@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
+</style>
+</head>
+<body>
+
+<h1>Define an HTML Table - HTML хүснэгт байгуулах</h1>
+<p><b>td</b> - хүснэгтийн нүд. <br><b>tr</b> - хүснэгтийн мөр. <br><b>th</b> - хүснэгтийн толгой.</p>
+<p>Доорх хүснэгтийг зохиоход:
+  <br>"<b>Table Cells</b>
+  <br><b>Table Rows</b>
+  <br><b>Table Headers</b>
+  <br><b>Collapsed Table Borders</b> - border, border-collapse
+  <br><b>HTML Table Column Width</b> - style="width:  "
+  <br><b>Vertical Table Headers</b>
+  <br><b>Table Caption</b> - caption
+  <br><b>HTML Table - Rowspan</b> - rowspan
+  <br><b>Multiple Col Elements</b> - colgroup-col span" элементүүдийг ашигласан.</p>
+
+<table style="width:100%">
+    <caption>Цээжилсэн үгийн жагсаалт</caption>
+    <colgroup>
+      <col span="1">
+      <col span="1" style="background-color: gold">
+      <col span="1" style="background-color: lightblue">
+    </colgroup>
+<tr>
+    <th>Он сар өдөр</th>
+    <th style="width:250px">Шинэ үгс</th>
+    <th style="width:350px">Утга</th>
+    <th style="width:450px">Жишээ</th>
+</tr>
+  <tr>
+    <th rowspan="5" style="width:100px">2023.01.01</th>
+    <td>få</td>
+    <td>авах</td>
+    <td>få arbeta</td>
+  </tr>
+  <tr>
+    <td>inleda</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ledig</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>spara</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>fågel</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+</html>
