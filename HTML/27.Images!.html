@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>HTML Images</title>
+</head>
 <body>
-    <h1>HTML images - Зураг оруулах</h1>
-    <p>img - таг нь веб хуудсанд зураг оруулахад хэрэглэгддэг. 
-        <br>src - Зурганд хүрэх замыг зааж өгнө. 
-        <br>Alt - хөтөч нь зургийг олж чадахгүй үед эвдэрсэн холбоос болон текстийг харуулна. 
-        <br>Style - зургийн өргөн ба өндрийг тодорхойлно. width болон height чанарууд нь үргэлж пикселээр тодорхойлдог.</p>
-    <img src="images/white-lotus-flower.jpg" alt="White-lotus-flower" style="width:490px;height:500px;">
-<hr>
-    <h1>Animated Images - Хөдөлгөөнт зураг</h1>
-    <p>Хөдөлгөөнт зураг оруулж болно.</p>
-    <img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">
-<hr>
-    <h1>Image as a Link - Зургийг веб рүү холбох</h1>
-    <p>Веб хуудасны холболтыг дүрсээрр оруулж болно.</p>
-    <a href="default.asp"><img src="smiley.gif" alt="Smilling head" style="width:42px;height:42px;"></a>
-<hr>
-    <h1>Floating Images - Хөвөгч зураг</h1>
+
+<p><a href="Index.html">Index рүү буцах</a></p>
+
+<h1>HTML images (Зураг оруулах)</h1>
+<p>Зураг нь вэб хуудасны дизайн болон харагдах байдлыг сайжруулж чадна.</p>
+
+<h2>HTML Images Syntax</h2>
+<p>HTML <mark>img</mark> таг нь вэб хуудсанд зураг оруулахад хэрэглэгддэг.</p>
+<p>Шошго нь <mark>img</mark> шаардлагатай хоёр шинж чанартай:</p>
+<p><b>src</b> - Зурганд хүрэх замыг зааж өгнө.</p>
+<p><b>alt</b> - Зургийн өөр текстийг зааж өгнө.</p>
+<p>Энэ <mark>img</mark> таг хоосон, зөвхөн шинж чанаруудыг агуулсан тул хаах таг байхгүй.</p>
+<p><b>Syntax</b>: <em>(img src="url" alt="alternatetext")</em></p>
+
+<h2>The src Attribute</h2>
+<p>Шаардлагатай <mark>src</mark> атрибут нь зураг руу хүрэх замыг <i>(URL)</i> зааж өгдөг.</p>
+<img src="Images/white-lotus-flower.jpg" alt="White-lotus-flower" style="width:340px;height:350px;">
+    
+<h2>The alt Attribute</h2>
+<p><mark>alt</mark>- HTML шинж чанар нь зургийг харуулах боломжгүй бол өөр текстийг харуулна.</p>
+<p>Атрибутын <b>alt</b> утга нь зургийг тайлбарлах ёстой:</p>
+<img src="wrongname.gif" alt="Flowers in Chania">
+<p>Хэрэв хөтөч зураг олж чадахгүй бол <b>alt</b> нь атрибутын утгыг харуулах болнo.</p>
+
+<h2>Image Size - Width and Height</h2>
+<p><mark>width, height</mark> шинж чанарууд нь зургийн өргөн, өндрийг үргэлж пикселээр тодорхойлдог.</p>
+<p>Зургийн өргөн ба өндрийг тодорхойлохын тулд <b>style</b> атрибутыг ашиглаж болно: <em>style="width:500px;height:600px;</em></p>
+<p>Эсвэл <b>width</b>, <b>height</b> шинж чанаруудыг ашиглаж болно: <em>width="500" height="600"</em></p>
+        
+<h2>Width and Height, or Style?</h2>
+<p><mark>Width, height, style</mark> шинж чанарууд HTML дээр хүчинтэй.</p>
+<p>Гэхдээ <b>style</b> шинж чанарыг ашиглахыг санал болгодог, учир нь хуудасны зургийн хэмжээг өөрчлөхөөс сэргийлнэ.</p>
+
+<h2>Images in Another Folder</h2>
+<p>Хэрэв танд дэд хавтас дотор зураг байгаа бол <b>src</b> шинж чанарт хавтасны нэрийг зааж өгөх ёстой.</p>
+<img src="/Images/sunlight-sky-clouds.jpg" alt="Sky" style="width:200px;height:180px;">
+
+<h2>Images on Another Server/Website</h2>
+<p>Өөр сервер дээрх зураг руу чиглүүлэхийн тулд <b>src</b> шинж чанарт үнэмлэхүй URL-г зааж өгдөг.</p>
+<img src="">
+
+<h2>Animated Images (Хөдөлгөөнт зураг)</h2>
+<p>HTML нь хөдөлгөөнт GIF-г зөвшөөрдөг.</p>
+<img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">
+
+<h2>Image as a Link (Зургийг холбоос хэлбэрээр)</h2>
+<p>Зургийг холбоос болгон ашиглахын тулд <mark>a</mark> таг дотор <mark>img</mark> тагийг байрлуулна.</p>
+<a href="default.asp"><img src="smiley.gif" alt="Smilling head" style="width:42px;height:42px;"></a>
+
+<h2>Image Floating (Хөвөгч зураг)</h2>
+<p>Зургийг текстийн баруун эсвэл зүүн талд хөвүүлэхийн тулд <b>CSS float</b> шинж чанарыг ашиглана.</p>
     <p><strong>Хөвөгч зураг баруун талд:</strong></p>
-    <p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">Зураг догол мөрийн баруун талд байрлуулав.</p>
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">Зураг догол мөрийн баруун талд байрлуулав.</p>
     <p><strong>Хөвөгч зураг зүүн талд:</strong></p>
-    <p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">Зураг догол мөрийн зүүн талд байна.</p>
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">Зураг догол мөрийн зүүн талд байна.</p>
 
 </body>
 </html>
