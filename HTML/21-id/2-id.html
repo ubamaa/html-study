@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML ID</title>
+</head>
+<body>
+
+<p><a href="../index.html">Index рүү буцах</a></p>
+
+<h2>Using The id Attribute in JavaScript</h2>
+<p><b>id</b> шинж чанарыг мөн JavaScript-н зарим ажлыг гүйцэтгэхэд ашиглаж болно.
+<br>JavaScript нь <b>getElementById()</b> аргыг ашиглан тухайн <b>id</b> элементийг ашиглана.
+<br>Товчлуур дээр дарахад эхний текст өөрчлөгдөнө.</p>
+
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Шидэт товчлуур</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+</script>
+
+</body>
+</html>
