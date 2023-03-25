@@ -21,6 +21,7 @@
   <area shape="rect" coords="290,172,333,250" alt="Phone" href="images/iPhone6s.jpg">
   <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="images/koppkaffe.jpg">
 </map>
+<p><em>Компьютер, гар утас эсвэл аяга кофе дээр дарж шинэ хуудас руу орж болно!</em></p>
 
 <h1>How Does it Work?</h1>
 <p>Зургийн газрын зураг үүсгэхийн тулд зураг дээр товших боломжтой хэсгийг тодорхойлсон HTML код хэрэгтэй.</p>
@@ -29,7 +30,7 @@
 <p>Зургийг <mark>img</mark> таг ашиглан оруулна.</p>
 <p>Бусад зургуудаас цорын ганц ялгаа нь <b>usemap</b> шинж чанарыг нэмэх ёстой.</p>
 <p>(<b>img src="image.jpg" alt="text" usemap="#workmap"</b>)</p>
-<p><em>Usemap</em> утга нь <b>#</b> хэш хаягаар эхэлнэ.</p>
+<p><em>Usemap</em> утга нь <b>#</b> хэштэгээр эхэлнэ.</p>
 
 <h2>Create Image Map</h2>
 <p><mark>map</mark> элемент нь зургийн газрын зураг үүсгэхэд хэрэглэгддэг бөгөөд <mark>name</mark> шинж чанарыг ашиглан зурагтай холбодог.</p>
@@ -65,8 +66,9 @@
 <p>JavaScript функцийг ашиглахын тулд <mark>area</mark> элементэд товшилтын үйлдлүүдийг нэмнэ.</p>
 <p><i>JavaScript функцийг туршихын тулд кофены аяга дээр дарна уу:</i></p>
 
-<img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
-<map name="workmap">
+<img src="images/workplace.jpg" alt="Workplace" usemap="#work" width="400" height="379">
+
+<map name="work">
     <area shape="circle" coords="337,300,44" href="images/koppkaffe.jpg" onclick="myFunction()">
   </map>
 
