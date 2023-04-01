@@ -2,79 +2,121 @@
 <html>
 <head>
   <title>HTML Classes</title>
-<style>
-.note {
-  font-size: 100%;
-  color: red;
-}
-</style>
+  <style>
+    .city {
+      background-color:honeydew;
+      color:dodgerblue;
+      border: 1px solid cornflowerblue;
+      margin: 20px;
+      padding: 20px;
+    }
+    .main {
+    text-align: center;
+    }
+  </style>
 </head>
 <body>
 
 <p><a href="../index.html">Index рүү буцах</a></p>
 
-<h1>HTML <span class="note">class</span> attribute - <span class="note">Class</span> шинж чанар</h1>
-<p><span class="note">class</span> шинж чанарыг HTML элементийн ангиллыг тодорхойлоход ашигладаг.</p>
+<h1>HTML <span class="note">class</span> attribute</h1>
+<p>HTML <span class="note">class</span> шинж чанарыг HTML элементийн ангиллыг тодорхойлоход хэрэглэгддэг.</p>
+<p>Хэд хэдэн HTML элементүүд ижил ангилалтай байж болно.</p>
 
-</body>
+<div class="city">
+<h2>Using The class Attribute</h2>
+<p>Загварын хүснэгт дэх ангиллын нэрийг зааж өгөхийн тулд <b>class</b> шинж чанарыг ихэвчлэн ашигладаг. <br>
+  Үүнийг мөн JavaScript ашиглан тухайн ангиллын нэр бүхий элементүүдэд хандаж, удирдах боломжтой.</p>
+</div>
+  <p>Доорх жишээ <b>city</b> утгатай <mark>class</mark> шинж чанартай <mark>div</mark> элементтэй байна. <br>
+  <mark>div</mark> элемент нь <b>head</b> хэсгийн <mark>.city</mark> загвараар тодорхойлогдсон байна:</p>
+<p>style> <br>
+<b>.city</b> {  <br>
+  background-color: honeydew; <br>
+  color: dodgerblue;  <br>
+  border: 1px solid cornflowerblue; <br>
+  margin: 20px; <br>
+  padding: 20px; <br>
+  } <br>
+  /style> <br>
+<br>
+<b>div class="city"></b> <br>
+h2>London/h2>  <br> 
+p>London is the capital of England./p> <br>
+<b>/div></b></p>
 
-<head>
-<style>
-.city {
-    background-color: lightgreen;
-    color:maroon;
-    border: 3px solid brown;
-    margin: 5px;
-    padding: 5px;
+<p>Дараах жишээ нь <b>note</b> утгатай <mark>class</mark> шинж чанартай <mark>span</mark> элементтэй байна. <br>
+  <mark>span</mark> элемент <b>head</b> хэсгийн <mark>.note</mark> загвараар тодорхойлогдсон байна:</p>
+<p>style>  <br>
+<mark>.note</mark> {  <br>
+  font-size: 120%;  <br>
+  color: red;  <br>
+  }  <br>
+  /style>  <br>
+<br>
+h1>My <b>span class="note">Important/span></b> Heading/h1> <br>
+p>This is some <b>span class="note">important/span></b> text./p></p>
+<p style="color:red;"><b>note</b>-тэй жишээг турших боломжгүй байв!</p>
+
+<p>Зөвлөмж: <b>Class</b> шинж чанарыг ямар ч HTML элемент дээр ашиглаж болно. <br>
+    Анхаарах: <b>class</b> жижиг үсгээр бичигдэнэ!</p>
+
+<h2 class="city">The Syntax For Class</h2>
+<p><b>Class үүсгэх:</b> class-н өмнө цэгэн тэмдэгт (.) бичнэ. Дараа нь CSS шинж чанарыг {} хаалтанд тодорхойлно:</p>
+    <p><mark>.city</mark> <b>{  <br>
+    background-color: honeydew; <br>
+    color: dodgerblue; <br>
+    padding: 10px; <br>
+    }</b></p>  
+
+<h2 class="city main">Multiple Classes</h2>
+<p>HTML элементүүд нь нэгээс олон ангид харьяалагддаг. Олон ангиудыг тодорхойлохын тулд ангийн нэрсийг зайгаар тусгаарлах <br>
+  ж.нь: div class="city main">. Элементийг заасан ангиудын дагуу загварчлах болно.</p>
+<p>Дараах жишээнд 3-н <b>h2</b> элемент <mark>city</mark> ангилалд хамаарна. <br>
+  <em>London</em> текстийг <b>center</b>-т чиглүүлсэн <mark>main</mark> ангилалд багтжээ.</p>
+    <p>style> <br>
+      <b>.city</b> {  <br>
+        background-color: honeydew;  <br>
+        color: dodgerblue;  <br>
+        padding: 10px;  <br>
+      }  <br>
+      <b>.main {  <br>
+      text-align: center;  <br>
+      }</b>  <br>
+    <br>
+    <b>h2 class="city main">London/h2></b> <br>
+    h2 class="city">Paris/h2> <br>
+    h2 class="city">Tokyo/h2></p>
+
+<h2 class="city">Different Elements Can Share Same Class</h2>
+<p class="city">Өөр өөр HTML элементүүд нь ижил ангийн нэрийг зааж болно.</p>
+<p>Дараах жишээнд <b>h2, p</b> хоёулаа <mark>city</mark> ангиллыг зааж байгаа бөгөөд ижил хэв маягтай байна:</p>
+<p>style> <br>
+<mark>.city</mark> {  <br>
+  background-color: honeydew; <br>
+  color: dodgerblue; <br>
+  padding: 10px; <br>
+} <br>
+/style><br>
+<br>
+<b>h2 class="city">Paris/h2></b><br>
+<b>p class="city">Paris is the capital of France./p></b></p>
+
+<h2>Use of The class Attribute in JavaScript</h2>
+<p><b>class</b>-г мөн JavaScript-ээр тодорхой элементүүд дээр тодорхой ажлуудыг гүйцэтгэхэд ашиглаж болно.</p>
+<p><mark>getElementsByClassName()</mark> аргыг ашиглан <b>city</b> нэртэй элементүүдэд хандаж болно:</p>
+
+<button onclick="myFunction()">Нуух товч</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
 }
-</style>
-</head>
-<body>
-    <div class="city">
-        <h2>Using The class Attribute</h2>
-        <p>Загварын хүснэгт дэх ангийн нэрийг зааж өгөхийн тулд "class" шинж чанарыг ихэвчлэн ашигладаг.</p>
-    </div>
-    <div class="city">
-    <p>div тагтай .city утгатай - class шинж чанар.</p>
-    </div>
-    <div class="city">
-    <p>span тагтай .note утгатай - class шинж чанар.</p>
-    </div>
-
-    <p>Энэ товчлуур дээр дарвал .city утгатай class шинж чанартай элементүүд нуугдана:</p>
-    <button onclick="myFunction()">Дарах товчлуур</button>
-    
-    <head>
-        <style>
-        .city { 
-            background-color: lightsteelblue;
-            color: brown;
-            padding: 5px;
-        }
-        
-        .main {
-            text-align: center;
-        }
-        </style>
-    </head>
-    
-    <h2 class="city main">Multiple Classes</h2>
-    <p>London is the capital of England.</p>
-    
-    <h2 class="city">Paris</h2>
-    <p>Paris is the capital of France.</p>
-    
-    <h2 class="city">Use of The class Attribute in JavaScript</h2>
-    <p>class шинж чанарыг мөн JavaScript-н тодорхой элементүүдийг тодорхой ажлууд гүйцэтгэхэд ашиглаж болно.</p>
-    
-    <script>
-    function myFunction() {
-      var x = document.getElementsByClassName("city");
-      for (var i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-    }
-    </script>
+</script>
+<p><b>city</b> нэртэй <mark>class</mark> элементүүдийг нуухыг хүсвэл товчлуурыг дарж болно!</p>
 
 </body>
-</html>
+</html>   

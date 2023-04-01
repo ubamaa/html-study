@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Id</title>
+<style>
+#myHeader {
+  background-color:moccasin;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.city {
+  background-color: moccasin;
+  color: purple;
+  padding: 10px;
+} 
+</style>
+</head>
+<body>
+
+<p><a href="../index.html">Index рүү буцах</a></p>
+
+<h1>HTML id Attribute</h1>
+<p>HTML <b>id</b> атрибут нь HTML элементийн өвөрмөц id-г тодорхойлоход хэрэглэгддэг.</p>
+<p>HTML баримт бичигт ижил ID-тай нэгээс олон элемент байж болохгүй.</p>
+
+<h2>Using the id Attribute</h2>
+<p><b>id</b> шинж чанар нь HTML элементийн өвөрмөц ID-г тодорхойлдог.</p>
+<p><b>id</b> шинж чанар нь загварын тодорхой хэв маягийг зааж өгөхөд ашиглагддаг.<br>
+  <mark>id синтакс:</mark> Хэш тэмдэг (#) id нэр, дараа нь CSS шинж чанарыг {} хаалтанд тодорхойлно.</p>
+<p>Дараах жишээнд <mark>myHeader</mark> нэртэй id, <b>h2</b> элементтэй байна. <br>
+  <b>h2</b> элементийг <b>head</b> хэсгийн <mark>#myHeader</mark> загварын тодорхойлолтын дагуу загварчилсан байна:</p>
+<p>style>  <br>
+  <mark>#myHeader</mark> <b>{ <br>
+    background-color: lightblue; <br>
+    color: black; <br>
+    padding: 40px; <br>
+    text-align: center; <br>
+  } </b> <br>
+  /style> <br>
+  <br>
+  h2 id="myHeader">Using the id Attribute/h2></p>
+<p><b>Note</b>: <b>id</b> жижиг үсгийг мэдэрдэг! Мөн дор хаяж 1 тэмдэгт агуулсан байх ёстой, <br>
+  тоогоор эхэлж болохгүй, хоосон зай (tab) агуулаагүй байх ёстой.</p>
+
+<h2 class="city">Difference Between Class and ID</h2>
+<p><b>class</b>-г олон HTML элемент ашиглаж болно, <b>id</b>-г 1 хуудсанд зөвхөн 1 HTML элемент ашиглах ёстой.</p>
+<p style="color:blue">Энэ хуудсанд оруулсан загварын жишээ:</p>
+<p>style> <br>
+  /* Style the element with the id "myHeader" */ <br>
+  <mark>#myHeader</mark> { <br>
+    background-color: moccasin; <br>
+    color: black; <br>
+    padding: 40px; <br>
+    text-align: center; <br>
+  } <br>
+  <br> 
+  /* Style all elements with the class name "city" */ <br>
+  <mark>.city </mark>{ <br>
+    background-color: moccasin; <br>
+    color: purple; <br>
+    padding: 10px; <br>
+  } <br>
+  /style> <br>
+  <br>
+!-- An element with a unique id --> <br>
+<b>h2 id="myHeader">Using The id Attribute in JavaScript/h2></b> <br>
+<br>
+!-- Multiple elements with same class --> <br>
+<b>h2 class="city">Difference Between Class and ID/h2></b> <br>
+<b>h2 class="city">HTML Bookmarks with ID and Links/h2></b></p>
+
+<h2 class="city">HTML Bookmarks with ID and Links</h2>
+<p>HTML bookmarks вэб хуудасны тодорхой хэсэг рүү шилжих боломжийг олгодог.</p>
+<p>Хавчуурга ашиглахын тулд эхлээд үүнийг үүсгэж: <b>h2 id="C4">Chapter 4/h2></b></p>
+<p>Дараа нь түүнд холбоос нэмэх хэрэгтэй: <b>a href="#C4">Jump to Chapter 4/a></b></p>
+
+  <p><a href="../14-links/4-bookmarks.html">Жишээг харах</a></p>
+
+<p>Эсвэл өөр хуудаснаас хавчуургын холбоос ("Jump to Chapter 4") нэмж болно: <br>
+  <b>a href="html_demo.html#C4">Jump to Chapter 4/a></b></p>
+
+<h2 id="myHeader">Using The id Attribute in JavaScript</h2>
+<p>Мөн <b>id</b> атрибутыг тухайн элемент дээр зарим ажлыг гүйцэтгэхийн тулд JavaScript ашиглаж болно.</p>
+<p>JavaScript нь <mark>getElementById()</mark> аргыг ашиглан заасан <b>id</b>-тай элементэд хандах боломжтой:</p>
+
+<button onclick="displayResult()">Шидэт товчлуур</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "JavaScript дээр id атрибутыг ашиглах";
+}
+</script>
+
+</body>
+</html>

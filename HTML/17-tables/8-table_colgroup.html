@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Tables</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<p><a href="../index.html">Index рүү буцах</a></p>
+
+<h1>HTML Table Colgroup</h1>
+<p><b>colgroup</b> элемент нь хүснэгтийн тодорхой баганын хэв маягт ашиглагддаг.</p>
+
+<h2>HTML Table Colgroup</h2>
+<p>Хэрэв хүснэгтийн эхний хоёр баганыг загварчлахыг хүсвэл <b>colgroup, col</colgroup></b> элементүүдийг ашиглана.</p>
+<p><mark>colgroup</mark> элементийг баганыг тодорхойлохын тулд сав болгон ашиглах ёстой.</p>
+<p>Colgroup-t <b>col</b> элементийг зааж өгнө. <b>span</b> шинж чанар нь хэдэн баганад загвар орохыг тодорхойлдог. <br>
+    <b>Style</b> шинж чанар нь багануудыг харуулах хэв маягийг тодорхойлдог.</p>
+<p>table style="width: 100%;"> <br>
+    colgroup> <br>
+    <mark>col span="2"</mark> <b>style="background-color: #D6EEEE"></b> <br>
+    /colgroup></p>
+
+<p><b>colgroup</b> таг нь <b>table</b> элементийн дэд элемент нь бөгөөд <b>thead, tr, td</b> гэх мэт <br>
+    бусад элементүүдийн өмнө, гэхдээ <b>caption</b> элементийн дараа байх ёстой.</p>
+
+<h2>Legal CSS Properties</h2>
+<p>Colgroup дээр зөвшөөрөгдсөн CSS шинж чанарууд маш хязгаарлагдмал сонголттой:</p>
+
+<table style="width: 50%;">
+    <colgroup>
+      <col span="1" style="background-color: #D6EEEE">
+      <col span="1" style="background-color: pink">
+    </colgroup>
+  <tr>
+    <th colspan="2">CSS properties</th>
+  </tr>
+  <tr>
+    <td>width</td>
+    <td>Элементийн өргөнийг тохируулдаг.</td>
+  </tr>
+  <tr>
+    <td>visibility</td>
+    <td>Тухайн элементийн харагдах эсэхийг заадаг.</td>
+  </tr>
+  <tr>
+    <td>background</td>
+    <td>Дэвсгэр шинж чанаруудыг тохируулна.</td>
+  </tr>
+  <tr>
+    <td>border</td>
+    <td>Хүрээний хэв маягийг тохируулна.</td>
+  </tr>
+  </table>
+    
+<p>Эдгээрээс бусад CSS шинж чанарууд хүснэгтэд нөлөөлөхгүй.</p>
+
+<h2>Multiple Col Elements</h2>
+<p>Хэрэв өөр хэв маягтай баганыг загварчлахыг хүсвэл <b>colgroup</b> дотор илүү олон <b>col</b> элемент ашиглана.</p>
+<p>table style="width: 100%;"> <br>
+    colgroup> <br>
+    <b>col span="2" style="background-color: #D6EEEE"></b>   <br>
+    <b>col span="3" style="background-color: pink"></b>   <br>
+    /colgroup></p>
+<p>Энэ хүснэгт эхний 2 багана, дараагийн дараалсан 3 багануудад (3,4,5) өнгө нэмсэн.</p>
+
+<h2>Empty Colgroups</h2>
+<p>Хэрэв хүснэгтийн дундах багануудыг загварчлахыг хүсвэл өмнөх баганад нь <b>col</b> "empty" элемент оруулна.</p>
+<p>table style="width: 100%;"> <br>
+    colgroup> <br>
+    <mark>col span="3"></mark>  <br>
+    <b>col span="2" style="background-color: pink"></b> <br>
+    /colgroup></p>
+<p>Энэ хүснэгт эхний 3-н багана загваргүй, 4 болон 5 багануудад өнгө оруулсан байна.</p>
+
+<h2>Hide Columns</h2>
+<p><b>visibility: collapse</b> шинж чанаруудын тусламжтай баганыг нууж болно.</p>
+<p> table style="width: 100%;"> <br>
+    colgroup> <br>
+        col span="2"> <br>
+    <mark>col span="3" style="visibility: collapse"></mark> <br>
+      /colgroup></p>
+<p>Энэ хүснэгтийн 3 баганыг (3,4,5) нуусан харагдаж байна.</p>
+
+</body>
+</html>

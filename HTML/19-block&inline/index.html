@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML Block and Inline</title>
+    <title>HTML Block & Inline</title>
 </head>
 <body>
 
 <p><a href="../index.html">Index рүү буцах</a></p>
 
-<div style="background-color:cornflowerblue;color:olivedrab;padding: 20px;"> 
-<h1>Block level elements - Блок түвшний элементүүд</h1>    
-<p>P ба DIV элемент нь хоёулаа блок элементүүд. Блок-түвшний элемент нь үргэлж шинэ мөрөнд эхэлж, бүрэн өргөнийг авах боломжтой.</p>
-</div>
-<p style="border: 3px solid fuchsia"><b>p</b> элемент нь HTML баримт бичигт догол мөрийг тодорхойлдог.</p>
-<div style="border: 5px solid greenyellow"><b>div</b> элемент нь хуваагдал эсвэл HTML документ дээр хувийг тодорхойлдог.</div>
+<h1>HTML Block and Inline Elements</h1>
+<p>HTML элемент бүр элементийн төрлөөс хамааран өгөгдмөл дэлгэцийн утгатай байдаг. <br>
+    Дэлгэцийн хоёр утга байдаг:</p>
+<ul style="list-style-type: circle;">
+    <li>Block</li>
+    <li>Inline</li>
+</ul>
 
-<h1>Inline Elements - </h1>
+<div style="background-color:bisque;color:olivedrab;padding: 20px;"> 
+<h2>Block-level Elements (Блок түвшний элементүүд)</h2>
+<p>Блок элемент нь үргэлж шинэ мөрөөс эхэлдэг бөгөөд элементийн өмнө, хойно автоматаар зай (margin) нэмдэг.</p>
+<p>Түгээмэл хэрэглэгддэг блок элементүүд нь <b>p</b> болон <b>div</b> юм.</p>
+</div>
+<p style="border: 3px solid darkcyan"><b>p</b> -Элемент нь HTML баримт бичгийн догол мөрийг тодорхойлдог.</p>
+<div style="border: 5px solid greenyellow"><b>div</b> -Элемент нь HTML баримтын хэсэг эсвэл ялгаж тодорхойлдог.</div>
+
+<h2>Inline Elements</h2>
+<p><em>Inline element</em> нь шинэ мөрөнд эхэлдэггүй, шаардлагатай хэмжээгээр өргөнийг эзэлдэг.</p>
 <p><span style="border: 2px solid black">span</span> нь <span style="color:cadetblue;font-weight: bold;">Inline</span> элемент юм.</p>
-<p>Дотоод элемент нь шинэ мөрөнд эхлэхгүй. Дотоод элемент нь зөвхөн шаардлагатай хэмжээгээр өргөн хүрээнээс их хэмжээгээр авдаг.</p>
+
+<div style="background-color:bisque;color:olivedrab;padding: 20px;">
+<h2>The div Element</h2>
+<p><b>div</b> элементийг ихэвчлэн бусад HTML элементүүдийн контейнер болгон ашигладаг.</p>
+<p>Энэ элемент нь шаардлагатай шинж чанарууд байхгүй ч, <mark>style, class, id</mark> эдгээртэй нийтлэг. <br>
+    <b>div</b> элементийг CSS-тэй хамт ашиглах үед агуулгын блокуудыг загварчлахад ашиглаж болно.</p>
+</div>
+
+<h2>The <span> Element</h2>
+<p><b>span</b> элемент нь <span style="color:crimson;font-weight: bold;">текстийн хэсэг эсвэл баримтын хэсгийг</span> тэмдэглэхэд ашигладаг <span style="color:indigo;font-weight: bold;">доторлогоотой сав</span> шиг юм.</p>
+<p>Энэ элемент нь шаардлагатай шинж чанарууд байхгүй ч, <mark>style, class, id</mark> эдгээртэй нийтлэг. <br>
+    CSS-тэй хамт ашиглах үед <b>span</b> элементийг текстийн зарим хэсгийг загварчлахад ашиглаж болно.</p>
 
 </body>
 </html>

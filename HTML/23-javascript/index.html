@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML JavaScript</title>
+</head>
+<body>
+
+<p><a href="../index.html">Index рүү буцах</a></p>
+
+<h1>HTML JavaScript</h1>
+<p><em>JavaScript</em> нь HTML хуудсыг илүү динамик, интерактив болгодог.</p>
+
+<h2>The HTML script Tag</h2>
+<p>JavaScript хэрэглээ нь зураг боловсруулах, маягтыг баталгаажуулах, динамикаар контентыг өөрчлөхөд ашиглагддаг.</p>
+<p>JavaScript нь <b>document.getElementById()</b> аргыг ихэвчлэн ашигладаг.</p>
+<p>HTML <mark>script</mark> тагийг клиент талын скриптийг (JavaScript) тодорхойлоход ашигладаг.</p>
+<p><b>script</b> элемент нь скрипт мэдэгдлүүдийг агуулсан, мөн <b>src</b> атрибутаар дамжуулан гадаад скрипт файл руу чиглүүлдэг.</p>
+<p>Энэ жишээ нь <em>"Hello JavaScript!"</em> гэж бичсэн id="demo"-тай HTML элемент:</p>
+<p>p id="demo">/p> <br>
+<br>
+script> <br>
+document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
+/script></p>
+
+<h2>A Taste of JavaScript</h2>
+<p>JavaScript-н хийж чадах зарим жишээ энд байна:</p>
+<p><b>1. JavaScript нь агуулгыг өөрчлөх боломжтой;</b></p>
+
+<p><em>p id="demo">JavaScript can change the content of an HTML element/p></em> <br>
+<br>
+<b>script></b> <br>
+<mark>function myFunction() {  <br> 
+  document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
+} </mark><br>
+<b>/script></b> <br>
+<em>button type="button" onclick="myFunction()">Товч дарах!/button></em></p>
+
+<p><b>2. JavaScript нь хэв маягийг өөрчилж болно;</b></p>
+
+<p><em>p id="demo">JavaScript can change the style of an HTML element./p></em> <br>
+  <br>
+<b>script></b> <br>
+<mark>function myFunction() { <br>
+  document.getElementById("demo").style.fontSize = "25px";  <br>
+  document.getElementById("demo").style.color = "red"; <br>
+  document.getElementById("demo").style.backgroundColor = "yellow"; <br>    
+} </mark><br>
+<b>/script></b> <br>
+<br> 
+<i>button type="button" onclick="myFunction()">Click Me!/button></i></p>
+
+<p><b>3. JavaScript нь шинж чанаруудыг өөрчилж болно:</b><br>
+  Энд JavaScript нь зургийн <i>src</i> (эх) шинж чанарын утгыг өөрчилсөн байгаа.</p>
+  <script>
+    function light(sw) {
+      var pic;
+      if (sw == 0) {
+        pic = "pic_bulboff.gif"
+      } else {
+        pic = "pic_bulbon.gif"
+      }
+      document.getElementById('myImage').src = pic;
+    }
+  </script>
+    
+  <img id="myImage" src="pic_bulboff.gif" width="100" height="170">
+
+    <p>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+
+<h2>The HTML noscript Tag</h2>
+<p>HTML <b>noscript</b> таг нь хөтчийнхөө скриптийг идэвхгүй болгосон эсвэл <br>
+  скрипт дэмждэггүй хөтөчтэй хэрэглэгчдэд харуулах өөр контентыг тодорхойлдог.</p>
+<p><em>p id="demo">/p></em> <br>
+  <br>
+<b>script></b> <br>
+document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
+<b>/script></b> <br>
+<br>
+<mark>noscript>Sorry, your browser does not support JavaScript!/noscript></mark></p>
+
+<p>JavaScript дэмждэггүй хөтөч нь <b>noscript</b> элемент дотор бичигдсэн текстийг харуулах болно.</p>
+
+</body>
+</html>

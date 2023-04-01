@@ -2,28 +2,83 @@
 <html>
 <head>
     <title>HTML File Paths</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 80%;
+        }
+        
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #DDD;
+        }
+        
+        tr:hover {background-color: rgba(255, 99,71, 0.2);}
+    </style>
 </head>
 <body>
 
 <p><a href="../index.html">Index рүү буцах</a></p>
 
-<h1>File Paths</h1>
+<h1>HTML File Paths (HTML файлын замууд)</h1>
+<p><i>File Path</i> нь вэбсайтын директорт байгаа файлын байршлыг тодорхойлдог.</p>
+<p>Файлын замыг дараах гадаад файлуудтай холбоход ашигладаг:</p>
+<ul>
+    <li>Web pages (Цахим хуудас)</li>
+    <li>Images (Зургууд)</li>
+    <li>Style sheets (Загварын хуудас)</li>
+    <li>JavaScript</li>
+  </ul> 
+
+<table>
+<caption>File Path Examples</caption>
+    <tr>
+      <th>Path</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>< img src="picture.jpg"></td>
+      <td><i>"picture.jpg"</i> файл нь одоогийн хуудастай нэг folder-д байгаа.</td>
+    </tr>
+    <tr>
+      <td>< img src="images/picture.jpg"></td>
+      <td><i>"picture.jpg"</i> файл нь одоогийн хавтсанд байгаа зургуудын хавтсанд байрладаг.</td>
+    </tr>
+    <tr>
+      <td>< img src="/images/picture.jpg"></td>
+      <td><i>"picture.jpg"</i> файл нь одоогийн вэбсайтын үндсэн хэсэгт байрлах зургийн хавтсанд байрладаг.</td>
+    </tr>
+    <tr>
+      <td>< img src="../picture.jpg"></td>
+      <td><i>"picture.jpg"</i> файл нь одоогийн folder-оос нэг түвшний дээгүүр хавтсанд байрладаг.</td>
+    </tr>
+  </table>
+
 <h2>Absolute File Paths</h2>
-<p>Үнэмлэхүй файлын зам нь файлын бүрэн URL хаяг байна.</p>
-<img src="https://vox525.wordpress.com/download.html/" style="width:200px">
+<p>Үнэмлэхүй файлын (Absolute file) зам нь файлын бүрэн URL хаяг байна.</p>
+<p><i>< img src="https://i.pinimg.com/236x/25/cd/48/25cd48f791bf714f9a246e18753d915f.jpg" style="width:200px"></i></p>
+<img src="https://i.pinimg.com/236x/25/cd/48/25cd48f791bf714f9a246e18753d915f.jpg" style="width:200px">
 
 <h2>Relative File Paths</h2>
-<p><b>img src="/images/picture.jpg"</b> зургийн зам нь одоогийн вэбийн үндсэн хэсэгт байгаа зургуудын хавтсанд байгаа файлыг зааж байна.</p>
+<p>Харьцангуй файлын (Relative File) зам нь одоогийн хуудастай холбоотой файлыг заадаг.</p>
+<p>Дараах жишээнд файлын зам нь одоогийн вэбийн үндсэн хэсэгт байрлах зургийн хавтсанд байгаа файлыг зааж байна. <br>
+    <i>< img src="/images/picture.jpg" alt="Mountain"></i></p>
 <img src="/HTML/images/7b.jpg" alt="City" style="width:350px">
 
-<p><b>img src="images/picture.jpg"</b> файл нь одоогийн хавтсанд байгаа зургуудын байгаа файлыг зааж байна.</p>
-<img src="images/sunlight-sky-clouds.jpg" alt="Sky, sun and clouds" style="width:620px">
+<p>Дараах жишээнд файлын зам нь одоогийн хавтсанд байрлах зургийн хавтсанд байгаа файлыг зааж байна. <br>
+    <i>< img src="images/picture.jpg" alt="Mountain"></i></p>
+<img src="images/1c.jpg" alt="City" style="width:570px">
 
-<p><b>img src="picture.jpg"</b> файл нь одоогийн хуудастай нэг хавтсанд байрлаж байгааг зааж байна.</p>
-<img src="1c.jpg" alt="Энд зураг оруулах боломжгүй." style="width:570px">
-
-<p><b>img src="../picture.jpg"</b> файл нь одоогийн фолдероос нэг түвшний хавтсанд байрлаж байгааг харуулж байна.</p>
+<p>Дараах жишээнд файлын зам нь одоогийн фолдероос нэг түвшний дээрх хавтсанд байрлах зургийн хавтсанд байгаа файлыг зааж байна. <br>
+    <i>< img src="../images/picture.jpg" alt="Mountain"></i></p>
 <img src="../images/tumblr.jpg" alt="Stockholm" style="width:550px">
+
+<h3>Best Practice</h3>
+<p>Харьцангуй файлын (Absolute File) замыг (боломжтой бол) ашиглах нь дээр.</p>
+<p>Харьцангуй файлын замыг ашиглах үед таны вэб хуудсууд таны одоогийн үндсэн URL-тай холбогдохгүй. <br>
+    Бүх холбоосууд нь таны өөрийн компьютер дээр (localhost), <br>
+    түүнчлэн таны одоогийн домэйн болон ирээдүйн нийтийн домэйн дээр ажиллах болно.</p>
 
 </body>
 </html>

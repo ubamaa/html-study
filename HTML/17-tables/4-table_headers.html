@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Tables</title>
+    <style>
+    th, td {
+    border-style: ridge;
+  }
+    </style>
+</head>
+<body>
+
+<p><a href="../index.html">Index рүү буцах</a></p>
+
+<h1>HTML Table Headers</h1>
+<p>HTML хүснэгтүүд нь багана, мөр бүр эсвэл олон багана/мөр толгойтой байж болно.</p>
+
+<h2>HTML Table Headers</h2>
+<p>Хүснэгтийн толгойг <b>th</b> элементийг ашиглан тодорхойлно. <b>th</b> элемент бүр нь хүснэгтийн нүдийг төлөөлдөг.</p>
+
+<table style="width:80%">
+    <tr>
+      <th>Tag</th>
+      <th>Description</th> 
+    </tr>
+    <tr>
+      <td>table</td>
+      <td>Хүснэгтийг тодорхойлно.</td>
+    </tr>
+    <tr>
+      <td>th</td>
+      <td>Хүснэгтийн толгой хэсгийн нүдийг тодорхойлно.</td>
+    </tr>
+</table>
+
+<h2>Vertical Table Headers</h2>
+<p>Эхний баганыг хүснэгтийн толгой болгон ашиглахын тулд мөр бүрийн эхний нүдийг <b>th</b> элементээр тодорхойлно.</p>
+
+    <table style="width:100%">
+        <tr>
+          <th>Tag</th>
+          <td>caption</td>
+          <td>colgroup</td>
+          <td>col</td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td>Хүснэгтийн гарчигийг тодорхойлно.</td>
+          <td>Хүснэгтийн нэг буюу хэд хэдэн баганаас бүрдэх бүлгийг форматлахыг зааж өгнө.</td>
+          <td><b>colgroup</b> элементийн багана бүрийн шинж чанарыг тохируулна.</td>
+    </table>
+
+<h2>Align Table Headers</h2>
+<p>Хүснэгтийн анхны өгөгдлөөр толгойг тод, голд нь байрлуулдаг.</p>
+<p>Хүснэгтийн толгойг зүүн тийш зэрэгцүүлэхийн тулд <mark>text-align</mark> CSS шинж чанарыг ашиглана.</p>
+<p><b>style> <br>
+    table, th, td {
+      border: 1px solid black; <br>
+      border-collapse: collapse; } <br>
+    <mark>th { text-align: left; }</mark> <br>
+    /style></b></p>
+
+<h2>Header for Multiple Columns</h2>
+<p>Xоёр ба түүнээс дээш баганыг хамарсан толгойтой байж болно. <br>
+    Үүний тулд <b>th</b> элементийн <mark>colspan</mark> шинж чанарыг ашиглана.</p>
+
+    <table style="width:80%">
+        <tr>
+          <th colspan="2">Tag</th>
+        </tr>
+        <tr>
+          <td>colspan</td>
+          <td>Нүдийг олон баганатай болгоход ашиглана.</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td>Нүдийг олон эгнээ болгоход ашиглана.</td>
+        </tr>
+    </table>
+
+<h2>Table Caption</h2>
+<p>Хүснэгтэд гарчиг нэмж болно. Үүний тулд <b>caption</b> тагийг ашиглана.</p>
+
+<table style="width:80%">
+    <caption>HTML Table Tags</caption>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th> 
+    </tr>
+    <tr>
+      <td>table</td>
+      <td>Хүснэгтийг тодорхойлно.</td>
+    </tr>
+    <tr>
+      <td>th</td>
+      <td>Хүснэгтийн толгой хэсгийн нүдийг тодорхойлно.</td>
+    </tr>
+</table>
+
+</body>
+</html>
