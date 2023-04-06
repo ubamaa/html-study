@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How To Add CSS</title>
+  <link rel="stylesheet" href="styles/style1.css">
+  <style>
+    body {background-color: lavender;
+
+    }
+  </style>
+</head>
+<body>
+
+<p><a href="../index.html">Index буцах</a></p>  
+
+<h1>Three Ways to Insert CSS (CSS оруулах гурван арга)</h1>
+<p>Загварын хуудас оруулах гурван арга байдаг.</p>
+<ul>
+    <li>External CSS</li>
+    <li>Internal CSS</li>
+    <li>Inline CSS</li>
+</ul>
+
+<h2>External CSS</h2>
+<p>External CSS тусламжтайгаар бүхэл вэбсайтын харагдах байдлыг зөвхөн нэг файлаар өөрчлөх боломжтой!</p>
+<p>HTML хуудас <b>&lt;head&gt;</b> хэсгийн <b>&lt;link&gt;</b> элементэд External style файлын холбоосыг агуулсан байх ёстой. <br>
+  External style файлыг <mark>.css</mark> өргөтгөлөөр хадгална.</p>
+<p><b>&lt;head&gt;</b> <br>
+  <mark>&lt;link rel="stylesheet" href="mystyle.css"&gt;</mark>  <br>
+  <b>&lt;/head&gt;</b></p>
+
+<h2>Internal CSS</h2>
+<p>Хэрэв нэг HTML хуудсыг өвөрмөц хэв маягтай болгох бол <b>Internal style</b>-ийг ашиглаж болно.</p>
+<p>Internal style-ийг <b>&lt;head&gt;</b> хэсгийн <mark> &lt;style&gt;</mark> элементэд тодорхойлно.</p>
+<p><b>&lt;style&gt;</b> <br>
+  body { <br>
+    background-color: linen; <br>
+  } <br>
+  <br>
+  h1 { <br>
+    color: maroon; <br>
+    margin-left: 40px; <br>
+  } <br>
+  <b>&lt;/style&gt;</b></p>
+
+<h2 style="color:orangered;">Inline CSS</h2>
+<p style="color:green;">Нэг элементэд өвөрмөц загвар оруулахын тулд <b>Inline style</b> ашиглаж болно.</p>
+<p><mark>&lt;p style="color:blue;text-align:center;"&gt;</mark> <i>Inline style ашиглахын тулд харгалзах элементэд загварын шинж чанарыг нэмнэ.</i></p>
+
+<h1>Multiple Style Sheets (Олон загварын хуудас)</h1>
+<p>Хэрэв нэг хуудсанд ижил selector (элемент)-үүдийг сонгосон бол хамгийн сүүлд бичсэн загварын утга үйлчилнэ.</p>
+<p>Энэ жишээнүүд <b>External style</b> болон <b>Internal style</b> 2-ын хослол юм.</p>
+<p style="color:crimson;font-size: 150%">Жишээ 1.</p>
+<p><i>External style</i> хуудас нь &lt;h1&gt; элемент дараах загвартай: <b>h1 {color: navy;}</b>
+<p>&lt;head&gt; <br>
+  &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt; <br>
+  &lt;style> <br>
+  <b>h1 { <br>
+    color: orange; <br>
+  } </b><br>
+  &lt;/style&gt; <br>
+  &lt;/head&gt;</p>
+<p><i>Internal style</i> сүүлд тодорхойлогдсон тул &lt;h1&gt; элементүүд <mark>orange</mark> өнгөтэй болно.</p>
+<p style="color:crimson;font-size: 150%">Жишээ 2.</p>
+<p>Жишээ 1.-н эсрэг тохиолдол:</p>
+<p>&lt;head&gt; <br>
+  &lt;style> <br>
+  h1 { <br>
+    color: orange; <br>
+  } <br>
+  &lt;/style&gt; <br>
+  <b>&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</b> <br>
+  &lt;/head&gt;</p>
+<p><i>Internal style</i>-ийг <i>External style</i>-н өмнө тодорхойлсон бол &lt;h1&gt; элементүүд <mark>navy</mark> байх болно.</p>
+
+<h1>Cascading Order (Олон хэв маягийг нэг дор нэгтгэх)</h1>
+<p>HTML элементэд нэгээс олон загвар заасан тохиолдолд ямар хэв маягийг ашиглах вэ?</p>
+<p>Бүх style нэг хуудсанд «каскад» болоход "эхнийх нь хамгийн давуу эрхтэй" гэсэн дүрмийн дагуу байх болно.</p>
+<ol type="1">
+  <li>Inline style (HTML элемент дотор)</li>
+  <li>External ба Internal style sheets (head хэсэгт)</li>
+  <li>Browser default (Үндсэн хөтөч)</li>
+</ol>
+<p>Тиймээс inline style нь давуу эрхтэй бөгөөд External болон Internal styles, хөтчийн тохиргоог хүчингүй болгодог.</p>
+
+</body> 
+</html>
