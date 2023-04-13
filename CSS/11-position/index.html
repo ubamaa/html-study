@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Position</title>
+<style>
+    div.static {
+        position: static;
+        border: 3px solid #73AD21;
+    }
+    div.relative1 {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+    }
+    div.fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        border: 3px solid #73AD21;       
+    }      
+    div.relative2 {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73AD21;
+    } 
+
+    div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 100px;
+        border: 3px solid #73AD21;
+    }
+    div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        padding: 5px;
+        background-color: #cae8ca;
+        border: 2px solid #4CAF50;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+</style>
+</head>
+<body>
+
+<p><a href="../index.html">Index буцах</a></p>
+
+<h1>CSS Layout - The position Property</h1>
+<p><b>position</b> шинж чанар нь тухайн элементийн байрлал тогтоох аргын төрлийг 
+    (<em>static, relative, fixed, absolute, sticky)</em> тодорхойлдог.</p>
+
+<h2>The position Property</h2>
+<p><b>position</b> шинж чанар нь тухайн элементэд ашиглах байршлын төрлийг тодорхойлдог.</p>
+<p>5-н өөр байрлалын утга байдаг:</p>
+<ul>
+    <li><a href="#1">static</a></li>
+    <li><a href="#2">relative</a></li>
+    <li><a href="#3">fixed</a></li>
+    <li><a href="#4">absolute</a></li>
+    <li><a href="#5">sticky</a></li>
+</ul>
+<p>Эхлээд <b>position</b> шинж чанарыг тохируулах ёстой. <br>
+    Дараа нь <i>top, bottom, left, right</i> шинж чанаруудыг ашиглан элементүүдийг байрлуулна. <br>
+    Тэд байрлалын утгаас хамааран өөр өөрөөр ажилладаг.</p>
+
+<h3 id="1">position: static;</h3>
+<p>HTML элементүүд нь анхдагчаар <mark>static</mark> байдлаар байрладаг. <br>
+    <b>static</b> байрлалтай элементүүдэд <i>top, bottom, left, right</i> шинж чанарууд нөлөөлдөггүй. <br>
+    <b>position: static</b> тусгай байрлалгүй, хуудасны хэвийн урсгалын дагуу байрладаг!</p>
+<p>&lt;style&gt; <br>
+    div.static { <br>
+    <b>position: static;</b> <br>
+      border: 3px solid #73AD21; <br>
+    } <br>
+    &lt;/style&gt; <br>
+    <br>
+    <b>&lt;div class="static">This div element has position: static;&lt;/div&gt;</b></p>
+<div class="static">Энд CSS ашигласан байна: <b>position: static;</b> байрлалтай <i>div</i> элемент.</div>
+        
+<h3 id="2">position: relative;</h3>
+<p><b>position: relative</b>-тай элемент нь хэвийн байрлалтай буюу <b>relative</b> байрлалд байдаг. <br>
+    <b>Relative</b> байрлалтай элементийн <i>top, bottom, left, right</i> шинж чанарыг тохируулах нь хэвийн байрлалаас нь холдуудаг. <br>
+    Энэ нь элементээс үлдсэн хоосон зайг нөхөхийн тулд бусад контентыг тохируулахгүй.</p>
+<p>	&lt;style&gt; <br>
+    div.relative { <br>
+    <b>position: relative;</b> <br>
+      left: 30px; <br>
+      border: 3px solid #73AD21; <br>
+    } <br>
+    &lt;/style&gt; <br>
+    <br>
+    <b>&lt;div class="relative">This div element has position: relative;&lt;/div&gt;</b></p>
+<div class="relative1">Энэ <i>div</i> элемент нь <b>position: relative;</b> байрлалтай.</div>
+
+<h3 id="3">position: fixed;</h3>
+<p><b>position: fixed;</b> бүхий элемент нь хуудсанд үргэлж <b>relative</b> байдлаар харагдах бөгөөд хуудсыг гүйлгэсэн ч 1 байрандаа үлдэнэ гэсэн үг. <br>
+    Элементийг байрлуулахад <i>top, bottom, left, right</i> шинж чанаруудыг ашигладаг. <br>
+    <b>fixed</b> элемент нь хуудсанд ердийн байрлалтай байх үед байсан зайгаа үлдээдэггүй.</p>
+<p>&lt;style&gt; <br>
+    div.fixed { <br>
+    <b>position: fixed;</b> <br>
+      bottom: 0; <br>
+      right: 0; <br>
+      width: 300px; <br>
+      border: 3px solid #73AD21; <br>
+    } <br>
+    &lt;/style&gt; <br>
+    <br>
+    <b>&lt;div class="fixed">This div element has position: fixed;&lt;/div&gt;</b></p>
+<div class="fixed"><i>div</i> элемент <b>position: fixed;</b> байрлалтай.</div>
+<p>Хуудасны баруун дээд буланд байрлах <b>fixed</b> байрлалтай элементийг харж байна.</p>
+
+<h3 id="4">position: absolute;</h3>
+<p><b>position: absolute</b>-тэй элемент нь хамгийн ойр байрлах загвартай 
+    (<i>relative</i> байрлал дотор <i>fixed</i> шиг харагддаг) <b>relative</b> байрладаг. <br>
+    Хэрэв <b>absolut</b> байрлалтай элемент нь давхар загваргүй бол баримтын үндсэн хуудсыг гүйлгэхэд хамтдаа хөдөлдөг. <br>
+    <b>Note: Absolute</b> байрлалтай элементүүд нь хэвийн байрлал эзлэдэггүй бөгөөд элементүүдтэй давхцаж болно.</p>
+<p>&lt;style&gt; <br>
+    <b>div.relative { <br>
+      position: relative;</b> <br>
+      width: 400px; <br>
+      height: 200px; <br>
+      border: 3px solid #73AD21; <br>
+    } <br>
+    <br>
+    <b>div.absolute { <br>
+      position: absolute;</b> <br>
+      top: 80px; <br>
+      right: 0; <br>
+      width: 200px; <br>
+      height: 100px; <br>
+      border: 3px solid #73AD21; <br>
+    } <br>
+    &lt;/style&gt; <br>
+    <br>
+    <b>&lt;div class="relative">This div element has position: relative; <br>
+    &lt;div class="absolute">This div element has position: absolute;&lt;/div&gt; <br>
+    &lt;/div&gt;</b></p>
+<div class="relative2"><i>div</i> элемент <b>position: relative;</b> байрлалтай.
+<div class="absolute"><i>div</i> элемент <b>position: absolute;</b> байрлалтай.</div>
+  </div>
+
+<h3 id="5">position: sticky;</h3>
+<p><b>position: sticky;</b> элемент нь хуудасный гүйлгэх байрлалд тулгуурлан байрлуулна. <br>
+    <i>Sticky</i> элемент нь гүйлгэх байрлалаас хамааран <b>relative</b> болон <b>fixed</b> байрлалын хооронд шилжинэ. <br>
+    Энэ нь хуудасны өгөгдсөн офсет байрлалд хүрэх хүртэл <b>relative</b> байрлалтай, дараа нь <b>fixed</b> шиг байрандаа үлддэг.</p>
+<p><b>Note:</b>Internet Explorer нь sticky байршлыг дэмждэггүй. Safari-д <b>-webkit-</b> угтвар шаардлагатай (доорх жишээг харна уу!). <br>
+    Aжиллуулахын тулд <b>sticky</b> байрлалын <i>top, bottom, right, left</i> сонголтуудын аль нэгийг заах ёстой. <br>
+    Энэ жишээнд <b>sticky</b> элемент нь гүйлгэх байрлалд хүрээд хуудасны дээд хэсэгт <mark>(top: 0;)</mark> наалдана.</p>
+    <p>&lt;style&gt; <br>
+    <b>div.sticky { <br>
+      position: -webkit-sticky; <br>
+      position: sticky;</b> <br>
+      top: 0; <br>
+      padding: 5px; <br>
+      background-color: #cae8ca; <br>
+      border: 2px solid #4CAF50; <br>
+    } <br>
+    &lt;/style&gt; <br>
+    <br>
+    <b>&lt;div class="sticky">I am sticky!&lt;/div&gt;</b></p>
+
+<div class="sticky"><i>div</i> элемент <b>position: sticky;</b> байрлалтай!</div>
+<br>
+<hr>
+<table>
+    <caption>All CSS Positioning Properties</caption>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>bottom</td>
+        <td>Байрлалын доод захын ирмэгийг тохируулна.</td>
+    </tr>
+    <tr>
+        <td>clip</td>
+        <td>Absolute байрлалтай элементийг тайрахад ашиглана.</td>
+    </tr>
+    <tr>
+        <td>left</td>
+        <td>Байрлалын зүүн захын ирмэгийг тохируулна.</td>
+    </tr>
+    <tr>
+        <td>position</td>
+        <td>Элементийн байршлын төрлийг заана.</td>
+    </tr>
+    <tr>
+        <td>right</td>
+        <td>Байрлалын баруун захын ирмэгийг тохируулна.</td>
+    </tr>
+    <tr>
+        <td>top</td>
+        <td>Байрлалын дээд ирмэгийг тохируулна.</td>
+    </tr>
+  </table>
+
+</body>
+</html>
