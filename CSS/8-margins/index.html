@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>CSS Margins</title>
-    <style>
-        div {
-          border: 1px solid black;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          margin-right: 200px;
-          margin-left: 10px;
-          background-color: #D6EEEE;
-        }
+  <title>CSS Margins</title>
+  <style>
+    div {
+      border: 1px solid black;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 200px;
+      margin-left: 10px;
+      background-color: #D6EEEE;
+    }
+
     table {
-        border-collapse: collapse;
-        width: 70%;
-        }
+      border-collapse: collapse;
+      width: 70%;
+    }
 
-        th, td {
-        text-align: left;
-        padding: 7px;
-        }
+    th,
+    td {
+      text-align: left;
+      padding: 7px;
+    }
 
-        tr:nth-child(even) {
-        background-color: #D6EEEE;
-        }
-    </style>
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+  </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>
+  <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Margins</h1>
-<div><b>Margin</b> нь тодорхой хил хязгаараас гадуур байгаа элементүүдийн эргэн тойронд зай үүсгэхэд ашиглагддаг.</div>
+  <h1>CSS Margins</h1>
+  <div><b>Margin</b> нь тодорхой хил хязгаараас гадуур байгаа элементүүдийн эргэн тойронд зай үүсгэхэд ашиглагддаг.
+  </div>
 
-<h2>CSS Margins (Захын зай)</h2>
-<p>CSS margin шинж чанарууд нь элементүүдийн эргэн тойронд, тодорхой хилээс гадуур орон зай үүсгэхэд ашиглагддаг.</p>
-<p>CSS-ийн тусламжтайгаар захын зайг бүрэн хянах боломжтой. <br>
+  <h2>CSS Margins (Захын зай)</h2>
+  <p>CSS margin шинж чанарууд нь элементүүдийн эргэн тойронд, тодорхой хилээс гадуур орон зай үүсгэхэд ашиглагддаг.</p>
+  <p>CSS-ийн тусламжтайгаар захын зайг бүрэн хянах боломжтой. <br>
     Элементийн тал (<i>top, right, bottom, left</i>) тус бүрт <b>margin</b> тогтоох шинж чанарууд байдаг.</p>
 
-<h2>Margin - Individual Sides</h2>
-<p>CSS нь элементийн тал бүрийн захын зайг тодорхойлох шинж чанарууд:</p>
-<ul>
+  <h2>Margin - Individual Sides</h2>
+  <p>CSS нь элементийн тал бүрийн захын зайг тодорхойлох шинж чанарууд:</p>
+  <ul>
     <li>margin-top (дээд захын зай )</li>
     <li>margin-right (баруун захын зай)</li>
     <li>margin-bottom (доод захын зай)</li>
     <li>margin-left (зүүн захын зай)</li>
   </ul>
-<p>Бүх талын шинж чанарууд дараах утгатай байж болно:</p>
-<ul>
+  <p>Бүх талын шинж чанарууд дараах утгатай байж болно:</p>
+  <ul>
     <li>auto - хөтөч нь захын зайг тооцдог.</li>
     <li>length - px, pt, cm гэх мэт захын зайг зааж өгнө.</li>
     <li>% - агуулж буй элементийн өргөний %-ийн ирмэгийг заана.</li>
     <li>inherit - margin нь эх элементээс өвлөгдөх ёстойг заана.</li>
-</ul>
+  </ul>
 
-<h2>Margin - Shorthand Property</h2>
-<p>Кодыг богиносгохын тулд <b>margin</b> шинж чанарыг нэг шинж чанарт зааж өгч болно.</p>
-<p>Margin нь дээр дурдсан хувийн (Individual) ​​маржин шинж чанаруудын товчилсон шинж чанар юм.</p>
-<p>Тэгэхээр, энэ нь хэрхэн ажилладаг вэ:</p>
-<div>Хэрэв margin 4-н утгатай бол:</div>
-<ul>
+  <h2>Margin - Shorthand Property</h2>
+  <p>Кодыг богиносгохын тулд <b>margin</b> шинж чанарыг нэг шинж чанарт зааж өгч болно.</p>
+  <p>Margin нь дээр дурдсан хувийн (Individual) ​​маржин шинж чанаруудын товчилсон шинж чанар юм.</p>
+  <p>Тэгэхээр, энэ нь хэрхэн ажилладаг вэ:</p>
+  <div>Хэрэв margin 4-н утгатай бол:</div>
+  <ul>
     <li>margin: 25px 50px 75px 100px;
       <ul>
         <li>top margin is 25px</li>
@@ -69,8 +74,8 @@
       </ul>
     </li>
   </ul>
-<div>Хэрэв margin 3-н утгатай бол:</div>
-<ul>
+  <div>Хэрэв margin 3-н утгатай бол:</div>
+  <ul>
     <li>margin: 25px 50px 75px;
       <ul>
         <li>top margin is 25px</li>
@@ -79,8 +84,8 @@
       </ul>
     </li>
   </ul>
-<div>Хэрэв margin 2 утгатай бол:</div>
-<ul>
+  <div>Хэрэв margin 2 утгатай бол:</div>
+  <ul>
     <li>margin: 25px 50px;
       <ul>
         <li>top and bottom margins are 25px</li>
@@ -88,8 +93,8 @@
       </ul>
     </li>
   </ul>
-<div>Хэрэв margin нэг утгатай бол:</div>
-<ul>
+  <div>Хэрэв margin нэг утгатай бол:</div>
+  <ul>
     <li>margin: 25px;
       <ul>
         <li>all four margins are 25px</li>
@@ -97,79 +102,85 @@
     </li>
   </ul>
 
-<h2>The auto Value</h2>
-<p>Элементийг хайрцагт хэвтээ байдлаар голлуулахын тулд margin шинж чанарыг <mark>auto</mark> болгоно. <br>
+  <h2>The auto Value</h2>
+  <p>Элементийг хайрцагт хэвтээ байдлаар голлуулахын тулд margin шинж чанарыг <mark>auto</mark> болгоно. <br>
     Дараа нь өргөний хэмжээг тохируулж болно, үлдсэн зай нь зүүн болон баруун талаасаа тэнцүү хуваагдана.</p>
-<p>&lt;style&gt; <br>
+  <p>&lt;style&gt; <br>
     div { <br>
-      width: 400px; <br>
-      <b>margin: auto;</b> <br>
-      border: 1px solid red; <br>
+    width: 400px; <br>
+    <b>margin: auto;</b> <br>
+    border: 1px solid red; <br>
     } <br>
-    &lt;/style&gt;</p>
+    &lt;/style&gt;
+  </p>
 
-<h2>The inherit Value</h2>
-<p>Энэ жишээнд &lt;p class="ex1"&gt; элементийн <b>margin-left</b> нь эхний (&lt;div&gt;) элементээс залгамжилсан байна.</p>
-<p>&lt;style&gt; <br>
+  <h2>The inherit Value</h2>
+  <p>Энэ жишээнд &lt;p class="ex1"&gt; элементийн <b>margin-left</b> нь эхний (&lt;div&gt;) элементээс залгамжилсан
+    байна.</p>
+  <p>&lt;style&gt; <br>
     div { <br>
-      border: 1px solid red; <br>
+    border: 1px solid red; <br>
     <b>margin-left: 100px;</b> <br>
     } <br>
     <br>
     p.ex1 { <br>
     <b>margin-left: inherit;</b> <br>
     } <br>
-    &lt;/style&gt;</p>
-    <p>&lt;div&gt; <br>
+    &lt;/style&gt;
+  </p>
+  <p>&lt;div&gt; <br>
     <mark>&lt;p class="ex1"&gt;</mark>This paragraph has an inherited left margin (from the div element).&lt;/p&gt; <br>
-    &lt;/div&gt;</p>
+    &lt;/div&gt;
+  </p>
 
-<h1>CSS Margin Collapse</h1>
-<p>Зарим тохиолдолд хоёр захын зай (margin) давхцдаг.</p>
+  <h1>CSS Margin Collapse</h1>
+  <p>Зарим тохиолдолд хоёр захын зай (margin) давхцдаг.</p>
 
-<h2>Margin Collapse</h2>
-<p>Элементүүдийн дээд, доод ирмэг нь заримдаа том хэмжээтэй бол нэг талбайд давхцдаг. <br>
+  <h2>Margin Collapse</h2>
+  <p>Элементүүдийн дээд, доод ирмэг нь заримдаа том хэмжээтэй бол нэг талбайд давхцдаг. <br>
     Энэ нь зүүн, баруун талын захад тохиолддоггүй, зөвхөн дээд болон доод захын зайд гардаг!</p>
-<p>&lt;style&gt; <br>
+  <p>&lt;style&gt; <br>
     h1 { <br>
-      margin: 0 0 <b>50px</b> 0; <br>
+    margin: 0 0 <b>50px</b> 0; <br>
     } <br>
     <br>
     h2 { <br>
-      margin: <b>20px</b> 0 0 0; <br>
+    margin: <b>20px</b> 0 0 0; <br>
     } <br>
-    &lt;/style&gt;</p>
-<p>Дээрх жишээнд &lt;h1&gt; элементийн доод захын зай нь 50px, &lt;h2&gt; элементийн дээд ирмэг нь 20px байна. <br>
+    &lt;/style&gt;
+  </p>
+  <p>Дээрх жишээнд &lt;h1&gt; элементийн доод захын зай нь 50px, &lt;h2&gt; элементийн дээд ирмэг нь 20px байна. <br>
     &lt;h1&gt;, &lt;h2&gt;-ийн хоорондох босоо зай нийт 70px (50px + 20px) байх ёстой! <br>
     Иймээс захын зай давхцсаны улмаас бодит margin 50px болно.</p>
-<hr>
-<table>
-<caption>All CSS Margin Properties</caption>
+  <hr>
+  <table>
+    <caption>All CSS Margin Properties</caption>
     <tr>
-    <th>Property</th>
-    <th>Description</th>
+      <th>Property</th>
+      <th>Description</th>
     </tr>
     <tr>
-    <td>margin</td>
-    <td>Нэг элементэд бүх шинж чанарыг тохируулсан shorthand шинж чанар.</td>
+      <td>margin</td>
+      <td>Нэг элементэд бүх шинж чанарыг тохируулсан shorthand шинж чанар.</td>
     </tr>
     <tr>
-    <td>margin-bottom</td>
-    <td>Элементийн доод ирмэгийг тохируулна.</td>
+      <td>margin-bottom</td>
+      <td>Элементийн доод ирмэгийг тохируулна.</td>
     </tr>
     <tr>
-    <td>margin-left</td>
-    <td>Элементийн зүүн захыг тохируулна.</td>
+      <td>margin-left</td>
+      <td>Элементийн зүүн захыг тохируулна.</td>
     </tr>
     <tr>
-    <td>margin-right</td>
-    <td>Элементийн баруун захыг тохируулна.</td>
+      <td>margin-right</td>
+      <td>Элементийн баруун захыг тохируулна.</td>
     </tr>
     <tr>
-    <td>margin-top</td>
-    <td>Элементийн дээд ирмэгийг тохируулна.</td>
+      <td>margin-top</td>
+      <td>Элементийн дээд ирмэгийг тохируулна.</td>
     </tr>
   </table>
 
 </body>
+
 </html>

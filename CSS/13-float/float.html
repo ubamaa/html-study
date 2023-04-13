@@ -1,114 +1,127 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CSS Float</title>
     <style>
-    img {
-        float: right;
-    }
-    img {
-        float: left;
-    }
-    img {
-        float: none;
-    }
-    div {
-        float: left;
-        padding: 15px; 
-    }
+        img {
+            float: right;
+        }
 
-    .div1 {
-        background: red;
-    }
+        img {
+            float: left;
+        }
 
-    .div2 {
-        background: yellow;
-    }
+        img {
+            float: none;
+        }
 
-    .div3 {
-        background: green;
-    }
+        div {
+            float: left;
+            padding: 15px;
+        }
+
+        .div1 {
+            background: red;
+        }
+
+        .div2 {
+            background: yellow;
+        }
+
+        .div3 {
+            background: green;
+        }
     </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Float буцах</a></p>
+    <p><a href="../index.html">Float буцах</a></p>
 
-<h1>CSS Layout - float and clear</h1>
-<p>CSS <b>float</b> шинж чанар нь элемент хэрхэн хөвөхийг зааж өгдөг.</p>
-<p>CSS <b>clear</b> шинж чанар нь цэвэрлэсэн элементийн дэргэд, аль талд нь ямар элементүүд байрлаж болохыг заадаг.</p>
+    <h1>CSS Layout - float and clear</h1>
+    <p>CSS <b>float</b> шинж чанар нь элемент хэрхэн хөвөхийг зааж өгдөг.</p>
+    <p>CSS <b>clear</b> шинж чанар нь цэвэрлэсэн элементийн дэргэд, аль талд нь ямар элементүүд байрлаж болохыг заадаг.
+    </p>
 
-<h2>The float Property</h2>
-<p><b>float</b> шинж чанарыг агуулгыг байршуулахад, форматлахад ашигладаг. <br>
-    (Жишээ нь: дүрсийг блокон текстийн зүүн талд байршуулж болох эсэх).</p>
-<p><i>Float</i> шинж чанар нь дараах утгуудаас авч болно:</p>
-<ul>
-    <li>left - элемент нь агуулгын зүүн талд шилжсэн.</li>
-    <li>right - элемент нь агуулгын баруун талд шилжсэн.</li>
-    <li>none - Энэ нь анхдагч өгөгдөл, байрлал заахгүй (зөвхөн текст байгаа газарт байрлана).</li>
-    <li>inherit - толгой элементийн утгыг өвлөх болно./li>
-</ul>
-<p>Энгийнээр хэлбэл, <b>float</b> шинж чанарыг текстийн эргэн тойронд зургаар хүрээлүүлж болно.</p>
+    <h2>The float Property</h2>
+    <p><b>float</b> шинж чанарыг агуулгыг байршуулахад, форматлахад ашигладаг. <br>
+        (Жишээ нь: дүрсийг блокон текстийн зүүн талд байршуулж болох эсэх).</p>
+    <p><i>Float</i> шинж чанар нь дараах утгуудаас авч болно:</p>
+    <ul>
+        <li>left - элемент нь агуулгын зүүн талд шилжсэн.</li>
+        <li>right - элемент нь агуулгын баруун талд шилжсэн.</li>
+        <li>none - Энэ нь анхдагч өгөгдөл, байрлал заахгүй (зөвхөн текст байгаа газарт байрлана).</li>
+        <li>inherit - толгой элементийн утгыг өвлөх болно./li>
+    </ul>
+    <p>Энгийнээр хэлбэл, <b>float</b> шинж чанарыг текстийн эргэн тойронд зургаар хүрээлүүлж болно.</p>
 
-<h2>Example - float: right;</h2>
-<p>Дараах жишээ нь зураг текстийн баруун талд байрласныг харуулж байна.</p>
-<p><img src="images/7.jpg" alt="the Seven Dwarfs" style="width:350px;height:210px;"> </p>
-<p>&lt;style&gt; <br>
-    <b>img { <br>
-    float: right; <br>
-    }</b> <br>
-    &lt;/style&gt;</p>
-<p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-left:15px;"&gt; ... &lt;/p&gt;</p>
+    <h2>Example - float: right;</h2>
+    <p>Дараах жишээ нь зураг текстийн баруун талд байрласныг харуулж байна.</p>
+    <p><img src="images/7.jpg" alt="the Seven Dwarfs" style="width:350px;height:210px;"> </p>
+    <p>&lt;style&gt; <br>
+        <b>img { <br>
+            float: right; <br>
+            }</b> <br>
+        &lt;/style&gt;
+    </p>
+    <p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-left:15px;"&gt; ...
+        &lt;/p&gt;</p>
 
-<h2>Example - float: left;</h2>
-<p>Дараах жишээн дээр зураг текстийн зүүн талд байрласныг харуулж байна.</p>
-<p><img src="images/rata.jpg" alt="Ratatouille" style="width:140px;height:160px;"> </p>
-<p> &lt;style&gt; <br>
-    <b>img { <br>
-    float: left; <br>
-    }</b> <br>
-    &lt;/style&gt;</p>
-<p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-right:15px;"&gt; ... &lt;/p&gt;</p>
+    <h2>Example - float: left;</h2>
+    <p>Дараах жишээн дээр зураг текстийн зүүн талд байрласныг харуулж байна.</p>
+    <p><img src="images/rata.jpg" alt="Ratatouille" style="width:140px;height:160px;"> </p>
+    <p> &lt;style&gt; <br>
+        <b>img { <br>
+            float: left; <br>
+            }</b> <br>
+        &lt;/style&gt;
+    </p>
+    <p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-right:15px;"&gt;
+        ... &lt;/p&gt;</p>
 
-<h2>Example - No float</h2>
-<p>Дараах жишээн дээр зураг нь текстийн яг байгаа газарт гарч ирж байгаа <i>(float: none;)</i>:</p>
-<p><img src="images/simba.jpg" alt="The Lion King" style="width:170px;height:180px;"></p>
-<p> &lt;style&gt; <br>
-    <b>img { <br>
-    float: none; <br>
-    }</b> <br>
-    &lt;/style&gt;</p>
-<p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px;"&gt; ... &lt;/p&gt;</p>
+    <h2>Example - No float</h2>
+    <p>Дараах жишээн дээр зураг нь текстийн яг байгаа газарт гарч ирж байгаа <i>(float: none;)</i>:</p>
+    <p><img src="images/simba.jpg" alt="The Lion King" style="width:170px;height:180px;"></p>
+    <p> &lt;style&gt; <br>
+        <b>img { <br>
+            float: none; <br>
+            }</b> <br>
+        &lt;/style&gt;
+    </p>
+    <p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px;"&gt; ... &lt;/p&gt;</p>
 
-<h2>Example - Float Next To Each Other</h2>
-<p><b>div</b> элементүүд ихэвчлэн бие биенийхээ дээр байрладаг. 
-    Хэрэв <b>float: left</b>-ийг ашиглавал элементүүдийг зэрэгцүүлэн байрлуулж болно.</p>
-<p>Энэ жишээнд 3-н <b>div</b> бие биенийхээ хажууд зэрэгцэх болно.</p>
-<div class="div1">Div 1</div>
-<div class="div2">Div 2</div>
-<div class="div3">Div 3</div>
-<br><br><br>
-<p>&lt;style&gt; <br>
-    div { <br>
-      float: left; <br>
-      padding: 15px; <br>
-    } <br>
-    <br>
-    .div1 { <br>
-      background: red; v
-    } <br>
-    <br>
-    .div2 { <br>
-      background: yellow; <br>
-    } <br>
-    <br>
-    .div3 { <br>
-      background: green; <br>
-    } <br>
-    &lt;/style&gt;</p>
-<p>&lt;div class="div1">Div 1&lt;/div&gt; <br>
-    &lt;div class="div2">Div 2&lt;/div&gt; <br>
-    &lt;div class="div3">Div 3&lt;/div&gt;</p>
-    
+    <h2>Example - Float Next To Each Other</h2>
+    <p><b>div</b> элементүүд ихэвчлэн бие биенийхээ дээр байрладаг.
+        Хэрэв <b>float: left</b>-ийг ашиглавал элементүүдийг зэрэгцүүлэн байрлуулж болно.</p>
+    <p>Энэ жишээнд 3-н <b>div</b> бие биенийхээ хажууд зэрэгцэх болно.</p>
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+    <br><br><br>
+    <p>&lt;style&gt; <br>
+        div { <br>
+        float: left; <br>
+        padding: 15px; <br>
+        } <br>
+        <br>
+        .div1 { <br>
+        background: red; v
+        } <br>
+        <br>
+        .div2 { <br>
+        background: yellow; <br>
+        } <br>
+        <br>
+        .div3 { <br>
+        background: green; <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
+    <p>&lt;div class="div1">Div 1&lt;/div&gt; <br>
+        &lt;div class="div2">Div 2&lt;/div&gt; <br>
+        &lt;div class="div3">Div 3&lt;/div&gt;</p>
+
 </body>
+
 </html>

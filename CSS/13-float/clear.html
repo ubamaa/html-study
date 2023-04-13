@@ -1,115 +1,125 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CSS Float</title>
-<style>
-    .div1 {
-        float: left;
-        padding: 10px;
-        border: 2px solid #73AD21;
-    }
-        
-    .div2 {
-        padding: 10px;
-        border: 2px solid purple;
-    }
-        
-    .div3 {
-        float: left;
-        padding: 10px;  
-        border: 2px solid #73AD21;
-    }
-        
-    .div4 {
-        padding: 10px;
-        border: 2px solid purple;
-        clear: left;
-    }
+    <style>
+        .div1 {
+            float: left;
+            padding: 10px;
+            border: 2px solid #73AD21;
+        }
 
-    div {
-        border: 2px solid #4CAF50;
-        padding: 5px;
-    }   
+        .div2 {
+            padding: 10px;
+            border: 2px solid purple;
+        }
 
-    .img1 {
-        float: right;
-    }
+        .div3 {
+            float: left;
+            padding: 10px;
+            border: 2px solid #73AD21;
+        }
 
-    .img2 {
-        float: right;
-    }
+        .div4 {
+            padding: 10px;
+            border: 2px solid purple;
+            clear: left;
+        }
 
-    .clearfix {
-        overflow: auto;
-    }
+        div {
+            border: 2px solid #4CAF50;
+            padding: 5px;
+        }
 
-    .img3 {
-        float: right;
-    }   
+        .img1 {
+            float: right;
+        }
 
-    .img4 {
-        float: right;
-    }
+        .img2 {
+            float: right;
+        }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-</style>
+        .clearfix {
+            overflow: auto;
+        }
+
+        .img3 {
+            float: right;
+        }
+
+        .img4 {
+            float: right;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>    
+    <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Layout - clear and clearfix</h1>
-<h2>The clear Property</h2>
-<p><b>float</b> шинж чанарыг ашиглаж байхдаа дараагийн элементийн байрлалыг (баруун, зүүн талд биш) 
-    өөрчлөхийг хүсвэл <b>clear</b> шинж чанарыг ашиглах хэрэгтэй болно.</p>
-<p><b>clear</b> шинж чанар нь <i>float</i> элементийн хажууд байгаа элементэд юу тохиолдохыг зааж өгдөг.</p>
-<p><i>clear</i> шинж чанар нь дараах утгуудын аль нэгийг агуулж болно:</p>
-<ul>
-    <li><b>none</b> - Элементийг зүүн, баруун <i>float</i> элементийн доор байрлуулаагүй. Энэ нь анхдагчаар байгаа.</li>
-    <li><b>left</b> - Элементийг <i>float: left;</i> элементүүдийн доор байрлуулна.</li>
-    <li><b>right</b> - Элементийг <i>float: right;</i> элементүүдийн доор байрлуулна.</li>
-    <li><b>both</b> - Элементийг зүүн болон баруун <i>float</i> элементүүдийн доор байрлуулна.</li>
-    <li><b>inherit</b> - Элемент нь өмнөх элементээсээ <i>clear</i> утгаа авдаг.</li>
-</ul>
-<p>float цэвэрлэхдээ clear-ийг float-тэй тааруулах хэрэгтэй: <br>
-    Хэрэв элемент float: left; байвал clear: left; ашиглах ёстой, <br>
-    float элемент хэвээр байх болно, гэхдээ clear элемент вэб хуудсан дээр түүний доор гарч ирнэ.</p>
-<div class="div1"><b>div1</b> (Without clear)</div>
-<div class="div2"><b>div2</b> - HTML кодын div1-ийн дараа div2 байдгийг анхаарах! 
-    div1 нь float: left; утгатай тул div2 текстэд div1 багтсан байна.</div>
-<br>
-<div class="div3">div3 (With clear)</div>
-<div class="div4">div4 - энд clear: left; утгатай учир div3-н доор байрласан. 
-    clear: left; утга нь float элементүүдээс тусгаарлагдана. Мөн clear: right болон both ашиглаж болно.</div>
+    <h1>CSS Layout - clear and clearfix</h1>
+    <h2>The clear Property</h2>
+    <p><b>float</b> шинж чанарыг ашиглаж байхдаа дараагийн элементийн байрлалыг (баруун, зүүн талд биш)
+        өөрчлөхийг хүсвэл <b>clear</b> шинж чанарыг ашиглах хэрэгтэй болно.</p>
+    <p><b>clear</b> шинж чанар нь <i>float</i> элементийн хажууд байгаа элементэд юу тохиолдохыг зааж өгдөг.</p>
+    <p><i>clear</i> шинж чанар нь дараах утгуудын аль нэгийг агуулж болно:</p>
+    <ul>
+        <li><b>none</b> - Элементийг зүүн, баруун <i>float</i> элементийн доор байрлуулаагүй. Энэ нь анхдагчаар байгаа.
+        </li>
+        <li><b>left</b> - Элементийг <i>float: left;</i> элементүүдийн доор байрлуулна.</li>
+        <li><b>right</b> - Элементийг <i>float: right;</i> элементүүдийн доор байрлуулна.</li>
+        <li><b>both</b> - Элементийг зүүн болон баруун <i>float</i> элементүүдийн доор байрлуулна.</li>
+        <li><b>inherit</b> - Элемент нь өмнөх элементээсээ <i>clear</i> утгаа авдаг.</li>
+    </ul>
+    <p>float цэвэрлэхдээ clear-ийг float-тэй тааруулах хэрэгтэй: <br>
+        Хэрэв элемент float: left; байвал clear: left; ашиглах ёстой, <br>
+        float элемент хэвээр байх болно, гэхдээ clear элемент вэб хуудсан дээр түүний доор гарч ирнэ.</p>
+    <div class="div1"><b>div1</b> (Without clear)</div>
+    <div class="div2"><b>div2</b> - HTML кодын div1-ийн дараа div2 байдгийг анхаарах!
+        div1 нь float: left; утгатай тул div2 текстэд div1 багтсан байна.</div>
+    <br>
+    <div class="div3">div3 (With clear)</div>
+    <div class="div4">div4 - энд clear: left; утгатай учир div3-н доор байрласан.
+        clear: left; утга нь float элементүүдээс тусгаарлагдана. Мөн clear: right болон both ашиглаж болно.</div>
 
-<h2>The clearfix Hack</h2>
-<p>Хэрэв <b>float</b> элемент нь агуулагдах элементээсээ өндөр байвал энэ нь <b>overflow</b> болно.<br>
-    Энэ асуудлыг шийдэхийн тулд <b>clearfix hack</b> нэмж болно:</p>
-<p><b>Without Clearfix</b></p>
-<div>
-<img class="img1" src="images/rata.jpg" alt="Pineapple" width="150" height="160">
-    Энэ зургийг баруун тийш шилжүүлсэн. Мөн агуулах элементийнхээ өмнө гарч блокийн гадна гарсан байна:</div>
-      
-<p style="clear:right"><b>With Clearfix</b></p>
-<div class="clearfix">
-    <img class="img2" src="images/rata.jpg" alt="Pineapple" width="150" height="160">
-    Энэ зургийг агуулсан элементийг <i>clearfix</i>-н <b>overflow: auto;</b> төрлийг нэмж зөв байрлуулсан байна:</div>
-<p><b>overflow: auto;</b> нь засварыг сайн гүйцэтгэж, захын зай болон дүүргэлтийг хянах боломжтой (мөн гүйлгэх зурвасыг нэмж болно).<br>
-    Гэсэн ч <b>new modern clearfix hack</b> нь ашиглахад илүү аюулгүй, мөн ихэнх вэб хуудсанд энэ кодыг ашигладаг.</p>
+    <h2>The clearfix Hack</h2>
+    <p>Хэрэв <b>float</b> элемент нь агуулагдах элементээсээ өндөр байвал энэ нь <b>overflow</b> болно.<br>
+        Энэ асуудлыг шийдэхийн тулд <b>clearfix hack</b> нэмж болно:</p>
+    <p><b>Without Clearfix</b></p>
+    <div>
+        <img class="img1" src="images/rata.jpg" alt="Pineapple" width="150" height="160">
+        Энэ зургийг баруун тийш шилжүүлсэн. Мөн агуулах элементийнхээ өмнө гарч блокийн гадна гарсан байна:
+    </div>
 
-<p><b>Without Clearfix</b></p>
-<div>
-<img class="img3" src="images/simba.jpg" alt="Pineapple" width="170" height="170">
-    Энэ зургийг баруун тийш шилжүүлсэн. Агуулах элементийнхээ дээгүүр байрласан блокийн гадна талд гарсан: </div>
-  
-<p style="clear:right"><b>With New Modern Clearfix</b></p> 
-<div class="clearfix">
-<img class="img4" src="images/simba.jpg" alt="Pineapple" width="170" height="170">
-    Энэ асуудлыг шийдэхийн тулд агуулсан элементэд <b>clearfix hack</b> нэмсэн: </div>
-    
+    <p style="clear:right"><b>With Clearfix</b></p>
+    <div class="clearfix">
+        <img class="img2" src="images/rata.jpg" alt="Pineapple" width="150" height="160">
+        Энэ зургийг агуулсан элементийг <i>clearfix</i>-н <b>overflow: auto;</b> төрлийг нэмж зөв байрлуулсан байна:
+    </div>
+    <p><b>overflow: auto;</b> нь засварыг сайн гүйцэтгэж, захын зай болон дүүргэлтийг хянах боломжтой (мөн гүйлгэх
+        зурвасыг нэмж болно).<br>
+        Гэсэн ч <b>new modern clearfix hack</b> нь ашиглахад илүү аюулгүй, мөн ихэнх вэб хуудсанд энэ кодыг ашигладаг.
+    </p>
+
+    <p><b>Without Clearfix</b></p>
+    <div>
+        <img class="img3" src="images/simba.jpg" alt="Pineapple" width="170" height="170">
+        Энэ зургийг баруун тийш шилжүүлсэн. Агуулах элементийнхээ дээгүүр байрласан блокийн гадна талд гарсан:
+    </div>
+
+    <p style="clear:right"><b>With New Modern Clearfix</b></p>
+    <div class="clearfix">
+        <img class="img4" src="images/simba.jpg" alt="Pineapple" width="170" height="170">
+        Энэ асуудлыг шийдэхийн тулд агуулсан элементэд <b>clearfix hack</b> нэмсэн:
+    </div>
+
 </body>
+
 </html>
