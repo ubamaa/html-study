@@ -1,169 +1,185 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>CSS Selectors</title>
-<style>
-* {
-  text-align: left;
-  color:darkcyan;
-}
-table {
-  border-collapse: collapse;
-  width: 90%;
-}
+  <title>CSS Selectors</title>
+  <style>
+    * {
+      text-align: left;
+      color: darkcyan;
+    }
 
-th, td {
-  padding: 7px;
-  text-align: left;
-  border-bottom: 1px solid #DDD;
-}
+    table {
+      border-collapse: collapse;
+      width: 90%;
+    }
 
-tr:hover {background-color: #D6EEEE;}
-</style>
+    th,
+    td {
+      padding: 7px;
+      text-align: left;
+      border-bottom: 1px solid #DDD;
+    }
+
+    tr:hover {
+      background-color: #D6EEEE;
+    }
+  </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>
+  <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Selectors</h1>
-<p>CSS сонгогч нь таны загварчлахыг хүсэж буй HTML элемент(үүд)-ийг сонгоно.</p>
+  <h1>CSS Selectors</h1>
+  <p>CSS сонгогч нь таны загварчлахыг хүсэж буй HTML элемент(үүд)-ийг сонгоно.</p>
 
-<h2>CSS Selectors</h2>
-<p>CSS сонгогчдыг таван төрөлд хувааж болно.</p>
-<ul>
+  <h2>CSS Selectors</h2>
+  <p>CSS сонгогчдыг таван төрөлд хувааж болно.</p>
+  <ul>
     <li><em>Simple selectors</em> (<b>name, id, class</b> дээр үндэслэн элементүүдийг сонгох)</li>
     <li><em>Combinator selectors</em> (тэдгээрийн хоорондын тодорхой харилцаанд тулгуурлан элементүүдийг сонгох)</li>
     <li><em>Pseudo-class selectors</em> (тодорхой төлөвт тулгуурлан элементүүдийг сонгох)</li>
     <li><em>Pseudo-elements selectors</em> (элементийн хэсгийг сонгож, загварчлах)</li>
     <li><em>Attribute selectors</em> (атрибут эсвэл атрибутын утга дээр үндэслэн элементүүдийг сонгох)</li>
-  </ul>  
-<p>Энэ хуудсанд энгийн CSS сонгогчийг (Simple selectors) тайлбарлах болно.</p>
+  </ul>
+  <p>Энэ хуудсанд энгийн CSS сонгогчийг (Simple selectors) тайлбарлах болно.</p>
 
-<h3>The CSS element Selector</h3>
-<p>Элемент сонгогч нь элементийн <b>name</b> дээр үндэслэн HTML элементүүдийг сонгоно.</p>
-<p><b>&lt;style&gt;</b>  <br>
+  <h3>The CSS element Selector</h3>
+  <p>Элемент сонгогч нь элементийн <b>name</b> дээр үндэслэн HTML элементүүдийг сонгоно.</p>
+  <p><b>&lt;style&gt;</b> <br>
     <mark>p</mark> { <br>
-      text-align: center; <br>
-      color: red; <br>
+    text-align: center; <br>
+    color: red; <br>
     } <br>
-    <b>&lt;/style&gt;</b></p>
+    <b>&lt;/style&gt;</b>
+  </p>
 
-<h3>The CSS id Selector</h3>
-<p><b>id</b> сонгогч нь тодорхой элементийг сонгохдоо HTML элементийн <mark>id</mark> шинж чанарыг ашигладаг.</p>
-<p><b>id</b> элемент нь өвөрмөц тул <mark>id</mark> сонгогчийг нэг элементэд сонгож ашигладаг!</p>
-<p>Тодорхой <b>id</b>-тай элементийг сонгохын тулд хэш (#) тэмдэг бичиж, элементийн <em>id</em>-г оруулна.</p>
-<p><em>Дараах CSS дүрмийг <b>id="para1"</b> бүхий HTML элементэд хэрэглэнэ:</em></p>
+  <h3>The CSS id Selector</h3>
+  <p><b>id</b> сонгогч нь тодорхой элементийг сонгохдоо HTML элементийн <mark>id</mark> шинж чанарыг ашигладаг.</p>
+  <p><b>id</b> элемент нь өвөрмөц тул <mark>id</mark> сонгогчийг нэг элементэд сонгож ашигладаг!</p>
+  <p>Тодорхой <b>id</b>-тай элементийг сонгохын тулд хэш (#) тэмдэг бичиж, элементийн <em>id</em>-г оруулна.</p>
+  <p><em>Дараах CSS дүрмийг <b>id="para1"</b> бүхий HTML элементэд хэрэглэнэ:</em></p>
   <p><b>&lt;style&gt;</b> <br>
     <mark>#para1</mark> { <br>
-      text-align: center; <br>
-      color: red; <br>
+    text-align: center; <br>
+    color: red; <br>
     } <br>
-    <b>&lt;/style&gt;</b>  <br>
-    &lt;p <mark>id="para1"</mark>>Hello World!&lt;/p&gt;</p>
+    <b>&lt;/style&gt;</b> <br>
+    &lt;p <mark>id="para1"</mark>>Hello World!&lt;/p&gt;
+  </p>
 
-<h3>The CSS class Selector</h3>
-<p><b>class</b> сонгогч нь тодорхой <em>class</em> шинж чанартай HTML элементүүдийг сонгоно.</p>
-<p>Тодорхой <b>class</b>-тай элементүүдийг сонгохын тулд цэг (.) тэмдэг, дараа нь <em>class</em> нэрээ бичнэ.</p>
-<p style="font-size: 150%;">Жишээ 1.</p>
-<p><em>Энд <b>class="center"</b>-тэй HTML элементүүд улаан өнгөтэй, төвд зэрэгцсэн байна:</em></p>
-<p><b>&lt;style&gt;</b> <br>
+  <h3>The CSS class Selector</h3>
+  <p><b>class</b> сонгогч нь тодорхой <em>class</em> шинж чанартай HTML элементүүдийг сонгоно.</p>
+  <p>Тодорхой <b>class</b>-тай элементүүдийг сонгохын тулд цэг (.) тэмдэг, дараа нь <em>class</em> нэрээ бичнэ.</p>
+  <p style="font-size: 150%;">Жишээ 1.</p>
+  <p><em>Энд <b>class="center"</b>-тэй HTML элементүүд улаан өнгөтэй, төвд зэрэгцсэн байна:</em></p>
+  <p><b>&lt;style&gt;</b> <br>
     <mark>.center</mark> { <br>
-      text-align: center; <br>
-      color: red; <br>
+    text-align: center; <br>
+    color: red; <br>
     } <br>
     <b>&lt;/style&gt;</b> <br>
     <mark>&lt;h1 class="center"</mark>>Red and center-aligned heading&lt;/h1&gt; <br>
-    <mark>&lt;p class="center"</mark>>Red and center-aligned paragraph.&lt;/p&gt;</p>
-<p style="font-size: 150%;">Жишээ 2.</p>
-<p>Мөн <b>class</b> нь зөвхөн тодорхой HTML элементүүдэд нөлөөлөх ёстойг зааж болно.</p>
-<p><em>Энэ жишээнд <b>class="center"</b>-тэй зөвхөн &lt;p&gt; элементүүд улаан өнгөтэй, төвд зэрэгцсэн байна:</em></p>
-<p><b>&lt;style&gt;</b> <br>
+    <mark>&lt;p class="center"</mark>>Red and center-aligned paragraph.&lt;/p&gt;
+  </p>
+  <p style="font-size: 150%;">Жишээ 2.</p>
+  <p>Мөн <b>class</b> нь зөвхөн тодорхой HTML элементүүдэд нөлөөлөх ёстойг зааж болно.</p>
+  <p><em>Энэ жишээнд <b>class="center"</b>-тэй зөвхөн &lt;p&gt; элементүүд улаан өнгөтэй, төвд зэрэгцсэн байна:</em></p>
+  <p><b>&lt;style&gt;</b> <br>
     <mark>p.center</mark> { <br>
-      text-align: center; <br>
-      color: red; <br>
+    text-align: center; <br>
+    color: red; <br>
     } <br>
     <b>&lt;/style&gt;</b> <br>
     &lt;h1 class="center">This heading will not be affected&lt;/h1&gt; <br>
-    <mark>&lt;p class="center"</mark>>This paragraph will be red and center-aligned.&lt;/p&gt;</p>
-<p style="font-size: 150%;">Жишээ 3.</p>
-<p>HTML элементүүд нь нэгээс олон <b>class</b>-д нөлөөлөх боломжтой.</p>
-<p><em>Энэ жишээнд &lt;p&gt; элементийг <b>class="center", class="large"</b> загварын дагуу загварчилсан байна:</em></p>
-<p><b>&lt;style&gt;</b> <br>
-  p.center { <br>
+    <mark>&lt;p class="center"</mark>>This paragraph will be red and center-aligned.&lt;/p&gt;
+  </p>
+  <p style="font-size: 150%;">Жишээ 3.</p>
+  <p>HTML элементүүд нь нэгээс олон <b>class</b>-д нөлөөлөх боломжтой.</p>
+  <p><em>Энэ жишээнд &lt;p&gt; элементийг <b>class="center", class="large"</b> загварын дагуу загварчилсан байна:</em>
+  </p>
+  <p><b>&lt;style&gt;</b> <br>
+    p.center { <br>
     text-align: center; <br>
     color: red; <br>
-  } <br>
-  <br>
-  p.large { <br>
+    } <br>
+    <br>
+    p.large { <br>
     font-size: 300%; <br>
-  } <br>
-  <b>&lt;/style&gt;</b> <br>
-  <br>
-  &lt;h1 class="center">This heading will not be affected&lt;/h1&gt; <br>
-  <mark>&lt;p class="center"></mark>This paragraph will be red and center-aligned.&lt;/p&gt; <br>
-  <mark>&lt;p class="center large"></mark>This paragraph will be red, center-aligned, and in a large font-size.&lt;/p&gt;</p>
+    } <br>
+    <b>&lt;/style&gt;</b> <br>
+    <br>
+    &lt;h1 class="center">This heading will not be affected&lt;/h1&gt; <br>
+    <mark>&lt;p class="center"></mark>This paragraph will be red and center-aligned.&lt;/p&gt; <br>
+    <mark>&lt;p class="center large"></mark>This paragraph will be red, center-aligned, and in a large
+    font-size.&lt;/p&gt;
+  </p>
 
-<h2>The CSS Universal Selector</h2>
-<p>Universal Selector нь хуудасны бүх HTML элементүүдийг сонгоно. <br>
+  <h2>The CSS Universal Selector</h2>
+  <p>Universal Selector нь хуудасны бүх HTML элементүүдийг сонгоно. <br>
     Үүний тулд (*) тэмдэг ашиглана.</p>
-<p><b>&lt;style&gt;</b> <br>
+  <p><b>&lt;style&gt;</b> <br>
     <mark>*</mark> { <br>
-      text-align: center; <br>
-      color: teal; <br>
+    text-align: center; <br>
+    color: teal; <br>
     } <br>
-    <b>&lt;/style&gt;</b></p>
-<p style="color:crimson">Universal Selector-ээр энэ хуудасны загварыг тодорхойлов!</p>
+    <b>&lt;/style&gt;</b>
+  </p>
+  <p style="color:crimson">Universal Selector-ээр энэ хуудасны загварыг тодорхойлов!</p>
 
-<h2>The CSS Grouping Selector</h2>
-<p>Grouping Selector нь ижил загварын тодорхойлолт бүхий HTML элементүүдийг сонгоно. <br>
+  <h2>The CSS Grouping Selector</h2>
+  <p>Grouping Selector нь ижил загварын тодорхойлолт бүхий HTML элементүүдийг сонгоно. <br>
     Бүлэглэхийн тулд элемент бүрийг таслалаар (,) тусгаарлана.</p>
-<p><em>Дараах CSS кодыг харцгаая (h1, h2, p ижил загварын тодорхойлолттой):</em></p>
-<p><b>&lt;style&gt;</b> <br>
+  <p><em>Дараах CSS кодыг харцгаая (h1, h2, p ижил загварын тодорхойлолттой):</em></p>
+  <p><b>&lt;style&gt;</b> <br>
     <mark>h1, h2, p</mark> { <br>
-      text-align: center; <br>
-      color: red; <br>
+    text-align: center; <br>
+    color: red; <br>
     } <br>
-    <b>&lt;/style&gt;</b></p>
-<p>Бүлэглэх нь бичиглэлийг багасгахад тустай.</p>
-<hr>
-<p style="text-align:center;">All CSS Simple Selectors</p>
-<table>
-  <tr>
-    <th>Selector</th>
-    <th>Example</th>
-    <th>Example description</th>
-  </tr>
-  <tr>
-    <td>#id</td>
-    <td>#firstname</td>
-    <td>id="firstname" элементийг сонгоно.</td>
-  </tr>
-  <tr>
-    <td>.class</td>
-    <td>.intro</td>
-    <td>class="intro" бүхий элементүүдийг сонгоно.</td>
-  </tr>
-  <tr>
-    <td>element.class</td>
-    <td>p.intro</td>
-    <td>Зөвхөн class="intro"-тай &lt;p&gt; элементүүдийг сонгоно.</td>
-  </tr>
-  <tr>
-    <td>*</td>
-    <td>*</td>
-    <td>Бүх элементүүдийг сонгоно.</td>
-  </tr>
-  <tr>
-    <td>element</td>
-    <td>p</td>
-    <td>Бүх &lt;p> элементүүдийг сонгоно.</td>
-  </tr>
-  <tr>
-    <td>elememt,element</td>
-    <td>div, p</td>
-    <td>Бүх &lt;div&gt; болон &lt;p&gt; элементүүдийг сонгоно.</td>
-  </tr>
-</table>
+    <b>&lt;/style&gt;</b>
+  </p>
+  <p>Бүлэглэх нь бичиглэлийг багасгахад тустай.</p>
+  <hr>
+  <p style="text-align:center;font-size: 120%;">All CSS Simple Selectors</p>
+  <table>
+    <tr>
+      <th>Selector</th>
+      <th>Example</th>
+      <th>Example description</th>
+    </tr>
+    <tr>
+      <td>#id</td>
+      <td>#firstname</td>
+      <td>id="firstname" элементийг сонгоно.</td>
+    </tr>
+    <tr>
+      <td>.class</td>
+      <td>.intro</td>
+      <td>class="intro" бүхий элементүүдийг сонгоно.</td>
+    </tr>
+    <tr>
+      <td>element.class</td>
+      <td>p.intro</td>
+      <td>Зөвхөн class="intro"-тай &lt;p&gt; элементүүдийг сонгоно.</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>*</td>
+      <td>Бүх элементүүдийг сонгоно.</td>
+    </tr>
+    <tr>
+      <td>element</td>
+      <td>p</td>
+      <td>Бүх &lt;p> элементүүдийг сонгоно.</td>
+    </tr>
+    <tr>
+      <td>elememt,element</td>
+      <td>div, p</td>
+      <td>Бүх &lt;div&gt; болон &lt;p&gt; элементүүдийг сонгоно.</td>
+    </tr>
+  </table>
 
 </body>
+
 </html>

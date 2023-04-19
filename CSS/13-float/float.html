@@ -4,15 +4,15 @@
 <head>
     <title>CSS Float</title>
     <style>
-        img {
+        img.right {
             float: right;
         }
 
-        img {
+        img.left {
             float: left;
         }
 
-        img {
+        img.none {
             float: none;
         }
 
@@ -32,33 +32,49 @@
         .div3 {
             background: green;
         }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th,
+        td {
+            padding: 7px;
+            text-align: left;
+            border-bottom: 1px solid #DDD;
+        }
+
+        tr:hover {
+            background-color: #D6EEEE;
+        }
     </style>
 </head>
 
 <body>
 
-    <p><a href="../index.html">Float буцах</a></p>
+    <p><a href="../index.html">Index буцах</a></p>
 
     <h1>CSS Layout - float and clear</h1>
     <p>CSS <b>float</b> шинж чанар нь элемент хэрхэн хөвөхийг зааж өгдөг.</p>
-    <p>CSS <b>clear</b> шинж чанар нь цэвэрлэсэн элементийн дэргэд, аль талд нь ямар элементүүд байрлаж болохыг заадаг.
-    </p>
+    <p>CSS <b>clear</b> шинж чанар нь <em>clear</em> элементийн дэргэд, аль талд нь ямар элементүүд байрлаж болохыг
+        заадаг.</p>
 
     <h2>The float Property</h2>
-    <p><b>float</b> шинж чанарыг агуулгыг байршуулахад, форматлахад ашигладаг. <br>
+    <p><b>float</b> шинж чанар нь агуулгыг байршуулахад, форматлахад ашигладаг. <br>
         (Жишээ нь: дүрсийг блокон текстийн зүүн талд байршуулж болох эсэх).</p>
-    <p><i>Float</i> шинж чанар нь дараах утгуудаас авч болно:</p>
+    <p><i>Float</i> шинж чанар нь дараах утгуудыг авч болно:</p>
     <ul>
-        <li>left - элемент нь агуулгын зүүн талд шилжсэн.</li>
-        <li>right - элемент нь агуулгын баруун талд шилжсэн.</li>
-        <li>none - Энэ нь анхдагч өгөгдөл, байрлал заахгүй (зөвхөн текст байгаа газарт байрлана).</li>
-        <li>inherit - толгой элементийн утгыг өвлөх болно./li>
+        <li><b>left</b> - элемент нь агуулгын зүүн талд шилжсэн.</li>
+        <li><b>right</b> - элемент нь агуулгын баруун талд шилжсэн.</li>
+        <li><b>none</b> - Энэ нь анхдагч өгөгдөл, байрлал заахгүй (зөвхөн текст байгаа газарт байрлана).</li>
+        <li><b>inherit</b> - толгой элементийн утгыг өвлөх болно./li>
     </ul>
-    <p>Энгийнээр хэлбэл, <b>float</b> шинж чанарыг текстийн эргэн тойронд зургаар хүрээлүүлж болно.</p>
+    <p>Энгийнээр хэлбэл, <b>float</b> шинж чанарыг текстийн эргэн тойронд зургаар хүрээлүүлэхэд ашиглаж болно.</p>
 
     <h2>Example - float: right;</h2>
     <p>Дараах жишээ нь зураг текстийн баруун талд байрласныг харуулж байна.</p>
-    <p><img src="images/7.jpg" alt="the Seven Dwarfs" style="width:350px;height:210px;"> </p>
+    <p><img class="right" src="images/merida.jpg" alt="Brave" style="width:210px;height:190px;margin-right:350px;"></p>
     <p>&lt;style&gt; <br>
         <b>img { <br>
             float: right; <br>
@@ -68,9 +84,11 @@
     <p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-left:15px;"&gt; ...
         &lt;/p&gt;</p>
 
+    <br>
     <h2>Example - float: left;</h2>
     <p>Дараах жишээн дээр зураг текстийн зүүн талд байрласныг харуулж байна.</p>
-    <p><img src="images/rata.jpg" alt="Ratatouille" style="width:140px;height:160px;"> </p>
+    <p><img class="left" src="images/rata.jpg" alt="Ratatouille" style="width:140px;height:160px;margin-left:50px;">
+    </p>
     <p> &lt;style&gt; <br>
         <b>img { <br>
             float: left; <br>
@@ -80,9 +98,10 @@
     <p>&lt;p&gt;&lt;img src="pineapple.jpg" alt="Pineapple" style="width:170px; height:170px; margin-right:15px;"&gt;
         ... &lt;/p&gt;</p>
 
+    <br><br>
     <h2>Example - No float</h2>
     <p>Дараах жишээн дээр зураг нь текстийн яг байгаа газарт гарч ирж байгаа <i>(float: none;)</i>:</p>
-    <p><img src="images/simba.jpg" alt="The Lion King" style="width:170px;height:180px;"></p>
+    <p><img class="none" src="images/simba.jpg" alt="The Lion King" style="width:170px;height:180px;"></p>
     <p> &lt;style&gt; <br>
         <b>img { <br>
             float: none; <br>
@@ -121,6 +140,40 @@
     <p>&lt;div class="div1">Div 1&lt;/div&gt; <br>
         &lt;div class="div2">Div 2&lt;/div&gt; <br>
         &lt;div class="div3">Div 3&lt;/div&gt;</p>
+    <br>
+    <hr>
+
+    <p style="text-align: center;font-size: 130%;"><b>All CSS Float Properties</b></p>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>box-sizing</td>
+            <td>Элементийн өргөн, өндрийг хэрхэн тооцоолох, тэдгээрт дэвсгэр болон хүрээ оруулах эсэхийг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>clear</td>
+            <td>float элементтэй зэрэгцсэн элементийг хэрхэн байрлахыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>Элемент зүүн, баруун талд байрлах эсвэл огт хөдлөхгүй байхыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>overflow</td>
+            <td>Агуулга нь элементийн ирмэгээс халихад хэрхэн шийдэхийг заах болно.</td>
+        </tr>
+        <tr>
+            <td>overflow-x</td>
+            <td>Хэрэв агуулгын зүүн/баруун ирмэг элементийн агуулгын талбараас гарвал хэрхэн засахыг заана.</td>
+        </tr>
+        <tr>
+            <td>overflow-y</td>
+            <td>Агуулгын дээд/доод ирмэг нь элементийн агуулгын талбараас давах үед хэрхэн засахыг заана.</td>
+        </tr>
+    </table>
 
 </body>
 

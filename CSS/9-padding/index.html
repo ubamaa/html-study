@@ -1,169 +1,187 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>CSS Padding</title>
-    <style>
-        div {
-          border: 1px solid palevioletred;
-          background-color:lemonchiffon;
-          padding-top: 10px;
-          padding-right: 20px;
-          padding-bottom: 10px;
-          padding-left: 5px;
-        }
-      table {
+  <title>CSS Padding</title>
+  <style>
+    div {
+      border: 1px solid palevioletred;
+      background-color: lemonchiffon;
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+    }
+
+    table {
       border-collapse: collapse;
       width: 70%;
-      }
+    }
 
-      th, td {
+    th,
+    td {
       text-align: left;
       padding: 7px;
-      }
+    }
 
-      tr:nth-child(even) {
+    tr:nth-child(even) {
       background-color: #D6EEEE;
-      }
-    </style>
+    }
+  </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>
+  <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Padding</h1>
-<p><b>Padding</b> нь элементийн агуулгын эргэн тойронд, тодорхойлсон хүрээ дотор зай үүсгэхэд ашиглагддаг.</p>
+  <h1>CSS Padding</h1>
+  <p><b>Padding</b> нь элементийн агуулгын эргэн тойронд, тодорхойлсон хүрээ дотор зай үүсгэхэд ашиглагддаг.</p>
 
-<h2>CSS Padding</h2>
-<p>CSS <i>padding</i> шинж чанар нь тодорхой хил дотор элементийн агуулгын эргэн тойронд зай үүсгэхэд ашиглагддаг.</p>
-<p>CSS-ийн тусламжтайгаар <b>padding</b>-ийг бүрэн хянах боломжтой. <br>
+  <h2>CSS Padding</h2>
+  <p><i>CSS padding</i> шинж чанар нь тодорхой хил дотор элементийн агуулгын эргэн тойронд зай үүсгэхэд ашиглагддаг.</p>
+  <p>CSS-ийн тусламжтайгаар <b>padding</b>-ийг бүрэн хянах боломжтой. <br>
     Элементийн тал бүрт (<i>top, right, bottom, left</i>) дотор зайг тохируулах шинж чанарууд байдаг.</p>
 
-<h2>Padding - Individual Sides</h2>
-<p>CSS нь элементийн тал бүрийн зайг заадаг шинж чанартай:</p>
-<div>
-<ul>
-    <li>padding-top</li>
-    <li>padding-right</li>
-    <li>padding-bottom</li>
-    <li>padding-left</li>
-  </ul>
-</div>
-<p><b>Padding</b> нь дараах утгуудтай байж болно.</p>
-<div>
+  <h2>Padding - Individual Sides</h2>
+  <p>CSS нь элементийн тал бүрийн зайг заадаг шинж чанартай:</p>
+  <div>
     <ul>
-        <li>length - px, pt, cm гэх мэт зайг зааж өгнө.</li>
-        <li>% - агуулж буй элементийн өргөний %-ийн дүүргэлтийг зааж өгнө.</li>
-        <li>inherit - зайг эх элементээс өвлөн авах ёстойг заана.</li>
-    </ul>  
-</div>
+      <li><em>padding-top</em></li>
+      <li><em>padding-right</em></li>
+      <li><em>padding-bottom</em></li>
+      <li><em>padding-left</em></li>
+    </ul>
+  </div>
+  <p><b>Padding</b> нь дараах утгуудтай байж болно.</p>
+  <div>
+    <ul>
+      <li><ins>length</ins> - px, pt, cm гэх мэт зайг зааж өгнө.</li>
+      <li><ins>%</ins> - агуулж буй элементийн өргөний %-ийн дүүргэлтийг зааж өгнө.</li>
+      <li><ins>inherit</ins> - зайг эх элементээс өвлөн авах ёстойг заана.</li>
+    </ul>
+  </div>
 
-<h2>Padding - Shorthand Property</h2>
-<p>Кодыг богиносгохын тулд <i>padding</i> шинж чанарыг нэг шинж чанарт зааж өгч болно.</p>
-<p>Padding шинж чанар нь дээр заасан бие даасан padding шинж чанаруудын товчлол шинж чанар юм.</p>
-<p>Тэгэхээр, энэ нь хэрхэн ажилладаг вэ:</p>
-<p>Хэрэв <b>padding</b> 4-н утгатай бол:</p>
-<div><ul>
-    <li>padding: 25px 50px 75px 100px;
-      <ul>
-        <li>top padding is 25px</li>
-        <li>right padding is 50px</li>
-        <li>bottom padding is 75px</li>
-        <li>left padding is 100px</li>
-      </ul>
-    </li>
-    </ul></div>
-<p>Хэрэв <b>padding</b> 3-н утгатай бол:</p>
-<div><ul>
-    <li>padding: 25px 50px 75px;
-      <ul>
-        <li>top padding is 25px</li>
-        <li>right and left paddings are 50px</li>
-        <li>bottom padding is 75px</li>
-      </ul>
-    </li> 
-    </ul></div>
-<p>Хэрэв <b>padding</b> 2 утгатай бол:</p>
-<div><ul>
-    <li>padding: 25px 50px;
-      <ul>
-        <li>top and bottom paddings are 25px</li>
-        <li>right and left paddings are 50px</li>
-      </ul>
-    </li>
-  </ul></div>
-<p>Хэрэв <b>padding</b> 1 утгатай бол:</p>
-<div><ul>
-    <li>padding: 25px;
-      <ul>
-        <li>all four paddings are 25px</li>
-      </ul>
-    </li>
-  </ul></div>
+  <h2>Padding - Shorthand Property</h2>
+  <p>Кодыг богиносгохын тулд <i>padding</i> шинж чанарыг нэг шинж чанарт зааж өгч болно.</p>
+  <p><b>Padding</b> шинж чанар нь дээр заасан бие даасан <i>padding</i> шинж чанаруудын товчлол шинж чанар юм.</p>
+  <p>Тэгэхээр, энэ нь хэрхэн ажилладаг вэ:</p>
+  <p>Хэрэв <b>padding</b> 4-н утгатай бол:</p>
+  <div>
+    <ul>
+      <li>padding: 25px 50px 75px 100px;
+        <ul>
+          <li>top padding is 25px</li>
+          <li>right padding is 50px</li>
+          <li>bottom padding is 75px</li>
+          <li>left padding is 100px</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <p>Хэрэв <b>padding</b> 3-н утгатай бол:</p>
+  <div>
+    <ul>
+      <li>padding: 25px 50px 75px;
+        <ul>
+          <li>top padding is 25px</li>
+          <li>right and left paddings are 50px</li>
+          <li>bottom padding is 75px</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <p>Хэрэв <b>padding</b> 2 утгатай бол:</p>
+  <div>
+    <ul>
+      <li>padding: 25px 50px;
+        <ul>
+          <li>top and bottom paddings are 25px</li>
+          <li>right and left paddings are 50px</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <p>Хэрэв <b>padding</b> 1 утгатай бол:</p>
+  <div>
+    <ul>
+      <li>padding: 25px;
+        <ul>
+          <li>all four paddings are 25px</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 
-<h2>Padding and Element Width</h2>
-<p>CSS <b>width</b> шинж чанар нь элементийн агуулгын талбайн өргөнийг заадаг. <br>
+  <h2>Padding and Element Width</h2>
+  <p>CSS <b>width</b> шинж чанар нь элементийн агуулгын талбайн өргөнийг заадаг. <br>
     Агуулгын талбай нь элементийн (хайрцагны загвар) дүүргэлт, хүрээ, ирмэгийн доторх хэсэг юм.</p>
-<p>Хэрэв элемент заасан өргөнтэй бол тухайн элементийн padding-н хэмжээ элементийн нийт өргөнд нэмэгдэх болно.</p>
-<p>Энд &lt;div&gt; элементэд 300px өргөн өгөгдсөн, padding 25px (баруун + зүүн талын зай = 50px), <br>
+  <p>Хэрэв элемент заасан өргөнтэй бол тухайн элементийн <i>padding</i>-н хэмжээ элементийн нийт өргөнд нэмэгдэх болно.
+  </p>
+  <p>Энд &lt;div&gt; элементэд 300px өргөн өгөгдсөн, padding 25px (баруун + зүүн талын зай = 50px), <br>
     ингээд &lt;div&gt; элементийн бодит өргөн нь 350px болж байна.</p>
-<div>&lt;style&gt; <br>
+  <div>&lt;style&gt; <br>
     div.ex1 { <br>
-      width: 300px; <br>
-      background-color: yellow; <br>
+    width: 300px; <br>
+    background-color: yellow; <br>
     } <br>
     <br>
     div.ex2 { <br>
-      <b>width: 300px; <br>
+    <b>width: 300px; <br>
       padding: 25px;</b> <br>
-      background-color: lightblue; <br>
+    background-color: lightblue; <br>
     } <br>
     &lt;/style&gt; <br>
     &lt;div class="ex1">This div is 300px wide.&lt;/div&gt; <br>
-    &lt;div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.&lt;/div&gt;</div>
-<p><b>Padding</b>-н хэмжээнээс үл хамааран элементийг заасан өргөнтэй нь байлгахын тулд <mark>box-sizing</mark> шинж чанарыг ашиглаж болно. <br>
-  Энэ шинж чанар элементийн бодит өргөнийг хадгалахад хүргэдэг.</p>
-<div>&lt;style&gt; <br>
-  div.ex1 { <br>
+    &lt;div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.&lt;/div&gt;
+  </div>
+  <p><b>Padding</b>-н хэмжээнээс үл хамааран элементийг заасан өргөнтэй нь байлгахын тулд
+    <span style="color:darkorange;font-weight: bold;">box-sizing</span> шинж чанарыг ашиглаж болно. <br>
+    Энэ шинж чанар нь элементийн <b>бодит</b> өргөнийг хадгалахад хүргэдэг.
+  </p>
+  <div>&lt;style&gt; <br>
+    div.ex1 { <br>
     width: 300px; <br>
     background-color: yellow; <br>
-  } <br>
-  <br>
-  div.ex2 { <br>
+    } <br>
+    <br>
+    div.ex2 { <br>
     width: 300px; <br>
     padding: 25px; <br>
     <b>box-sizing: border-box;</b> <br>
     background-color: lightblue; <br>
-  } <br>
-  &lt;/style&gt;</div>
-<hr>
-
+    } <br>
+    &lt;/style&gt;
+  </div>
+  <br><br>
+  <hr>
+  <p style="text-align: center;font-size: 130%;"><b>All CSS Padding Properties</b></p>
   <table>
-  <caption>All CSS Padding Properties</caption>
     <tr>
-    <th>Property</th>
-    <th>Description</th>
+      <th>Property</th>
+      <th>Description</th>
     </tr>
     <tr>
-    <td>padding</td>
-    <td>Бүх шинж чанарыг тохируулсан shorthand шинж чанар.</td>
+      <td>padding</td>
+      <td>Бүх шинж чанарыг тохируулсан shorthand шинж чанар.</td>
     </tr>
     <tr>
-    <td>padding-bottom</td>
-    <td>Элементийн доод зайг тохируулна.</td>
+      <td>padding-bottom</td>
+      <td>Элементийн доод зайг тохируулна.</td>
     </tr>
     <tr>
-    <td>padding-left</td>
-    <td>Элементийн зүүн талын зайг тохируулна.</td>
+      <td>padding-left</td>
+      <td>Элементийн зүүн талын зайг тохируулна.</td>
     </tr>
     <tr>
-    <td>padding-right</td>
-    <td>Элементийн баруун талын зайг тохируулна.</td>
+      <td>padding-right</td>
+      <td>Элементийн баруун талын зайг тохируулна.</td>
     </tr>
     <tr>
-    <td>padding-top</td>
-    <td>Элементийн дээд зайг тохируулна.</td>
+      <td>padding-top</td>
+      <td>Элементийн дээд зайг тохируулна.</td>
     </tr>
   </table>
 
 </body>
+
 </html>

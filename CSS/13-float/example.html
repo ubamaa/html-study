@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Float</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .box {
+        float: left;
+        width: 33.33%;
+        /* three boxes (use 25% for four, and 50% for two, etc) */
+        padding: 30px;
+        /* if you want space between the images */
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .img-container {
+        float: left;
+        width: 33.33%;
+        /* three containers (use 25% for four, and 50% for two, etc) */
+        padding: 3px;
+        /* if you want space between the images */
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: cornflowerblue;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: inline-block;
+        color: indigo;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: mediumpurple;
+    }
+
+    .active {
+        background-color: hsl(300, 76%, 72%);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .header,
+    .footer {
+        background-color: lightblue;
+        color: hsl(0, 100%, 75%);
+        padding: 8px;
+    }
+
+    .column {
+        float: left;
+        padding: 15px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .menu {
+        width: 25%;
+    }
+
+    .content {
+        width: 75%;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        padding: 8px;
+        margin-bottom: 5px;
+        background-color: #33b5e5;
+        color: #ffffff;
+    }
+
+    .menu li:hover {
+        background-color: #0099cc;
+    }
+</style>
+
+<body>
+
+    <p><a href="../index.html">Index буцах</a></p>
+
+    <h1>CSS Layout - Float Examples</h1>
+    <p>Энэ хуудсанд нийтлэг <b>float</b> жишээнүүд багтсан болно.</p>
+
+    <h2>Grid of Boxes / Equal Width Boxes</h2>
+    <p><b>float</b> тусламжтайгаар агуулгын блокуудыг бие биенийхээ хажууд байрлуулахад хялбар байдаг.</p>
+    <p><b>Ижил өргөнтэй, зэрэгцсэн хайрцагнууд</b></p>
+    <div class="clearfix">
+        <div class="box" style="background-color:rgba(255, 99, 71, 0.6)">
+            <p><b>Note:</b> Ийм бүтцийг хийхэд <b>clearfix hack</b> ашигладаг. Мөн <b>box-sizing</b>
+                шинж чанарыг ашигласнаар хайрцаг нь нэмэлт дүүргэлтээс болж эвдэрч гэмтэхгүй.</p>
+        </div>
+        <div class="box" style="background-color:rgba(255, 99, 71, 0.4)">
+            <p><b>Note:</b> Ийм бүтцийг хийхэд <b>clearfix hack</b> ашигладаг. Мөн <b>box-sizing</b>
+                шинж чанарыг ашигласнаар хайрцаг нь нэмэлт дүүргэлтээс болж эвдэрч гэмтэхгүй.</p>
+        </div>
+        <div class="box" style="background-color:rgba(255, 99, 71, 0.2)">
+            <p><b>Note:</b> Ийм бүтцийг хийхэд <b>clearfix hack</b> ашигладаг. Мөн <b>box-sizing</b>
+                шинж чанарыг ашигласнаар хайрцаг нь нэмэлт дүүргэлтээс болж эвдэрч гэмтэхгүй.</p>
+        </div>
+    </div>
+    <br>
+    <p><b>What is box-sizing?</b> <br>
+        3-н <i>float</i> хайрцгийг зэрэгцүүлэн хялбархан үүсгэж болно. Гэсэн ч, блок бүрийн өргөнийг
+        (мөн бусад padding, border гэх мэт) нэмэхэд блок эвдэрдэг. <br>
+        <b>box-sizing</b> шинж чанар нь блокийг гэмтээхгүйн тулд <b>padding</b> дотор блокийн нийт
+        <i>width, height</i> болон <i>padding, border</i>-уудыг багтаасан байдаг.
+    </p>
+
+    <h2>Images Side By Side</h2>
+    <p>Зургийг зэрэгцүүлэн харуулахын тулд хайрцагны сүлжээг ашиглаж болно:</p>
+    <div class="clearfix">
+        <div class="img-container">
+            <img src="images/lion.jpg" alt="The Lion King" style="width:90%">
+        </div>
+        <div class="img-container">
+            <img src="images/may.jpg" alt="The Jungle Book" style="width:90%">
+        </div>
+        <div class="img-container">
+            <img src="images/panda.jpg" alt="Kung Fu panda" style="width:90%">
+        </div>
+    </div>
+    <p><b>clearfix hack</b>-ийг форматын явцыг хянахын тулд ашиглаж байгаа, мөн зургийн блокийг нэмэлт
+        <i>padding</i>-ээс хамгаалж баталгаажуулан <b>box-sizing</b> шинж чанарыг нэмснийг анхаар!
+    </p>
+
+    <h2>Equal Height Boxes</h2>
+    <p>Өмнөх жишээнд ижил өргөнтэй блокуудыг зэрэгцүүлэн байрлуулахыг сурсан.
+        Ижил өндөртэй <b>float</b> блокийг бүтээх нь тийм ч хялбар биш. <br>
+        Хурдан шийдэл бол доорх жишээн дэх тогтмол өндрийг тохируулах явдал юм.</p>
+
+    <h2>Navigation Menu</h2>
+    <p>Хэвтээ цэс үүсгэхийн тулд <b>float</b>-ийг гипер холбоосын жагсаалттай ашиглаж болно:</p>
+    <ul>
+        <li><a href="#home" class="active">Tutorials</a></li>
+        <li><a href="#news">HTML Tutorial</a></li>
+        <li><a href="#contact">CSS Tutorial</a></li>
+        <li><a href="#about">Үүсгэн байгуулагч</a></li>
+    </ul>
+
+    <h2>Web Layout Example</h2>
+    <p>Мөн <b>float</b> шинж чанарыг ашиглан вэб хуудасны бүтцийг хийх нь түгээмэл байдаг:</p>
+    <div class="header">
+        <h1>Программ бичиж сурсан түүх</h1>
+    </div>
+
+    <div class="clearfix">
+        <div class="column menu">
+            <ul>
+                <li>CSS Tutorial</li>
+                <li>HTML Tutorial</li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>Танилцуулга</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p><b>Та бүхэнд баярлалаа!</b></p>
+    </div>
+
+</body>
+
+</html>

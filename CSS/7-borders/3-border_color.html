@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Borders</title>
+  <style>
+    p.one {
+      border-style: solid;
+      border-color: red;
+      padding: 5px;
+    }
+
+    p.two {
+      border-style: double;
+      border-color: green;
+      padding: 5px;
+    }
+
+    p.three {
+      border-style: dotted;
+      border-color: blue;
+      padding: 5px;
+    }
+
+    p.four {
+      border-style: solid;
+      border-color: red green blue yellow;
+      padding: 5px;
+      /* red top, green right, blue bottom and yellow left */
+    }
+
+    p.five {
+      border-style: solid;
+      border-color: #6a5acd;
+      padding: 5px;
+      /* red */
+    }
+
+    p.sex {
+      border-style: solid;
+      border-color: rgb(238, 130, 238);
+      padding: 5px;
+      /* blue */
+    }
+
+    p.seven {
+      border-style: solid;
+      border-color: hsl(0, 0%, 73%);
+      padding: 5px;
+      /* grey */
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="../index.html">Index буцах</a></p>
+
+  <h1>CSS Borders</h1>
+  <h2>CSS Border Color</h2>
+  <p><b>border-color</b> шинж чанарыг хүрээний өнгийг тохируулахад ашигладаг.</p>
+  <p>Хүрээний өнгийг дараах байдлаар тохируулж болно:</p>
+  <ul>
+    <li><b>namn</b> - өнгөний нэрийг зааж өгч болно.</li>
+    <li><b>HEX</b> - HEX утгыг зааж өгөх "#ff0000" г. м.</li>
+    <li><b>RGB</b> - RGB утгыг зааж өгөх "rgb(255,0,0)" г. м.</li>
+    <li><b>HSL</b> - HSL утгыг зааж өгөх "hsl(0, 100%, 50%)" г. м.</li>
+    <li><b>transparent</b></li>
+  </ul>
+  <p><b>Note:</b> <em>border-color</em> нь дангаараа ашиглагдахгүй, <em>border-style</em> эхэнд тодорхойлогдоно. <br>
+    Мөн хүрээний өнгийг тохируулаагүй бол тухайн элементийн өнгийг өвлөнө.</p>
+
+  <p class="one">Хүрээ - <i>border-style: solid; border-color: red;</i></p>
+  <p class="two">Хүрээ - <i>border-style: double; border-color: green;</i></p>
+  <p class="three">Хүрээ - <i>border-style: dotted; border-color: blue;</i></p>
+
+  <h2>Specific Side Colors</h2>
+  <p><b>border-color</b> нь 4-н утгатай:</p>
+  <ul style="list-style-type:square;">
+    <li><i>top border</i></li>
+    <li><i>right border</i></li>
+    <li><i>bottom border</i></li>
+    <li><i>left border</i></li>
+  </ul>
+  <p>Тиймээс 4-н талын хилийг өөр өөр өнгөөр тодорхойлж болно.</p>
+  <p class="four">Хүрээ - <i>border-style: solid; border-color: red green blue yellow;</i> (red top, green right, blue
+    bottom, yellow left)</p>
+
+  <h2>HEX Values</h2>
+  <p>Хүрээний өнгийг зургаан оронтой <b>(HEX)</b> ашиглан тодорхойлж болно.</p>
+  <p class="five">Хүрээ - <i>border-style: solid; border-color: #6a5acd;</i></p>
+
+  <h2>RGB Values</h2>
+  <p>Хүрээний өнгийг <b>RGB</b> утгыг ашиглан зааж өгч болно:</p>
+  <p class="sex">Хүрээ - <i>border-style: solid; border-color: rgb(238, 130, 238);</i></p>
+
+  <h2>HSL Values</h2>
+  <p>Мөн <b>HSL</b> утгыг ашиглаж болно.</p>
+  <p class="seven">Хүрээ - <i>border-style: solid; border-color: hsl(0, 0%, 73%);</i></p>
+
+</body>
+
+</html>

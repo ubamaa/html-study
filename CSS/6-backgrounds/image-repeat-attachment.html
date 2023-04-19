@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Backgrounds</title>
+  <style>
+    body {
+      background-image: url("images/ist.jpg"), url("images/butterfly.jpg");
+      background-repeat: repeat-y;
+    }
+
+    p.a {
+      background-image: url("images/bak.jpg");
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    tr {
+      border-bottom: 1px solid violet;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="../index.html">Index буцах</a></p>
+
+  <h1 style="text-align: center;">CSS Background Image</h1>
+  <h2>CSS background-image</h2>
+
+  <p><b>Background-image</b> шинж чанар нь элементийн дэвсгэр болгон ашиглах зургийг зааж өгдөг. <br>
+    <i>Анхдагч байдлаар</i>, дэвсгэр зураг давтагддаг тул бүтэн элементийг хамарна.
+  </p>
+  <p>Арын дэвсгэр зургийг &lt;p&gt; элемент гэх мэт тодорхой элементэд тохируулж болно:</p>
+  <p class="a">Текст болон дэвсгэр зургийн хослолыг зөв тохируулахгүй бол текстийг уншихад хэцүү болно. <br>
+    <b>Note:</b> Дэвсгэр зургийг сонгохдоо текстэнд саад учруулахгүй зургийг ашиглах хэрэгтэй.
+  </p>
+  <br>
+  <p style="text-align:center;font-size: 120%;"><b>The CSS Background Image Property</b></p>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>background-image</td>
+      <td>Элементийн дэвсгэр зургийг тохируулна.</td>
+    </tr>
+  </table>
+  <br><br>
+  <hr>
+
+  <h1 style="text-align: center;">CSS Background Image Repeat</h1>
+  <h2>CSS background-repeat</h2>
+  <p><i>Анхдагч байдлаар</i>, <b>background-image</b> шинж чанар нь дэвсгэр зургийг хуудасны зүүн дээд буланд
+    байрлуулж, босоо болон хэвтээ байдлаар давтдаг.</p>
+  <p><i>background-repeat:</i> нь дэвсгэрийн давталтыг тохируулна:</p>
+  <p><i>background-repeat: no-repeat;</i> - Дэвсгэр зургийг зөвхөн нэг удаа давтах шинж чанараар тодорхойлогдсон.</p>
+  <p><i>background-repeat: repeat-x;</i> - Зураг хэвтээ байдлаар давтагдана.</p>
+  <p><i>background-repeat: repeat-y;</i> - Зураг босоо байдлаар давтагдана.</p>
+  <p>Зарим зургийг зөвхөн хэвтээ эсвэл босоо байдлаар давтахгүй бол дэвсгэр хачирхалтай харагддаг.
+    Энэ нь текст болон зургийн хослолыг илүү сайн харагдуулахад тустай.</p>
+
+  <h2>CSS background-position</h2>
+  <p><b>background-position:</b> шинж чанарыг дэвсгэр зургийн байрлалыг тодорхойлоход ашигладаг.</p>
+  <p>Энэ жишээн дээр дэвсгэр зурагт зөвхөн 1 удаа давтагдаж, баруун талд байрлан, текстэд баруун захын зай нэмсэн байна.
+  </p>
+  <p>&lt;style&gt; <br>
+    body { <br>
+    background-image: url("img_tree.png"); <br>
+    background-repeat: no-repeat; <br>
+    <b>background-position: right top;</b> <br>
+    margin-right: 200px; <br>
+    } <br>
+    &lt;/style&gt;
+  </p>
+
+  <p style="text-align:center; font-size: 130%;"><b>The CSS Background Repeat and Position Properties</b></p>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>background-position</td>
+      <td>Арын дэвсгэр зургийн эхлэлийн байрлалыг тохируулна.</td>
+    </tr>
+    <tr>
+      <td>background-repeat</td>
+      <td>Арын дэвсгэр зураг хэрхэн давтагдахыг тохируулна.</td>
+    </tr>
+  </table>
+  <br><br>
+  <hr>
+
+  <h1 style="text-align: center;">CSS Background Attachment</h1>
+  <h2>CSS background-attachment</h2>
+  <p><b>background-attachment:</b> шинж чанар нь дэвсгэр зургийг гүйлгэх эсвэл байрлалаа хадгалах эсэхийг заадаг <br>
+    (хуудасны үлдсэн хэсэгтэй хамт гүйлгэхгүй).</p>
+  <p><b>background-attachment: fixed;</b> - дэвсгэр зургийг хуудастай хамт гүйлгэнэ.</p>
+  <p>&lt;style&gt; <br>
+    body { <br>
+    background-image: url("img_tree.png"); <br>
+    background-repeat: no-repeat; <br>
+    background-position: right top; <br>
+    margin-right: 200px; <br>
+    <b>background-attachment: fixed;</b> <br>
+    } <br>
+    &lt;/style&gt;
+  </p>
+  <p><b>background-attachment: scroll;</b> - дэвсгэр зураг хуудастай гүйхгүй.</p>
+  <p>&lt;style&gt; <br>
+    body { <br>
+    background-image: url("img_tree.png"); <br>
+    background-repeat: no-repeat; <br>
+    background-position: right top; <br>
+    margin-right: 200px; <br>
+    <b>background-attachment: scroll;</b> <br>
+    } <br>
+    &lt;/style&gt;
+  </p>
+  <p style="text-align:center; font-size: 130%;"><b>The CSS Background Attachment Property</b></p>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>background-attachment</td>
+      <td>Дэвсгэр зургийг хуудастай хамт гүйлгэх эсэхийг тохируулна.</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

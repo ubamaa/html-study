@@ -1,165 +1,183 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CSS Display</title>
     <style>
         li {
-          display: inline;
-        }
-        span {
-        display: block;
-        }
-        a {
-        display: block;
-        }
-        table {
-        border-collapse: collapse;
-        width: 70%;
+            display: inline;
         }
 
-        th, td {
-        text-align: left;
-        padding: 7px;
+        span {
+            display: block;
+        }
+
+        a {
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 5px;
         }
 
         tr:nth-child(odd) {
-        background-color: #D6EEEE;
+            background-color: #D6EEEE;
         }
     </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>
+    <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Layout - The display Property</h1>
-<p><b>Display</b> шинж чанар нь байршлыг хянах хамгийн чухал CSS шинж чанар юм.</p>
+    <h1>CSS Layout - The display Property</h1>
+    <p><b>Display</b> шинж чанар нь байршлыг хянах хамгийн чухал CSS шинж чанар юм.</p>
 
-<h2>The display Property</h2>
-<p><i>Display</i> шинж чанар нь тухайн элементийг хэрхэн харуулахыг заадаг.</p>
-<p>HTML элемент бүр элементийн төрлөөс хамааран өгөгдмөл дэлгэцийн утгатай байна. <br>
-    Ихэнх элементийн дэлгэцийн өгөгдмөл утга нь <b>block</b> эсвэл <b>inline</b> юм.</p>
+    <h2>The display Property</h2>
+    <p><i>Display</i> шинж чанар нь тухайн элементийг хэрхэн харуулахыг заадаг.</p>
+    <p>HTML элемент бүр элементийн төрлөөс хамааран өгөгдмөл дэлгэцийн утгатай байна. <br>
+        Ихэнх элементийн дэлгэцийн өгөгдмөл утга нь <b>block</b> эсвэл <b>inline</b> юм.</p>
 
-<h2>Block-level Elements</h2>
-<p><b>Block-level</b> нь үргэлж шинэ мөрөнд эхэлдэг бөгөөд боломжтой өргөнийг эзэлдэг (баруун, зүүн тийш сунадаг).</p>
-<p><i>Block</i> түвшний элементүүдийн жишээ:</p>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;div&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;h1&gt; - &lt;h6&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;p&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;table&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dd&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dt&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;hr&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;pre&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ol&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;li&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ul&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;form&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;header&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;footer&gt;</div>
-<div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;main&gt;</div>
+    <h2>Block-level Elements</h2>
+    <p><b>Block-level</b> нь үргэлж шинэ мөрөнд эхэлдэг бөгөөд боломжтой өргөнийг эзэлдэг (баруун, зүүн тийш сунадаг).
+    </p>
+    <p><i>Block</i> түвшний элементүүдийн жишээ:</p>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;div&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;h1&gt; - &lt;h6&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;p&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;table&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dd&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dt&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;hr&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;pre&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ol&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;li&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ul&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;form&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;header&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;footer&gt;</div>
+    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;main&gt;</div>
 
-<h2>Inline Elements</h2>
-<p><b>Inline</b> элемент нь шинэ мөрөнд эхэлдэггүй бөгөөд зөвхөн шаардлагатай хэмжээгээр өргөнийг эзэлдэг.</p>
-<p><i>Inline</i> элементүүдийн жишээ:</p>
-<span style="color:lightcoral;font-weight:bold;">&lt;span&gt;</span>
-<span style="color:lightcoral;font-weight:bold;">&lt;a&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;img&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;button&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;sup&gt;</span>
-<span style="color:lightcoral;font-weight:bold;">&lt;abbr&gt;</span>
-<span style="color:lightcoral;font-weight:bold;">&lt;cite&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;script&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;b&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;map&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;small&gt;</span>
-<span style="color:lightcoral;font-weight:bold;">&lt;bdo&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;em&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;i&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;strong&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;q&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;sub&gt;</span> 
-<span style="color:lightcoral;font-weight:bold;">&lt;br&gt;</span> 
+    <h2>Inline Elements</h2>
+    <p><b>Inline</b> элемент нь шинэ мөрөнд эхэлдэггүй бөгөөд зөвхөн шаардлагатай хэмжээгээр өргөнийг эзэлдэг.</p>
+    <p><i>Inline</i> элементүүдийн жишээ:</p>
+    <span style="color:lightcoral;font-weight:bold;">&lt;span&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;a&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;img&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;button&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;sup&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;abbr&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;cite&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;script&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;b&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;map&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;small&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;bdo&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;em&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;i&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;strong&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;q&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;sub&gt;</span>
+    <span style="color:lightcoral;font-weight:bold;">&lt;br&gt;</span>
 
-<h2>Display: none;</h2>
-<p><b>display:none</b> нь JavaScript-д элементүүдийг устгах, дахин үүсгэхгүйгээр нуух, харуулах зорилгоор ихэвчлэн хэрэглэгддэг.</p>
-<p>&lt;script&gt; элемент нь <b>display: none;</b>-г анхдагч байдлаар ашигладаг.</p>
+    <h2>Display: none;</h2>
+    <p><b>display:none</b> нь JavaScript-д элементүүдийг устгах, дахин үүсгэхгүйгээр нуух, харуулах зорилгоор ихэвчлэн
+        хэрэглэгддэг.</p>
+    <p>&lt;script&gt; элемент нь <b>display: none;</b>-г анхдагч байдлаар ашигладаг.</p>
 
-<h2>Override The Default Display Value</h2>
-<p>Дээр дурдсанчлан, элемент бүр өгөгдмөл дэлгэцийн утгатай байдаг. Гэсэн хэдий ч үүнийг дарж болно.</p>
-<p>Inline элементийг Block элементээр солих (эсвэл эсрэгээр) нь вэб стандартад нийцсэн хуудсыг онцгой харагдуулахад тустай.</p>
-<p style="font-size: 150%;">Жишээ 1.</p>
-<p>Нийтлэг жишээ бол хэвтээ цэсэнд Inline <b>&lt;li&gt;</b> элементүүдийг үүсгэх явдал юм. <br>
-    Холбоосуудын жагсаалтыг хэвтээ цэс хэлбэрээр харуулах:</p>
+    <h2>Override The Default Display Value</h2>
+    <p>Дээр дурдсанчлан, элемент бүр өгөгдмөл дэлгэцийн утгатай байдаг. Гэсэн хэдий ч үүнийг дарж болно.</p>
+    <p>Inline элементийг Block элементээр солих (эсвэл эсрэгээр) нь вэб стандартад нийцсэн хуудсыг онцгой харагдуулахад
+        тустай.</p>
+    <p style="font-size: 150%;">Жишээ 1.</p>
+    <p>Нийтлэг жишээ бол хэвтээ цэсэнд Inline <b>&lt;li&gt;</b> элементүүдийг үүсгэх явдал юм. <br>
+        Холбоосуудын жагсаалтыг хэвтээ цэс хэлбэрээр харуулах:</p>
     <ul>
         <li><a href="/html/default.asp" target="_blank">HTML</a></li>
         <li><a href="/css/default.asp" target="_blank">CSS</a></li>
         <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
     </ul>
-<p>&lt;style&gt; <br>
-    li { <br>
-      display: inline; <br>
-    } <br>
-    &lt;/style&gt;</p>
-<p><b>Note:</b> Элементийн <b>displays</b> шинж чанарыг тохируулах нь элементийн төрлийг БИШ зөвхөн тухайн элементийг хэрхэн харуулахыг өөрчилдөг.<br>
-    Тэгэхээр, <b>display:none</b> бүхий Inline элемент дотор бусад Block элемент байхыг хориглоно.</p> 
-<p style="font-size: 150%;">Жишээ 2.</p>
-<p>Дараах жишээнд <b>&lt;span&gt;</b> элементүүдийг <i>Block</i> элемент болгон үзүүлэв:</p>
-<p>&lt;style&gt; <br>
-    <b>span { <br>
-    display: block;</b> <br>
-    } <br>
-    &lt;/style&gt; <br>
-    <br>
-    <span>A display property with</span><span>a value of "block" results in</span>
-    <span>a line break between each span elements.</span></p>
-<p style="font-size: 150%;">Жишээ 3.</p>
-<p>Дараах жишээнд <b>&lt;a&gt;</b> элементүүдийг <i>Block</i> элемент болгон үзүүлэв:</p>
-<p>&lt;style&gt; <br>
-    <b>a { <br>
-      display: block;</b> <br>
-    } <br>
-    &lt;/style&gt;</p>
+    <p>&lt;style&gt; <br>
+        li { <br>
+        display: inline; <br>
+        } <br>
+        &lt;/style&gt;</p>
+    <p><b>Note:</b> Элементийн <b>displays</b> шинж чанарыг тохируулах нь элементийн төрлийг БИШ зөвхөн тухайн
+        элементийг хэрхэн харуулахыг өөрчилдөг.<br>
+        Тэгэхээр, <b>display:none</b> бүхий Inline элемент дотор бусад Block элемент байхыг хориглоно.</p>
+    <p style="font-size: 150%;">Жишээ 2.</p>
+    <p>Дараах жишээнд <b>&lt;span&gt;</b> элементүүдийг <i>Block</i> элемент болгон үзүүлэв:</p>
+    <p>&lt;style&gt; <br>
+        <b>span { <br>
+            display: block;</b> <br>
+        } <br>
+        &lt;/style&gt; <br>
+        <br>
+        <span>A display property with</span><span>a value of "block" results in</span>
+        <span>a line break between each span elements.</span>
+    </p>
+    <p style="font-size: 150%;">Жишээ 3.</p>
+    <p>Дараах жишээнд <b>&lt;a&gt;</b> элементүүдийг <i>Block</i> элемент болгон үзүүлэв:</p>
+    <p>&lt;style&gt; <br>
+        <b>a { <br>
+            display: block;</b> <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
     <a href="/html/default.asp" target="_blank">HTML</a>
     <a href="/css/default.asp" target="_blank">CSS</a>
     <a href="/js/default.asp" target="_blank">JavaScript</a>
 
-<h2>Hide an Element - display:none or visibility:hidden?</h2>
-<p style="font-size: 150%;">Жишээ 1.</p>
-<p><b>display: none;</b> гэж тохируулснаар элементийг нууж болно. Элемент нуугдаж, хуудас нь элемент байхгүй мэт харагдах болно:</p>
-<p>&lt;style> <br>
-    <b>h1.hidden { <br>
-        display: none; <br>
-    }</b> <br>
-    &lt;/style> <br>
+    <h2>Hide an Element - display:none or visibility:hidden?</h2>
+    <p style="font-size: 150%;">Жишээ 1.</p>
+    <p><b>display: none;</b> гэж тохируулснаар элементийг нууж болно. Элемент нуугдаж, хуудас нь элемент байхгүй мэт
+        харагдах болно:</p>
+    <p>&lt;style> <br>
+        <b>h1.hidden { <br>
+            display: none; <br>
+            }</b> <br>
+        &lt;/style> <br>
+        <br>
+        <mark>&lt;h1 class="hidden">This is a hidden heading&lt;/h1></mark> <br>
+        &lt;p>Notice that the h1 element with display: none; does not take up any space.&lt;/p>
+    </p>
+    <p style="font-size: 150%;">Жишээ 2.</p>
+    <p><b>visibility:hidden;</b> мөн элементийг нуудаг. Элемент нуугдах боловч байршилд нөлөөлж зайгаа хадгалсан хэвээр
+        байна.</p>
+    <p>&lt;style> <br>
+        <b>h1.hidden { <br>
+            visibility: hidden; <br>
+            }</b> <br>
+        &lt;/style> <br>
+        <br>
+        <mark>&lt;h1 class="hidden">This is a hidden heading&lt;/h1></mark> <br>
+        &lt;p>Notice that the hidden heading still takes up space.&lt;/p>
+    </p>
     <br>
-    <mark>&lt;h1 class="hidden">This is a hidden heading&lt;/h1></mark> <br>
-    &lt;p>Notice that the h1 element with display: none; does not take up any space.&lt;/p></p>
-<p style="font-size: 150%;">Жишээ 2.</p>
-<p><b>visibility:hidden;</b> мөн элементийг нуудаг. Элемент нуугдах боловч байршилд нөлөөлж зайгаа хадгалсан хэвээр байна.</p>
-<p>&lt;style> <br>
-    <b>h1.hidden { <br>
-    visibility: hidden; <br>
-    }</b> <br>
-    &lt;/style> <br>
-    <br>
-    <mark>&lt;h1 class="hidden">This is a hidden heading&lt;/h1></mark> <br>
-    &lt;p>Notice that the hidden heading still takes up space.&lt;/p></p>
-<hr>
-<table>
-    <caption>CSS Display/Visibility Properties</caption>
-    <tr>
-    <th>Property</th>
-    <th>Description</th>
-    </tr>
-    <tr>
-    <td>display</td>
-    <td>Элементийг хэрхэн харуулахыг зааж өгнө.</td>
-    </tr>
-    <tr>
-    <td>visibility</td>
-    <td>Элемент харагдах эсэхийг зааж өгнө.</td>
-    </tr>
-</table>  
+    <hr>
+    <p style="text-align: center;font-size: 130%;"><b>CSS Display/Visibility Properties</b></p>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>Элементийг хэрхэн харуулахыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>visibility</td>
+            <td>Элемент харагдах эсэхийг зааж өгнө.</td>
+        </tr>
+    </table>
 
 </body>
+
 </html>

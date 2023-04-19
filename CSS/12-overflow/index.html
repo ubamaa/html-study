@@ -1,177 +1,202 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CSS Overflow</title>
-<style>
-    div {
-        background-color:aquamarine;
-        width: 230px;
-        height: 65px;
-        border: 1px solid;
-        overflow: visible;
-    }
-    div.a {
-        background-color:lightsalmon;
-        width: 230px;
-        height: 65px;
-        border: 1px solid black;
-        overflow: hidden;
-    }
-    div.b {
-        background-color:limegreen;
-        width: 230px;
-        height: 65px;
-        border: 1px solid black;
-        overflow: scroll;
-    }
-    div.c {
-        background-color:gold;
-        width: 230px;
-        height: 65px;
-        border: 1px solid black;
-        overflow: auto;
-    }
-    div.d {
-        background-color:hotpink;
-        width: 230px;
-        height: 65px;
-        border: 1px solid black;
-        overflow-x: hidden;
-        overflow-y: scroll;
-    }
-    table {
-        border-collapse: collapse;
-        width: 90%;
-    }
+    <style>
+        div {
+            background-color: aquamarine;
+            width: 230px;
+            height: 65px;
+            border: 1px solid;
+            overflow: visible;
+            margin-left: 30px;
+        }
 
-    th, td {
-        text-align: left;
-        padding: 8px;
-    }
+        div.a {
+            background-color: lightsalmon;
+            width: 230px;
+            height: 65px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
 
-    tr:nth-child(even) {
-        background-color: #D6EEEE;
-    }
+        div.b {
+            background-color: limegreen;
+            width: 230px;
+            height: 65px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        div.c {
+            background-color: gold;
+            width: 230px;
+            height: 65px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+        div.d {
+            background-color: hotpink;
+            width: 230px;
+            height: 65px;
+            border: 1px solid black;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 7px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #D6EEEE;
+        }
     </style>
 </head>
+
 <body>
 
-<p><a href="../index.html">Index буцах</a></p>
+    <p><a href="../index.html">Index буцах</a></p>
 
-<h1>CSS Layout - Overflow</h1>
-<p><b>Overflow</b> CSS шинж чанар нь тухайн талбайд багтахгүй том контентыг хэрхэн багтаах аргыг заадаг.</p>
+    <h1>CSS Layout - Overflow</h1>
+    <p><b>Overflow</b> CSS шинж чанар нь тухайн талбайд багтахгүй том контентыг хэрхэн багтаах аргыг заадаг.</p>
 
-<h2>CSS Overflow</h2>
-<p><b>Overflow</b> шинж чанар нь контентийн агуулга заасан хэсэгт багтахааргүй бол контентыг таслах эсвэл гүйлгэх зурвас нэмэх эсэхийг тодорхойлдог.</p>
-<p><i>Overflow</i> шинж чанар нь дараах утгатай байна:</p>
-<ul>
-    <li><a href="#1"><b>visible</b></a> - Өгөгдмөл. Агуулгын халилтыг таслахгүй. Агуулгыг блокийн захаас гадуур харуулна.</li>
-    <li><a href="#2"><b>hidden</b></a> - агуулгын халилтыг тайрч, энэ хэсэг харагдахгүй болно.</li>
-    <li><a href="#3"><b>scroll</b></a> - агуулгын халилт таслагдаж, энэ хэсгийг харуулахын тулд гүйлгэх зурвас нэмнэ.</li>
-    <li><a href="#4"><b>auto</b></a> - <i>scroll</i>-тэй төстэй боловч зөвхөн шаардлагатай үед гүйлгэх мөрийг нэмнэ.</li>
-</ul>
-<p><b>Note:</b> <i>Overflow </i>шинж чанар нь зөвхөн заасан өндөртэй <b>block</b> түвшний элементүүдэд ажилладаг.</p>
+    <h2>CSS Overflow</h2>
+    <p><b>Overflow</b> шинж чанар нь контентийн агуулга заасан хэсэгт багтахааргүй бол контентыг таслах эсвэл гүйлгэх
+        зурвас нэмэх эсэхийг тодорхойлдог.</p>
+    <p><i>Overflow</i> шинж чанар нь дараах утгатай байна:</p>
+    <ul>
+        <li><a href="#1"><b>visible</b></a> - Өгөгдмөл. Агуулгын халилтыг таслахгүй. Агуулгыг блокийн захаас гадуур
+            харуулна.</li>
+        <li><a href="#2"><b>hidden</b></a> - агуулгын халилтыг тайрч, энэ хэсэг харагдахгүй болно.</li>
+        <li><a href="#3"><b>scroll</b></a> - агуулгын халилт таслагдаж, энэ хэсгийг харуулахын тулд гүйлгэх зурвас
+            нэмнэ.</li>
+        <li><a href="#4"><b>auto</b></a> - <i>scroll</i>-тэй төстэй боловч зөвхөн шаардлагатай үед гүйлгэх мөрийг нэмнэ.
+        </li>
+    </ul>
+    <p><b>Note:</b> <i>Overflow </i>шинж чанар нь зөвхөн заасан өндөртэй <b>block</b> түвшний элементүүдэд ажилладаг.
+    </p>
 
-<h3 id="1">overflow: visible</h3>
-<p>Өгөгдмөл, <b>overflow: visible;</b> нь агуулгын халилтыг таслахгүй, харин блокийн ирмэгийг давж харагдах болно.</p>
-<div>Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно. 
-    Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
+    <h3 id="1">overflow: visible</h3>
+    <p>Өгөгдмөл, <b>overflow: visible;</b> нь агуулгын халилтыг таслахгүй, харин блокийн ирмэгийг давж харагдах болно.
+    </p>
+    <div>Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно.
+        Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
     <br>
     <br>
-<p>	&lt;style&gt; <br>
-    div { <br>
-      background-color: coral; <br>
-      width: 200px; <br>
-      height: 65px; <br>
-      border: 1px solid; <br>
-      <b>overflow: visible;</b> <br>
-    } <br>
-    &lt;/style&gt;</p>
+    <p> &lt;style&gt; <br>
+        div { <br>
+        background-color: coral; <br>
+        width: 200px; <br>
+        height: 65px; <br>
+        border: 1px solid; <br>
+        <b>overflow: visible;</b> <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
 
-<h3 id="2">overflow: hidden</h3>
-<p><b>hidden</b> тохируулсан үед хальсан агуулга таслагдаж, харагдахгүй болно:</p>
-<div class="a">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно. 
-    Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
-<p>&lt;style&gt; <br>
-    div { <br>
-      background-color: coral; <br>
-      width: 200px; <br>
-      height: 65px; <br>
-      border: 1px solid black; <br>
-      <b>overflow: hidden;</b> <br>
-    } <br>
-    &lt;/style&gt;</p>
+    <h3 id="2">overflow: hidden</h3>
+    <p><b>hidden</b> тохируулсан үед хальсан агуулга таслагдаж, харагдахгүй болно:</p>
+    <div class="a">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно.
+        Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
+    <p>&lt;style&gt; <br>
+        div { <br>
+        background-color: coral; <br>
+        width: 200px; <br>
+        height: 65px; <br>
+        border: 1px solid black; <br>
+        <b>overflow: hidden;</b> <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
 
-<h3 id="3">overflow: scroll</h3>
-<p><b>Scroll</b> тохируулсан үед агуулга таслагдах ч, блок дотор гүйлгэх зурвас нэмэгдэнэ. <br>
-    <b>Note:</b> 2 чиглэлд гүйлгэх зурвас гарч ирнэ (хэрэггүй байсан ч)!</p>
-<div class="b">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно. 
-    Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
-<p>&lt;style&gt; <br>
-    div { <br>
-      background-color: coral; <br>
-      width: 200px; <br>
-      height: 100px; <br>
-      border: 1px solid black; <br>
-      <b>overflow: scroll;</b> <br>
-    } <br>
-    &lt;/style&gt;</p>
+    <h3 id="3">overflow: scroll</h3>
+    <p><b>Scroll</b> тохируулсан үед агуулга таслагдах ч, блок дотор гүйлгэх зурвас нэмэгдэнэ. <br>
+        <b>Note:</b> 2 чиглэлд гүйлгэх зурвас гарч ирнэ (хэрэггүй байсан ч)!
+    </p>
+    <div class="b">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно.
+        Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
+    <p>&lt;style&gt; <br>
+        div { <br>
+        background-color: coral; <br>
+        width: 200px; <br>
+        height: 100px; <br>
+        border: 1px solid black; <br>
+        <b>overflow: scroll;</b> <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
 
-<h3 id="4">overflow: auto</h3>
-<p><b>auto</b> утга нь <b>scroll</b>-тэй төстэй, зөвхөн шаардлагатай үед л гүйлгэх зурвасыг нэмнэ:</p>
-<div class="c">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно. 
-    Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
-<p>&lt;style&gt; <br>
-    div { <br>
-      background-color: coral; <br>
-      width: 200px; <br>
-      height: 65px; <br>
-      border: 1px solid black; <br>
-      <b>overflow: auto;</b> <br>
-    } <br>
-    &lt;/style&gt;</p>
- 
-<h2>overflow-x and overflow-y</h2>
-<p><b>overflow-x: overflow-y:</b> шинж чанарууд нь агуулгын халилтыг зөвхөн хэвтээ болон босоо чиглэлд өөрчлөх эсэхийг тодорхойлдог.</p>
-<p><i>overflow-x</i> - агуулгын зүүн/баруун талын халилтыг зааж өгдөг. <br>
-    <i>overflow-y</i> - агуулгын дээд/доод талын халилтыг зааж өгдөг.</p>
-<div class="d">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно. 
-    Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
-<p>&lt;style> <br>
-    background-color: coral; <br>
-    width: 200px; <br>
-    height: 65px; <br>
-    border: 1px solid black; <br>
-    div { <br>
-    <b>overflow-x: hidden;</b> /* Hide horizontal scrollbar */ <br>
-    <b>overflow-y: scroll;</b> /* Add vertical scrollbar */ <br>
-    } <br>
-    &lt;/style></p>
+    <h3 id="4">overflow: auto</h3>
+    <p><b>auto</b> утга нь <b>scroll</b>-тэй төстэй, зөвхөн шаардлагатай үед л гүйлгэх зурвасыг нэмнэ:</p>
+    <div class="c">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно.
+        Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
+    <p>&lt;style&gt; <br>
+        div { <br>
+        background-color: coral; <br>
+        width: 200px; <br>
+        height: 65px; <br>
+        border: 1px solid black; <br>
+        <b>overflow: auto;</b> <br>
+        } <br>
+        &lt;/style&gt;
+    </p>
 
-<hr>
-<table>
-    <caption>All CSS Overflow Properties</caption>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>overflow</td>
-        <td>Агуулга нь элементийн захаас хэтэрсэн тохиолдолд хэрхэн шийдэхийг зааж өгнө.</td>
-    </tr>
-    <tr>
-        <td>overflow-wrap</td>
-        <td>Хөтөч нь урт үгтэй мөрүүдийг агуулж байвал тэдгээрийг таслах эсэхийг заана.</td>
-    </tr>
-    <tr>
-        <td>overflow-x</td>
-        <td>Хэрэв элементийн агуулга заасан талбайгаас гарвал зүүн/баруун захад халилт гаргахыг зааж өгнө.</td>
-    </tr>
-    <tr>
-        <td>overflow-y</td>
-        <td>Элементийн агуулга талбайн гадуур гарах тохиолдолд агуулгын дээд/доод захад халилт хийхийг зааж өгнө.</td>
-    </tr>
-  </table>
+    <h2>overflow-x and overflow-y</h2>
+    <p><b>overflow-x: overflow-y:</b> шинж чанарууд нь агуулгын халилтыг зөвхөн хэвтээ болон босоо чиглэлд өөрчлөх
+        эсэхийг тодорхойлдог.</p>
+    <p><i>overflow-x</i> - агуулгын зүүн/баруун талын халилтыг зааж өгдөг. <br>
+        <i>overflow-y</i> - агуулгын дээд/доод талын халилтыг зааж өгдөг.
+    </p>
+    <div class="d">Хэрэв та форматаа илүү хянахыг хүсвэл overflow шинж чанарыг ашиглаж болно.
+        Overflow шинж чанар нь агуулга элементийн блокоос хэтэрсэн тохиолдолд юу болохыг зааж өгдөг.</div>
+    <p>&lt;style> <br>
+        background-color: coral; <br>
+        width: 200px; <br>
+        height: 65px; <br>
+        border: 1px solid black; <br>
+        div { <br>
+        <b>overflow-x: hidden;</b> /* Hide horizontal scrollbar */ <br>
+        <b>overflow-y: scroll;</b> /* Add vertical scrollbar */ <br>
+        } <br>
+        &lt;/style>
+    </p>
+    <br>
+    <hr>
+    <p style="text-align: center;font-size: 130%;"><b>All CSS Overflow Properties</b></p>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>overflow</td>
+            <td>Агуулга нь элементийн захаас хэтэрсэн тохиолдолд хэрхэн шийдэхийг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>overflow-wrap</td>
+            <td>Хөтөч нь урт үгтэй мөрүүдийг агуулж байвал тэдгээрийг таслах эсэхийг заана.</td>
+        </tr>
+        <tr>
+            <td>overflow-x</td>
+            <td>Хэрэв элементийн агуулга заасан талбайгаас гарвал зүүн/баруун захад халилт гаргахыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>overflow-y</td>
+            <td>Элементийн агуулга талбайн гадуур гарах тохиолдолд агуулгын дээд/доод захад халилт хийхийг зааж өгнө.
+            </td>
+        </tr>
+    </table>
 
 </body>
+
 </html>

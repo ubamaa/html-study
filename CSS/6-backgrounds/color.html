@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Backgrounds</title>
+  <style>
+    body {
+      background-color: seashell;
+    }
+
+    h1 {
+      background-color: rgb(255, 180, 255);
+    }
+
+    p.a {
+      background-color: rgba(255, 164, 90, 0.3);
+    }
+
+    div {
+      background-color: green;
+      padding: 1px;
+    }
+
+    div.first {
+      opacity: 0.1;
+    }
+
+    div.second {
+      opacity: 0.3;
+    }
+
+    div.third {
+      opacity: 0.6;
+    }
+
+    div.four {
+      background: rgb(255, 99, 71);
+    }
+
+    div.five {
+      background: rgba(255, 99, 71, 0.1);
+    }
+
+    div.sex {
+      background: rgba(255, 99, 71, 0.3);
+    }
+
+    div.seven {
+      background: rgba(255, 99, 71, 0.6);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="../index.html">Index буцах</a></p>
+
+  <h1>CSS Backgrounds</h1>
+  <p>CSS <b>background</b> шинж чанар нь элементүүдэд дэвсгэр эффект нэмэхэд ашиглагддаг.</p>
+  <p>CSS <i>background</i> дараах шинж чанаруудтай:</p>
+  <ul style="list-style-type:circle;">
+    <li><i>background-color</i></li>
+    <li><i>background-image</i></li>
+    <li><i>background-repeat</i></li>
+    <li><i>background-attachment</i></li>
+    <li><i>background-position</i></li>
+    <li><i>background (shorthand property)</i></li>
+  </ul>
+
+  <h2>CSS background-color</h2>
+  <p><span style="color:brown;font-weight: bold;">background-color</span> шинж чанар нь элементийн дэвсгэр өнгийг
+    тодорхойлдог.<br> CSS тусламжтайгаар өнгийг дараах өнгөнүүдээс сонгож болно:</p>
+  <p>- Өнгөний нэрээр (улаан, шар гэх мэт). <br>
+    - HEX утга ("#ff0000")<br>
+    - RGB, RGBA утга "rgb (255,0,0)"</p>
+
+  <h2>Other Elements</h2>
+  <p class="a">Ямар ч HTML элементийн дэвсгэр өнгийг тохируулж болно: <br>
+    Энэ хуудасны <b>&lt;h1&gt; &lt;p&gt; &lt;div&gt;</b> элементүүд өөр өөр дэвсгэр өнгөтэй байна.</p>
+
+
+  <h2>Opacity/Transparency</h2>
+  <p><b>Opacity</b> шинж чанар нь элементийн харанхуй/тод байдлыг тодорхойлдог. <br>
+    0.0-ээс 1.0 хүртэлх утгыг авч болно. Утга бага байх тусам цайвар болно.</p>
+  <div class="first">
+    <p style="font-size: 120%;font-weight: bold;">opacity 0.1 (Opacity-н үр дүн)</p>
+  </div>
+
+  <div class="second">
+    <p style="font-size: 120%;font-weight: bold;">opacity 0.3 (Opacity-н үр дүн)</p>
+  </div>
+
+  <div class="third">
+    <p style="font-size: 120%;font-weight: bold;">opacity 0.6 (Opacity-н үр дүн)</p>
+  </div>
+
+  <div>
+    <p style="font-size: 120%;font-weight: bold;">opacity 1 (default) (Opacity-н үр дүн)</p>
+  </div>
+  <p><b>Note:</b> Элементийн дэвсгэр дээр тунгалаг байдал нэмж, <b>opacity</b> шинж чанарыг ашиглах үед
+    түүний <span style="color:blue;font-weight: bold;">child</span> элементүүд мөн тунгалаг байдлыг өвлөнө. <br>
+    Энэ нь тод элемент доторх текстийг уншихад хүндрэл учруулдаг.</p>
+
+  <h2>Transparency using RGBA</h2>
+  <p>Хэрэв дээрх жишээний <span style="color:blue;font-weight: bold;">child</span> элементүүдэд <i>opacity</i>
+    ашиглахыг хүсэхгүй бол <b>RGBA</b> өнгөний утгыг ашиглаж болно. <br>
+    Доорх жишээ нь <i>opacity</i>-ийг текстийн бус дэвсгэр өнгөнд тохируулсан: <br>
+    <b>Opacity</b> шинж чанарыг ашиглах үед текст ил тод болж, дэвсгэрийн өнгө хэрхэн харагдахыг анхаарах!
+  </p>
+  <p><b>RGBA</b>()-ын үр дүн:</p>
+  <div class="five">
+    <p style="font-size: 120%;font-weight: bold;">10% opacity</p>
+  </div>
+
+  <div class="sex">
+    <p style="font-size: 120%;font-weight: bold;">30% opacity</p>
+  </div>
+
+  <div class="seven">
+    <p style="font-size: 120%;font-weight: bold;">60% opacity</p>
+  </div>
+
+  <div class="four">
+    <p style="font-size: 120%;font-weight: bold;">default</p>
+  </div>
+  <p>RGB-ээс гадна альфа суваг (RGB <b>A</b>) бүхий RGB өнгөний утгыг ашиглаж болно. <br>
+    Альфа параметр нь 0.0 (бүрэн цайвар) - 1.0 (тунгалаг биш) хоорондох тоо юм.</p>
+  <br>
+  <hr>
+  <p style="font-size: 120%;text-align: center;font-weight: bold;">The CSS Background Color Property</p>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>background-color</td>
+      <td>Элементийн дэвсгэр өнгийг тохируулна.</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

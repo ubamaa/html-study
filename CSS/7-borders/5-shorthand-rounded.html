@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Borders</title>
+  <style>
+    p.one {
+      border: 5px solid salmon;
+    }
+
+    p.two {
+      border-left: 5px solid slateblue;
+      background-color: gainsboro;
+    }
+
+    p.three {
+      border-bottom: 2px solid darkorange;
+      background-color: peachpuff;
+    }
+
+    p.normal {
+      border: 2px solid mediumspringgreen;
+      padding: 9px;
+    }
+
+    p.round1 {
+      border: 2px solid gold;
+      border-radius: 5px;
+      padding: 9px;
+    }
+
+    p.round2 {
+      border: 2px solid cornflowerblue;
+      border-radius: 8px;
+      padding: 9px;
+    }
+
+    p.round3 {
+      border: 2px solid darkorange;
+      border-radius: 12px;
+      padding: 9px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a href="../index.html">Index буцах</a></p>
+
+  <h1 style="text-align: center;">CSS Shorthand Border Property</h1>
+  <h2>CSS Border - Shorthand Property</h2>
+  <p>Кодыг богиносгохын тулд хилийн бүх салангид шинж чанаруудыг нэг шинж чанарт зааж өгч болно.</p>
+  <p><b>border</b> шинж чанар нь дараах шинж чанаруудын товчлол юм:</p>
+  <ul style="list-style-type:square;">
+    <li><i>border-width</i></li>
+    <li><i>border-style</i> (зайлшгүй)</li>
+    <li><i>border-color</i></li>
+  </ul>
+  <p style="color:cornflowerblue; font-size: 120%;">Жишээ:</p>
+  <p><i>border-width <br>
+      border-style <br>
+      border-color</i>-үүдийг <b>shorthand</b> шинж чанарт багтаажээ.</p>
+  <p style="padding: 5px;" class="one">border: 5px solid salmon;</p>
+
+  <h3>Left Border</h3>
+  <p>Зөвхөн нэг талын хилийн шинж чанарыг зааж өгч болно:</p>
+  <p><i>border-left-width <br>
+      border-left-style <br>
+      border-left-color</i> шинж чанарууд товчлогдсон байна.</p>
+  <p style="padding: 5px;" class="two">border-left: 5px solid slateblue;</p>
+
+  <h3>Bottom Border</h3>
+  <p><i>border-bottom-width <br>
+      border-bottom-style <br>
+      border-bottom-color</i> шинж чанарууд <b>shorthand</b> шинж чанарт багтсан байна.
+  </p>
+  <p style="padding: 5px;" class="three">border-bottom: 2px solid darkorange;</p>
+  <br>
+
+  <h1 style="text-align: center;">CSS Rounded Borders</h1>
+  <h2>CSS Rounded Borders</h2>
+  <p><b>border-radius</b> шинж чанарыг дугуйрсан хүрээ нэмэхэд ашигладаг.</p>
+  <p class="normal">Ердийн хүрээ - <i>border: 2px solid red; padding: 5px;</i></p>
+  <p class="round1">Дугуй хүрээ - <i>border: 2px solid red; border-radius: 5px; padding: 5px;</i></p>
+  <p class="round2">Дугуйрсан хүрээ - <i>border: 2px solid red; border-radius: 8px; padding: 5px;</i></p>
+  <p class="round3">Бөөрөнхий хүрээ - <i>border: 2px solid red; border-radius: 12px; padding: 5px;</i></p>
+
+</body>
+
+</html>
