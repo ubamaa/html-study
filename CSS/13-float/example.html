@@ -41,15 +41,47 @@
         display: table;
     }
 
-    ul {
+    * {
+        box-sizing: border-box;
+    }
+
+    .box1 {
+        float: left;
+        width: 50%;
+        padding: 50px;
+        height: 300px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: hsl(60, 100%, 61%);
+    }
+
+    .flex-container .box {
+        background-color: hsl(0, 100%, 93%);
+        width: 50%;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+
+    ul.a {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: cornflowerblue;
+        background-color: orange;
     }
 
-    li {
+    li.a {
         float: left;
     }
 
@@ -62,11 +94,11 @@
     }
 
     li a:hover {
-        background-color: mediumpurple;
+        background-color: lightpink;
     }
 
     .active {
-        background-color: hsl(300, 76%, 72%);
+        background-color: tomato;
     }
 
     * {
@@ -110,14 +142,14 @@
     }
 
     .menu li {
-        padding: 8px;
-        margin-bottom: 5px;
-        background-color: #33b5e5;
-        color: #ffffff;
+        padding: 17px;
+        margin-bottom: 8px;
+        background-color: lemonchiffon;
+        color: hsl(0, 100%, 75%);
     }
 
     .menu li:hover {
-        background-color: #0099cc;
+        background-color: #afd6e4;
     }
 </style>
 
@@ -170,39 +202,64 @@
         <i>padding</i>-ээс хамгаалж баталгаажуулан <b>box-sizing</b> шинж чанарыг нэмснийг анхаар!
     </p>
 
+    <br>
     <h2>Equal Height Boxes</h2>
     <p>Өмнөх жишээнд ижил өргөнтэй блокуудыг зэрэгцүүлэн байрлуулахыг сурсан.
         Ижил өндөртэй <b>float</b> блокийг бүтээх нь тийм ч хялбар биш. <br>
         Хурдан шийдэл бол доорх жишээн дэх тогтмол өндрийг тохируулах явдал юм.</p>
+    <p><b>float</b> шинж чанар ашигласан ижил өндөртэй хайрцагнууд:</p>
+    <div class="clearfix">
+        <div class="box1" style="background-color:rgba(146, 255, 138, 1)">
+            <h2>Box 1</h2>
+            <p>Энэ жишээ тийм ч уян хатан биш юм. <br>
+                Хэрэв блокууд нь үргэлж ижил хэмжээний агуулгатай байж чадвал CSS өндрийг ашиглах нь зөв.
+                Гэвч үргэлж ийм байхгүй.</p>
+            <p>Хэрэв энэ нь хэрэгтэй биш бол өөр шийдлийг харцгаая.</p>
+        </div>
+        <div class="box1" style="background-color:rgba(146, 255, 138, 0.7)">
+            <h2>Box 2</h2>
+            <p>Хэрэв дээрх жишээг гар утсан дээр туршвал хоёрдахь цонхны контент гадна талд харагдах болно.</p>
+            <p>Тиймээс CSS3 <b>Flexbox</b> хэрэгтэй, учир нь энэ нь автоматаар хайрцгийг хамгийн урт хайрцаг болгож
+                чаддаг.</p>
+        </div>
+    </div>
+    <h3>Flexible Boxes</h3>
+    <p><b>Flexbox</b> ашиглан уян хайрцаг үүсгэх:</p>
+    <div class="flex-container">
+        <div class="box">Box 1 - Уян хайрцаг үүсгэхийн тулд <b>Flexbox </b>ашигласан.</div>
+        <div class="box">Box 2 - өндөр Box 1.-ийг дагасан болно.</div>
+    </div>
 
+    <br>
     <h2>Navigation Menu</h2>
     <p>Хэвтээ цэс үүсгэхийн тулд <b>float</b>-ийг гипер холбоосын жагсаалттай ашиглаж болно:</p>
-    <ul>
-        <li><a href="#home" class="active">Tutorials</a></li>
-        <li><a href="#news">HTML Tutorial</a></li>
-        <li><a href="#contact">CSS Tutorial</a></li>
-        <li><a href="#about">Үүсгэн байгуулагч</a></li>
+    <ul class="a">
+        <li class="a"><a href="#home" class="active">Tutorials</a></li>
+        <li class="a"><a href="#news">HTML Tutorial</a></li>
+        <li class="a"><a href="#contact">CSS Tutorial</a></li>
+        <li class="a"><a href="#about">Үүсгэн байгуулагч</a></li>
     </ul>
 
+    <br>
     <h2>Web Layout Example</h2>
     <p>Мөн <b>float</b> шинж чанарыг ашиглан вэб хуудасны бүтцийг хийх нь түгээмэл байдаг:</p>
     <div class="header">
         <h1>Программ бичиж сурсан түүх</h1>
     </div>
-
     <div class="clearfix">
         <div class="column menu">
             <ul>
-                <li>CSS Tutorial</li>
-                <li>HTML Tutorial</li>
+                <li><b>CSS Tutorial</b></li>
+                <li><b>HTML Tutorial</b></li>
             </ul>
         </div>
 
         <div class="column content">
             <h1>Танилцуулга</h1>
-            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
-                the old town and the modern city.</p>
-            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+            <p>HTML is the standard markup language for Web pages. With HTML you can create your own Website. <br>
+                CSS is the language we use to style an HTML document. CSS describes how HTML elements should be
+                displayed.</p>
+            <p>HTML and CSS are easy to learn - You will enjoy it!</p>
         </div>
     </div>
     <div class="footer">
