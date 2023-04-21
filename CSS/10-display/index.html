@@ -12,7 +12,14 @@
             display: inline;
         }
 
-        span {
+        div {
+            background-color: hsl(60, 100%, 68%);
+            border: 2px solid orangered;
+            margin: 5px;
+            padding: 4px;
+        }
+
+        #span {
             display: block;
         }
 
@@ -52,44 +59,70 @@
     <h2>Block-level Elements</h2>
     <p><b>Block-level</b> нь үргэлж шинэ мөрөнд эхэлдэг бөгөөд боломжтой өргөнийг эзэлдэг (баруун, зүүн тийш сунадаг).
     </p>
-    <p><i>Block</i> түвшний элементүүдийн жишээ:</p>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;div&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;h1&gt; - &lt;h6&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;p&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;table&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dd&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;dt&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;hr&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;pre&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ol&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;li&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;ul&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;form&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;header&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;footer&gt;</div>
-    <div style="background-color:lemonchiffon;border: 1px solid lightcoral;">&lt;main&gt;</div>
+    <p><i>Block-level</i> элементүүдийн жишээ:</p>
+    <div><i>&lt;div&gt;</i> - HTML баримт бичигт хуваагдал эсвэл хэсгийг тодорхойлдог.</div>
+    <div><i>&lt;h1&gt; - &lt;h6&gt;</i> - HTML гарчгийг тодорхойлдог.</div>
+    <div><i>&lt;p&gt;</i> - догол мөрийг тодорхойлдог.</div>
+    <div><i>&lt;table&gt;</i> - HTML хүснэгтийг тодорхойлдог.</div>
+    <div><i>&lt;dd&gt;</i> - тайлбарын жагсаалт дахь нэр/томъёог тодорхойлоход хэрэглэгддэг.</div>
+    <div><i>&lt;dt&gt;</i> - тайлбарын жагсаалт дахь нэр/томъёог тодорхойлоход хэрэглэгддэг.</div>
+    <div><i>&lt;hr&gt;</i> - HTML хуудасны сэдэвчилсэн завсарлагыг тодорхойлдог.</div>
+    <div><i>&lt;pre&gt;</i> - урьдчилан форматласан текстийг тодорхойлдог.</div>
+    <div><i>&lt;ol&gt;</i> - эрэмбэлэгдсэн жагсаалтыг тодорхойлдог.</div>
+    <div><i>&lt;li&gt;</i> - жагсаалтын элементийг тодорхойлдог.</div>
+    <div><i>&lt;ul&gt;</i> - эрэмбэлэгдээгүй жагсаалтыг тодорхойлно.</div>
+    <div><i>&lt;form&gt;</i> - хэрэглэгчийн оруулах HTML хэлбэрийг бий болгоход ашигладаг.</div>
+    <div><i>&lt;header&gt;</i> - танилцуулах контент эсвэл навигацийн холбоосуудын багц юм.</div>
+    <div><i>&lt;footer&gt;</i> - баримт бичгийн төгсгөл хэсгийг тодорхойлдог.</div>
+    <div><i>&lt;main&gt;</i> - баримт бичгийн үндсэн агуулгыг тодорхойлдог.</div>
+    <div>&lt;<i>address</i>&gt; - холбоо барих мэдээлэл, имэйл хаяг, URL, утасны дугаар, нийгмийн сүлжээний нэр гэх мэт
+        нийтлэлийн зохиогч/эзэмшигчтэй холбоотой мэдээллийг тодорхойлдог.</div>
 
     <h2>Inline Elements</h2>
     <p><b>Inline</b> элемент нь шинэ мөрөнд эхэлдэггүй бөгөөд зөвхөн шаардлагатай хэмжээгээр өргөнийг эзэлдэг.</p>
     <p><i>Inline</i> элементүүдийн жишээ:</p>
-    <span style="color:lightcoral;font-weight:bold;">&lt;span&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;a&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;img&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;button&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;sup&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;abbr&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;cite&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;script&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;b&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;map&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;small&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;bdo&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;em&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;i&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;strong&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;q&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;sub&gt;</span>
-    <span style="color:lightcoral;font-weight:bold;">&lt;br&gt;</span>
+    <p><span style="color:#009000;font-weight:bold;">&lt;span&gt;</span> - текстийн хэсгийг тэмдэглэхэд
+        ашигладаг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;a&gt;</span> - 1 хуудаснаас нөгөө хуудас руу
+        холбоход хэрэглэгддэг гипер холбоосыг тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;img&gt;</span> - HTML хуудсанд зураг оруулахад
+        ашигладаг.
+    </p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;button&gt;</span> - дарж болох товчлуурыг
+        тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;sup&gt;</span> - текстийн дээд тэмдгийг
+        тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;abbr&gt;</span> - товчлолыг тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;cite&gt;</span> - бүтээлч болон бүтээлийн нэрийг
+        (ном, шүлэг, дуу, кино, уран зураг, баримал гэх мэт) тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;script&gt;</span> - клиент талын скриптийг
+        (JavaScript) оруулахад ашигладаг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;b&gt;</span> - ямар ч нэмэлт ач холбогдолгүйгээр тод
+        бичвэрийг онцолж өгдөг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;map&gt;</span> - зургийн газрын зургийг
+        тодорхойлоход ашигладаг.</p>
+    <p><span style="color:#047a04;font-weight:bold;">&lt;small&gt;</span> - жижиг текстийг (зохиогчийн эрх
+        болон бусад тайлбар гэх мэт) тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;bdo&gt;</span> - текстийн чиглэлийг өөрчлөхөд
+        хэрэглэгддэг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;em&gt;</span> - сонгосон текстийг тодруулахад
+        ашигладаг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;i&gt;</span> - өөр дуу хоолой, сэтгэл хөдлөл бүхий
+        текстийн хэсгийг тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;strong&gt;</span> - өндөр ач холбогдолтой текстийг
+        тодорхойлоход хэрэглэгддэг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;q&gt;</span> - богино ишлэлийг тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;sub&gt;</span> - дэд тэмдэгтийн текстийг
+        тодорхойлдог.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;br&gt;</span> - нэг мөрийн завсарлага оруулдаг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;var&gt;</span> - програмчлал эсвэл математик
+        илэрхийлэлд хувьсагчийг тодорхойлоход хэрэглэгддэг.</p>
+    <p><span style="color:#009000;font-weight:bold;">&lt;output&gt;</span> - тооцооллын үр дүнг илэрхийлэхэд
+        хэрэглэгддэг.</p>
+    <p><span style="color:#009028;font-weight:bold;">&lt;time&gt;</span> - тодорхой цагийг (эсвэл огноо/цаг)
+        тодорхойлдог.</p>
+    <p><span style="color:#009028;font-weight:bold;">&lt;select&gt;</span> - нээгддэг жагсаалт үүсгэхэд
+        ашигладаг.</p>
 
     <h2>Display: none;</h2>
     <p><b>display:none</b> нь JavaScript-д элементүүдийг устгах, дахин үүсгэхгүйгээр нуух, харуулах зорилгоор ихэвчлэн
@@ -104,15 +137,16 @@
     <p>Нийтлэг жишээ бол хэвтээ цэсэнд Inline <b>&lt;li&gt;</b> элементүүдийг үүсгэх явдал юм. <br>
         Холбоосуудын жагсаалтыг хэвтээ цэс хэлбэрээр харуулах:</p>
     <ul>
-        <li><a class="li" href="https://www.w3schools.com/html/default.asp" target="_blank">HTML</a></li>
-        <li><a class="li" href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a></li>
-        <li><a class="li" href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a></li>
+        <li><a class="li" href="/index.html" target="_blank">My Tutorials</a></li>
+        <li><a class="li" href="../../HTML/index.html" target="_blank">HTML Tutorial</a></li>
+        <li><a class="li" href="../index.html" target="_blank">CSS Tutorial</a></li>
     </ul>
     <p>&lt;style&gt; <br>
-        li { <br>
-        display: inline; <br>
+        <b>li { <br>
+            display: inline;</b> <br>
         } <br>
-        &lt;/style&gt;</p>
+        &lt;/style&gt;
+    </p>
     <p><b>Note:</b> Элементийн <b>displays</b> шинж чанарыг тохируулах нь элементийн төрлийг БИШ зөвхөн тухайн
         элементийг хэрхэн харуулахыг өөрчилдөг.<br>
         Тэгэхээр, <b>display:none</b> бүхий Inline элемент дотор бусад Block элемент байхыг хориглоно.</p>
@@ -124,8 +158,9 @@
         } <br>
         &lt;/style&gt; <br>
         <br>
-        <span>A display property with</span><span>a value of "block" results in</span>
-        <span>a line break between each span elements.</span>
+        <span id="span" style="color:rgba(255, 0, 255, 1)">A display property with</span><span id="span"
+            style="color:rgba(255, 0, 255, 1)">a value of "block" results in</span><span id="span"
+            style="color:rgba(255, 0, 255, 1)">a line break between each span elements.</span>
     </p>
     <p style="font-size: 150%;">Жишээ 3.</p>
     <p>Дараах жишээнд <b>&lt;a&gt;</b> элементүүдийг <i>Block</i> элемент болгон үзүүлэв:</p>
@@ -135,9 +170,9 @@
         } <br>
         &lt;/style&gt;
     </p>
-    <a href="/html/default.asp" target="_blank">HTML</a>
-    <a href="/css/default.asp" target="_blank">CSS</a>
-    <a href="/js/default.asp" target="_blank">JavaScript</a>
+    <a href="/index.html" target="_blank">My Tutorials</a>
+    <a href="../../HTML/index.html" target="_blank">HTML Tutorial</a>
+    <a href="../index.html" target="_blank">CSS Tutorial</a>
 
     <h2>Hide an Element - display:none or visibility:hidden?</h2>
     <p style="font-size: 150%;">Жишээ 1.</p>
