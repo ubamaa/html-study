@@ -91,7 +91,8 @@
 
     .flex-container5>div {
         background-color: #f1f1f1;
-        color: white;
+        color: black;
+        text-align: center;
         width: 100px;
         height: 100px;
     }
@@ -130,12 +131,11 @@
         хариу үйлдэл үзүүлэх байршлын бүтцийг боловсруулахад хялбар болгодог.</p>
 
     <h2>Flexbox Elements</h2>
-    <p><b>Flexbox </b> загварыг ашиглаж эхлэхийн тулд эхлээд уян хатан савыг тодорхойлох хэрэгтэй. <br>
+    <p><b>Flexbox </b> загварыг ашиглаж эхлэхийн тулд эхлээд уян хатан контейнерийг тодорхойлох хэрэгтэй. <br>
         <em>Flexible Layout нь </em> нь <b>dispaly</b> шинж чанарыг <em>flex</em> гэж тохируулсан эх элементтэй байх
-        ёстой. <br>
-        <em>Flex</em> савны шууд <i>child</i> элементүүд автоматаар уян хатан зүйл болдог.
+        ёстой. <br> <em>Flex</em> контейнерийн шууд <i>child</i> элементүүд автоматаар уян элемент болно.
     </p>
-    <p>Доорх элемент нь 3-н уян хатан зүйл бүхий <i>flex</i> савыг (the blue area) илэрхийлнэ.</p>
+    <p>Доорх элемент нь 3-н уян элемент бүхий <b>flex</b> контейнерийг (the green area) илэрхийлнэ.</p>
     <div class="flex-container">
         <div>1 item</div>
         <div>2 item</div>
@@ -144,8 +144,8 @@
 
     <h1>CSS Flex Container</h1>
     <h2>Parent Element (Container)</h2>
-    <p><b>Container</b> гэдэг нь өмнө дурдсанчлан, 3-н уян <b>зүйл (item)</b> бүхий уян хатан <b>сав (container)</b>
-        (цэнхэр хэсэг) юм.</p>
+    <p><b>Container</b> гэдэг нь өмнө дурдсанчлан, 3-н уян <em>элемент (item)</em> бүхий уян <b>сав (container)</b>
+        (ногоон хэсэг) юм.</p>
     <p>Flex контейнер нь <b>display</b> шинж чанарыг <b>flex</b> болгож тохируулснаар уян хатан болдог. <br>
         <b>flex container</b> шинж чанарууд:
     </p>
@@ -159,28 +159,27 @@
     </ul>
 
     <h3>The flex-direction Property</h3>
-    <p><b>flex-direction</b> шинж чанар нь сав нь уян хатан зүйлсийг аль чиглэлд байршуулахыг хүсч байгааг тодорхойлдог.
+    <p><b>flex-direction</b> шинж чанар контейнер нь уян элементийг аль чиглэлд байршуулахыг хүсч байгааг тодорхойлдог.
     </p>
-    <p><b>Column</b> утга нь уян хатан зүйлсийг босоо байдлаар <em>(from top to bottom)</em> байршуулсныг зааж байна :
-    </p>
+    <p><b>Column</b> утга нь уян элементийг босоо байдлаар <em>(from top to bottom)</em> байршуулсныг зааж байна:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-direction: column;</b> <br>
         }
     </p>
-    <p><b>column-reverse</b> утга нь уян хатан зүйлсийг босоо байдлаар (from bottom to top) байршуулна.</p>
+    <p><b>column-reverse</b> утга нь уян элементийг босоо байдлаар (from bottom to top) байршуулна.</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-direction: column-reverse;</b> <br>
         }
     </p>
-    <p><b>row</b> утга нь уян хатан зүйлсийг хэвтээ байдлаар байрлуулна (from left to right).</p>
+    <p><b>row</b> утга нь уян элементийг хэвтээ байдлаар байрлуулна (from left to right).</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-direction: row;</b> <br>
         }
     </p>
-    <p><b>row-reverse</b> утга нь уян хатан зүйлсийг хэвтээ байдлаар (from right to left) байрлуулна.</p>
+    <p><b>row-reverse</b> утга нь уян элементийг хэвтээ байдлаар (from right to left) байрлуулна.</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-direction: row-reverse;</b> <br>
@@ -188,8 +187,8 @@
     </p>
 
     <h3>The flex-wrap Property</h3>
-    <p><b>flex-wrap</b> шинж чанар нь уян хатан зүйлс нь тойрон бүслэх эсэхийг тодорхойлдог.</p>
-    <p>Доорх жишээ нь <i>flex-wrap</i> шинж чанарыг илүү сайн харуулахын тулд 15 уян хатан зүйлийг агуулсан.</p>
+    <p><b>flex-wrap</b> шинж чанар нь уян элемент нь тойрон бүслэх эсэхийг тодорхойлдог.</p>
+    <p>Доорх жишээ нь <i>flex-wrap</i> шинж чанарыг илүү сайн харуулахын тулд 15 уян элементийг агуулсан.</p>
     <div class="flex-container1">
         <div>1 item</div>
         <div>2 item</div>
@@ -207,19 +206,19 @@
         <div>14 item</div>
         <div>15 item</div>
     </div>
-    <p><b>wrap</b> утга нь уян хатан зүйлсийг шаардлагатай бол тойрохыг заана:</p>
+    <p><b>wrap</b> утга нь уян элементийг шаардлагатай бол тойрохыг заана:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-wrap: wrap;</b> <br>
         }
     </p>
-    <p><b>nowrap</b> утга нь уян хатан зүйлс тойрохгүйг заадаг <em>(өгөгдмөл)</em>.</p>
+    <p><b>nowrap</b> утга нь уян элемент тойрохгүйг заадаг <em>(өгөгдмөл)</em>.</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-wrap: nowrap;</b> <br>
         }
     </p>
-    <p><b>wrap-reverse</b> утга нь шаардлагатай бол уян хатан зүйлсийг урвуу дарааллаар ороохыг заана.</p>
+    <p><b>wrap-reverse</b> утга нь шаардлагатай бол уян элементийг урвуу дарааллаар ороохыг заана.</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>flex-wrap: wrap-reverse; </b><br>
@@ -237,32 +236,32 @@
     </p>
 
     <h3>The justify-content Property</h3>
-    <p><b>justify-content</b> шинж чанар нь уян хатан зүйлсийг зэрэгцүүлэхэд ашиглагддаг:</p>
-    <p><b>center</b> утга нь уян хатан зүйлсийг савны голд зэрэгцүүлнэ.</p>
+    <p><b>justify-content</b> шинж чанар нь уян элементийг зэрэгцүүлэхэд ашиглагддаг:</p>
+    <p><b>center</b> утга нь уян элементийг контейнерийн голд зэрэгцүүлнэ.</p>
     <div class="flex-container2">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
     </div>
-    <p><b>flex-start </b> утга нь уян хатан зүйлсийг савны эхлэлтэй зэрэгцүүлдэг <i>(өгөгдмөл)</i>.</p>
+    <p><b>flex-start </b> утга нь уян элементийг контейнерийн эхэнд зэрэгцүүлдэг <i>(өгөгдмөл)</i>.</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>justify-content: flex-start;</b> <br>
         }
     </p>
-    <p><b>flex-end</b> утга нь савны төгсгөлд уян хатан зүйлсийг зэрэгцүүлдэг:</p>
+    <p><b>flex-end</b> утга нь контейнерийн төгсгөлд уян элементийг зэрэгцүүлдэг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>justify-content: flex-end;</b> <br>
         }
     </p>
-    <p><b>space-around</b> утга нь мөр хооронд болон эхлэл, төгсгөлөөс зайтай уян хатан зүйлсийг харуулдаг:</p>
+    <p><b>space-around</b> утга нь элемент хооронд болон эхлэл, төгсгөлөөс зайтай уян элементийг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>justify-content: space-around; </b><br>
         }
     </p>
-    <p><b>space-between</b> утга нь мөр хооронд зайтай уян хатан зүйлсийг харуулдаг:</p>
+    <p><b>space-between</b> утга нь элемент хооронд зайтай уян элементийг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         <b>justify-content: space-between;</b> <br>
@@ -270,36 +269,37 @@
     </p>
 
     <h3>The align-items Property</h3>
-    <p><b>align-items</b> шинж чанарыг уян хатан зүйлсийг зэрэгцүүлэхэд ашигладаг.</p>
-    <p>Энэ жишээн дээр <b>align-items</b> шинж чанарыг илүү сайн харуулахын тулд 200px өндөртэй савыг ашигласан.</p>
-    <p><b>center</b> утга нь савны голд уян хатан зүйлсийг зэрэгцүүлнэ:</p>
+    <p><b>align-items</b> шинж чанарыг уян элементийг зэрэгцүүлэхэд ашигладаг.</p>
+    <p>Энэ жишээн дээр <b>align-items</b> шинж чанарыг илүү сайн харуулахын тулд 200px өндөртэй контейнерийг ашигласан.
+    </p>
+    <p><b>center</b> утга нь контейнерийн голд уян хатан элементийг зэрэгцүүлнэ:</p>
     <div class="flex-container3">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
     </div>
-    <p><b>flex-start</b> утга нь савны дээд талд байрлах уян хатан зүйлсийг зэрэгцүүлнэ:</p>
+    <p><b>flex-start</b> утга нь контейнерийн дээд талд уян элементийг зэрэгцүүлнэ:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 200px; <br>
         <b>align-items: flex-start;</b> <br>
         }
     </p>
-    <p><b>flex-end</b> утга нь савны ёроолд байрлах уян хатан зүйлсийг зэрэгцүүлдэг:</p>
+    <p><b>flex-end</b> утга нь контейнерийн ёроолд уян элементийг зэрэгцүүлдэг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 200px; <br>
         <b>align-items: flex-end;</b> <br>
         }
     </p>
-    <p><b>stretch</b> утга нь савыг дүүргэхийн тулд уян хатан зүйлсийг сунгадаг <i>(өгөгдмөл)</i>:</p>
+    <p><b>stretch</b> утга нь контейнерийг дүүргэхийн тулд уян элементийг сунгадаг <i>(өгөгдмөл)</i>:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 200px; <br>
         <b>align-items: stretch;</b> <br>
         }
     </p>
-    <p><b>baseline</b> утга нь үндсэн шугам зэрэг уян хатан зүйлсийг зэрэгцүүлдэг:</p>
+    <p><b>baseline</b> утга нь үндсэн шугмын дагуу уян элементийг зэрэгцүүлдэг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 200px; <br>
@@ -308,10 +308,10 @@
     </p>
 
     <h3>The align-content Property</h3>
-    <p><b>align-content</b> шинж чанарыг уян хатан шугмыг тэгшлэхэд ашигладаг.</p>
+    <p><b>align-content</b> шинж чанарыг уян шугмыг тэгшлэхэд ашигладаг.</p>
     <p>Эдгээр жишээн дээр <b>align-content</b> шинж чанарыг илүү сайн харуулахын тулд <b>flex-wrap</b> шинж чанартай
-        600px өндөр савыг ашиглаж байна.</p>
-    <p><b>space-between</b> утга нь хоорондоо тэнцүү зайтай уян хатан шугмуудыг харуулдаг:</p>
+        600px өндөр контейнерийг ашиглаж байна.</p>
+    <p><b>space-between</b> утга нь хоорондоо тэнцүү зайтай уян шугмуудыг харуулдаг:</p>
     <div class="flex-container4">
         <div>1 item</div>
         <div>2 item</div>
@@ -329,7 +329,7 @@
         <div>14 item</div>
         <div>15 item</div>
     </div>
-    <p><b>space-around</b> утга нь савны эхлэл, хооронд, төгсгөлд зайтай уян хатан шугмуудыг харуулдаг:</p>
+    <p><b>space-around</b> утга нь контейнерийн эхлэл, элемент хооронд, төгсгөлд зайтай уян шугмуудыг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 600px; <br>
@@ -337,7 +337,7 @@
         <b>align-content: space-around;</b> <br>
         }
     </p>
-    <p><b>stretch</b> утга нь зайг дүүргэхийн тулд уян хатан шугмуудыг сунгадаг <i>(өгөгдмөл)</i>:</p>
+    <p><b>stretch</b> утга нь зайг дүүргэхийн тулд уян шугмуудыг сунгадаг <i>(өгөгдмөл)</i>:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 600px; <br>
@@ -345,7 +345,7 @@
         <b>align-content: stretch;</b> <br>
         }
     </p>
-    <p><b>center</b> утга нь савны голд уян хатан шугмуудыг харуулдаг:</p>
+    <p><b>center</b> утга нь контейнерийн голд уян шугмуудыг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 600px; <br>
@@ -353,7 +353,7 @@
         <b>align-content: center;</b> <br>
         }
     </p>
-    <p><b>flex-start</b> утга нь савны эхэнд уян хатан шугмуудыг харуулдаг:</p>
+    <p><b>flex-start</b> утга нь контейнерийн эхэнд уян шугмуудыг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 600px; <br>
@@ -361,7 +361,7 @@
         <b>align-content: flex-start;</b> <br>
         }
     </p>
-    <p><b>flex-end</b> утга нь савны төгсгөлд уян хатан шугмуудыг харуулдаг:</p>
+    <p><b>flex-end</b> утга нь контейнерийн төгсгөлд уян шугмуудыг харуулдаг:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 600px; <br>
@@ -373,7 +373,7 @@
     <h2>Perfect Centering</h2>
     <p>Дараах жишээнд маш нийтлэг хэв загварын асуудлыг шийдэх болно: <b>perfect centering</b>.</p>
     <p><b>SOLUTION.</b> <b>justify-content</b> болон <b>align-items</b> шинж чанаруудыг <em>center</em> гэж
-        тохируулбал уян хатан зүйл <b>perfect centering</b> болно:</p>
+        тохируулбал уян элемент <b>perfect centering</b> болно:</p>
     <p>.flex-container { <br>
         display: flex; <br>
         height: 300px; <br>
@@ -382,7 +382,7 @@
         }
     </p>
     <div class="flex-container5">
-        <div>perfect centering</div>
+        <div><b>perfect centering</b></div>
     </div>
     <br><br>
 
@@ -394,12 +394,12 @@
         </tr>
         <tr>
             <td>align-content</td>
-            <td>Flex-wrap шинж чанарыг өөрчилдөг. Энэ нь align-items-тэй төстэй, гэвч уян хатан зүйлсийг
-                зэрэгцүүлдэггүй уян хатан шугмуудыг зэрэгцүүлдэг.</td>
+            <td>Flex-wrap шинж чанарыг өөрчилдөг. Энэ нь align-items-тэй төстэй, гэвч уян элементийг
+                зэрэгцүүлдэггүй уян шугмуудыг зэрэгцүүлдэг.</td>
         </tr>
         <tr>
             <td>align-items</td>
-            <td>Элементүүд нь хөндлөн тэнхлэгт байгаа зайг ашиглахын тулд уян зүйлсийг босоо байдлаар тэгшлэнэ.</td>
+            <td>Элементүүд нь хөндлөн тэнхлэгт байгаа зайг ашиглахын тулд уян элементийг босоо байдлаар тэгшлэнэ.</td>
         </tr>
         <tr>
             <td>display</td>
@@ -407,7 +407,7 @@
         </tr>
         <tr>
             <td>flex-direction</td>
-            <td>Flex контейнер доторх уян хатан зүйлсийн чиглэлийг заана.</td>
+            <td>Flex контейнер доторх уян элементийн чиглэлийг заана.</td>
         </tr>
         <tr>
             <td>flex-flow</td>
@@ -415,11 +415,11 @@
         </tr>
         <tr>
             <td>flex-wrap</td>
-            <td>Нэг мөрөнд хангалттай зай байхгүй бол уян хатан зүйлсийг ороох эсэхийг заана.</td>
+            <td>Нэг мөрөнд хангалттай зай байхгүй бол уян хатан элементийг ороох эсэхийг заана.</td>
         </tr>
         <tr>
             <td>justify-content</td>
-            <td>Үндсэн тэнхлэгт байгаа зайг ашиглахгүй байх үед уян хатан зүйлсийг хэвтээ байдлаар байрлуулна.</td>
+            <td>Үндсэн тэнхлэгт байгаа зайг ашиглахгүй байх үед уян элементийг хэвтээ байдлаар байрлуулна.</td>
         </tr>
     </table>
 
