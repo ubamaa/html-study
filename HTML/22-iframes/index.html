@@ -1,47 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>HTML Iframes</title>
+    <link rel="stylesheet" href="../../styles/style.css">
 </head>
+
 <body>
 
-<p><a href="../index.html">Index рүү буцах</a></p>    
+    <p><a class="backbutton" href="../index.html">буцах</a></p>
 
-<h1>HTML Iframes</h1>
-<p>HTML iframe нь вэб хуудас доторх вэб хуудсыг харуулахад хэрэглэгддэг.</p>
+    <h1>HTML Iframes</h1>
+    <p>HTML iframe нь вэб хуудас доторх вэб хуудсыг харуулахад хэрэглэгддэг.</p>
+    <iframe src="best.jpg" style="border:2px solid thistle" name="iframe_a" height="350px" width="100%"
+        title="Iframe Example"></iframe>
+    <p><a href="https://ru.sweden.se/kultura/shvedskij-yazyk/govorim-po-shvedski" target="iframe_a">Швед хэл
+            сурцгаая!</a></p>
 
-<iframe src="best.jpg" style="border:2px solid thistle" name="iframe_a" height="350px" width="100%" title="Iframe Example"></iframe>
+    <h2>HTML Iframe Syntax</h2>
+    <p>HTML <b>&lt;iframe></b> таг нь шугаман хүрээг тодорхойлдог.</p>
+    <p>Одоогийн HTML хуудаст өөр веб хуудсыг оруулахын тулд шугаман хүрээг ашигладаг.</p>
+    <p><em>Syntax:</em> <b>&lt;iframe src="url" title="description">v/iframe></b></p>
+    <p><b>Зөвлөгөө:</b> <mark>&lt;iframe></mark>-д <b>title</b> шинж чанарыг үргэлж оруулахыг зөвлөж байна. <br>
+        Энэ нь дэлгэц уншигч <em>&lt;iframe></em>-н агуулгыг уншихад ашигладаг.</p>
 
-<p><a href="https://ru.sweden.se/kultura/shvedskij-yazyk/govorim-po-shvedski" target="iframe_a">Швед хэл сурцгаая!</a></p>
+    <h2>Iframe - Set Height and Width</h2>
+    <p><b>viframe></b>-н хэмжээг тодорхойлохын тулд <mark>width, height</mark> шинж чанаруудыг ашиглана:</p>
+    <p><b>&lt;iframe src="url" height="200" width="300" title="description">&lt;/iframe></b> <br>
+        (анхдагч өгөгдлөөр height, width пикселээр заасан байдаг).</p>
+    <p>Эсвэл <mark>style</mark> шинж чанарыг нэмж, CSS <em>height, width</em> ашиглаж болно: <br>
+        <b>&lt;iframe src="url" style="height:200px;width:300px;" title="description">&lt;/iframe></b>
+    </p>
 
-<h2>HTML Iframe Syntax</h2>
-<p>HTML <b>< iframe></b> таг нь шугаман хүрээг тодорхойлдог.</p>
-<p>Одоогийн HTML хуудаст өөр веб хуудсыг оруулахын тулд шугаман хүрээг ашигладаг.</p>
-<p><em>Syntax:</em> <b>< iframe src="url" title="description">< /iframe></b></p>
-<p><b>Зөвлөгөө:</b> <mark>< iframe></mark>-д <b>title</b> шинж чанарыг үргэлж оруулахыг зөвлөж байна. <br>
-    Энэ нь дэлгэц уншигч <em>< iframe></em>-н агуулгыг уншихад ашигладаг.</p>
+    <h2>Iframe - Remove the Border</h2>
+    <p>Анхдагч өгөгдлөөр <b>&lt;iframe></b> нь эргэн тойрондоо хүрээтэй байдаг.</p>
+    <p>iframe-н үндсэн хүрээг арилгахын тулд <mark>style</mark> шинж чанарыг нэмж, CSS <b>border</b> ашиглана: <br>
+        <em>&lt;iframe src="url" <b>style="border:none;"</b> title="description">&lt;/iframe></em>
+    </p>
+    <p>CSS-ийн тусламжтайгаар <b>iframe</b> хүрээний хэмжээ, хэв маяг, өнгийг өөрчлөх боломжтой: <br>
+        <em>&lt;iframe src="url" <b>style="border:2px solid red;"</b> title="description">&lt;/iframe></em>
+    </p>
 
-<h2>Iframe - Set Height and Width</h2>
-<p><b>< iframe></b>-н хэмжээг тодорхойлохын тулд <mark>width, height</mark> шинж чанаруудыг ашиглана:</p>
-<p><b>< iframe src="url" height="200" width="300" title="description">< /iframe></b> <br>
-    (анхдагч өгөгдлөөр height, width пикселээр заасан байдаг).</p>
-<p>Эсвэл <mark>style</mark> шинж чанарыг нэмж, CSS <em>height, width</em> ашиглаж болно: <br>
-    <b>< iframe src="url" style="height:200px;width:300px;" title="description">< /iframe></b></p>
-
-<h2>Iframe - Remove the Border</h2>
-<p>Анхдагч өгөгдлөөр <b>< iframe></b> нь эргэн тойрондоо хүрээтэй байдаг.</p>
-<p>iframe-н үндсэн хүрээг арилгахын тулд <mark>style</mark> шинж чанарыг нэмж, CSS <b>border</b> ашиглана: <br>
-    <em>< iframe src="url" <b>style="border:none;"</b> title="description">< /iframe></em></p>
-<p>CSS-ийн тусламжтайгаар <b>iframe</b> хүрээний хэмжээ, хэв маяг, өнгийг өөрчлөх боломжтой: <br>
-    <em>< iframe src="url" <b>style="border:2px solid red;"</b> title="description">< /iframe></em></p>
-
-<h2>Iframe - Target for a Link</h2>
-<p><em>< Iframe></em>-г холбоосын зорилтот хүрээ болгон ашиглаж болно.</p>
-<p>Холбоосын <mark>target</mark> шинж чанарыг iframe-н <b>name</b> шинж чанартай холбох ёстой: <br>
-    (target атрибутын нэр iframe-н нэртэй таарч байх ёстой)</p>
-<p><b>< iframe src="url" <mark>name="iframe_a"</mark> title="description">< /iframe> <br>
-    p>a href="https://www.Internet Address" <mark>target="iframe_a"</mark>>NAME/a>/p></b></p>
-<p style="color:seagreen">Хуудасны эхэнд зорилтот холбоосын жишээг оруулсан!</p>
+    <h2>Iframe - Target for a Link</h2>
+    <p><em>&lt;Iframe></em>-г холбоосын зорилтот хүрээ болгон ашиглаж болно.</p>
+    <p>Холбоосын <mark>target</mark> шинж чанарыг iframe-н <b>name</b> шинж чанартай холбох ёстой: <br>
+        (target атрибутын нэр iframe-н нэртэй таарч байх ёстой)</p>
+    <p><b>&lt;iframe src="url" <mark>name="iframe_a"</mark> title="description">&lt;/iframe> <br>
+            &lt;p>&lt;a href="https://www.Internet
+            Address"<mark>target="iframe_a"</mark>&gt;<em>NAME</em>&lt;/a>&lt;/p></b></p>
+    <p style="color:seagreen">Хуудасны эхэнд зорилтот холбоосын жишээг оруулсан!</p>
 
 </body>
+
 </html>

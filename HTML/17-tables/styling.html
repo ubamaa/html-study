@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Tables</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    th,
+    td {
+      padding: 7px;
+      text-align: left;
+      border-bottom: 1px solid #DDD;
+    }
+
+    tr:hover {
+      background-color: #D6EEEE;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a class="backbutton" href="index.html">буцах</a></p>
+
+  <h1>HTML Table Styling</h1>
+  <p>Хүснэгтийг илүү загварлаг харагдуулахын тулд CSS ашиглана.</p>
+
+  <h2>HTML Table - Zebra Stripes</h2>
+  <p>Хэрэв хүснэгтийн хоёр дахь мөр бүрт дэвсгэр өнгө нэмбэл тахь шиг судалтай болно. <br>
+    Хүснэгтийн бусад мөрийг загварчлахын тулд <b>:nth-child(even)</b> сонголтыг ашиглана.</p>
+  <p>&lt;style> <br>
+    table { <br>
+    border-collapse: collapse; <br>
+    width: 100%; <br>
+    } <br>
+    th, td { <br>
+    text-align: left; <br>
+    padding: 8px; <br>
+    } <br>
+    <mark>tr:nth-child(even)</mark> { <br>
+    <b>background-color: #D6EEEE; </b> <br>
+    } <br>
+    &lt;/style>
+  </p>
+  <p>Хэрэв (<i>even</i>) оронд (<i>odd</i>) байвал 2,4,6 мөрийн оронд 1,3,5, гэх мэт мөрөнд солигдоно.</p>
+
+  <h2>HTML Table - Vertical Zebra Stripes</h2>
+  <p>Босоо тахь зураастай болгохын тулд багана болгоныг загварчилна. <br>
+    Хүснэгтийн өгөгдлийн элементийг <b>:nth-child(even)</b> байдлаар тохируулна.</p>
+  <p>&lt;style> <br>
+    table, th, td { <br>
+    border: 1px solid black; <br>
+    border-collapse: collapse; <br>
+    } <br>
+    <mark>th:nth-child(even),td:nth-child(even)</mark> <br>
+    { <br>
+    background-color: #D6EEEE; } <br>
+    &lt;/style>
+  </p>
+
+  <h2>Combine Vertical and Horizontal Zebra Stripes</h2>
+  <p>Дээрх хоёр жишээн дээрх загварыг нэгтгэж мөр болон багана бүрт зураастай давхардсан эффект авч болно.</p>
+  <p>Үүний тулд <mark>nth-child()</mark> элементэд <b>even (odd)</b> сонгогчийг ашиглан мөр бүрдээ
+    <mark>background-color</mark> нэмнэ.
+  </p>
+  <p>&lt;style> <br>
+    table, th, td { <br>
+    border: 1px solid black; <br>
+    border-collapse: collapse; } <br>
+    <mark>tr:nth-child(even)</mark> { <br>
+    <b>background-color: rgba(150, 212, 212, 0.4);</b> } <br>
+    <mark>th:nth-child(even), td:nth-child(even)</mark> { <br>
+    <b>background-color: rgba(150, 212, 212, 0.4);</b> } <br>
+    &lt;/style>
+  </p>
+  <p>Хэрэв толгой, хүснэгтийн нүдэнд эффектийг ашиглахыг хүсвэл <mark>:nth-child()</mark> сонгогчийг <b>th, td</b>
+    элементүүдийн аль алинд нь байрлуулна.</p>
+
+  <h2>Horizontal Dividers</h2>
+  <p>Хэрэв зөвхөн хүснэгтийн мөр бүрийн доод хэсэгт хүрээ хийвэл хэвтээ байдлаар тусгаарлагдсан хүснэгттэй болно.</p>
+  <p>Хэвтээ тусгаарлагчийг авахын тулд <b>tr</b> элементүүдэд <mark>border-bottom</mark> шинж чанарыг нэмнэ.</p>
+  <p>&lt;style> <br>
+    table { <br>
+    border-collapse: collapse; <br>
+    width: 100%; } <br>
+    <b>tr { </b> <br>
+    <mark>border-bottom: 1px solid #ddd;</mark> } <br>
+    &lt;/style>
+  </p>
+
+  <h2>Hoverable Table</h2>
+  <p><b>&lt;tr&gt;</b> дээрх <mark>:hover</mark> сонгогчийг ашиглан хулгана хүрэх үед хүснэгтийн мөрүүд тодорно.</p>
+
+  <table>
+    <caption>Common Image Formats</caption>
+    <caption>(Нийтлэг зургийн форматууд)</caption>
+    <tr>
+      <th>Abbreviation</th>
+      <th>File Format</th>
+      <th>File Extension (Файлын өргөтгөл)</th>
+    </tr>
+    <tr>
+      <td>APNG</td>
+      <td>Animated Portable Network Graphics</td>
+      <td>.apng</td>
+    </tr>
+    <tr>
+      <td>GIF</td>
+      <td>Graphics Interchange Format</td>
+      <td>.gif</td>
+    </tr>
+    <tr>
+      <td>ICO</td>
+      <td>Microsoft Icon</td>
+      <td>.ico, .cur</td>
+    </tr>
+    <tr>
+      <td>JPEG</td>
+      <td>Joint Photographic Expert Group image</td>
+      <td>.jpg, .jpeg, .jfif, .pjpeg, .pjp</td>
+    </tr>
+    <tr>
+      <td>PNG</td>
+      <td>Portable Network Graphics</td>
+      <td>.png</td>
+    </tr>
+    <tr>
+      <td>SVG</td>
+      <td>Scalable Vector Graphics</td>
+      <td>.svg</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

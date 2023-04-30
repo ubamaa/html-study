@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Tables</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a class="backbutton" href="index.html">буцах</a></p>
+
+  <h1>HTML Table Padding & Spacing</h1>
+  <p>HTML хүснэгтийн нүднүүдийн доторх дүүргэлт, мөн нүдний хоорондох зайг тохируулах боломжтой.</p>
+
+  <h2>HTML Table - Cell Padding</h2>
+  <p><em>Cell padding</em> гэдэг нь агуулга болон хүснэгтийн хүрээ хоорондох зай юм. <br>
+    Анхны өгөгдлөөр үүнийг 0 болгож тохируулсан байдаг.</p>
+  <p>Хүснэгтийн нүднүүдэд зай нэмэхийн тулд <mark>padding</mark> CSS шинж чанарыг ашиглана.</p>
+  <p>Padding нэмэхийн тулд <b>padding-top, padding-bottom, padding-left, padding-right</b> шинж чанарыг ашиглана.</p>
+
+  <table style="width:90%">
+    <caption>Table Padding and Spacing</caption>
+    <tr>
+      <th>Cell Padding</th>
+      <th>Cell Spacing</th>
+    </tr>
+    <tr>
+      <td>padding-top</td>
+      <td>border-spacing</td>
+    </tr>
+    <tr>
+      <td>padding-bottom</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>padding-left</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>padding-right</td>
+      <td></td>
+    </tr>
+  </table>
+
+  <p>Доорх утгаар дээд хүснэгтийг байгуулав.</p>
+  <p><b>&lt;style> <br>
+      table, th, td { <br>
+      border: 1px solid black; <br>
+      border-collapse: collapse; } <br>
+      th, td { <br>
+      <mark>padding-top: 5px; <br>
+        padding-bottom: 5px; <br>
+        padding-left: 20px; <br>
+        padding-right: 20px; </mark> } <br>
+      &lt;/style></b></p>
+
+  <h2>HTML Table - Cell Spacing</h2>
+  <p><em>Cell Spacing</em> гэдэг нь нүд бүрийн хоорондох зай юм. <br>
+    Анхны өгөгдлөөр энэ зайг 2 пикселээр тохируулсан.</p>
+  <p>Хүснэгтийн нүднүүдийн хоорондын зайг өөрчлөхийн тулд <mark>table</mark> элементэд <b>border-spacing</b> CSS шинж
+    чанарыг ашиглана.</p>
+  <p><b>&lt;style> <br>
+      table, th, td { <br>
+      border: 1px solid black; } <br>
+      <mark>table { border-spacing: 30px; }</mark> <br>
+      &lt;/style></b></p>
+
+</body>
+
+</html>

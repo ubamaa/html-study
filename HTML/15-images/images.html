@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Images</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>HTML images (Зураг оруулах)</h1>
+    <p>Зураг нь вэб хуудасны дизайн болон харагдах байдлыг сайжруулж чадна.</p>
+
+    <h2>HTML Images Syntax</h2>
+    <p>HTML <mark>&lt;img></mark> таг нь вэб хуудсанд зураг оруулахад хэрэглэгддэг.</p>
+    <p><em>&lt;img></em> таг нь шаардлагатай хоёр шинж чанартай:</p>
+    <p><b>src</b> - Зурганд хүрэх замыг зааж өгнө.</p>
+    <p><b>alt</b> - Зургийн өөр текстийг зааж өгнө.</p>
+    <p><mark>&lt;img></mark> таг хоосон, зөвхөн шинж чанаруудыг агуулсан тул төгсгөлийн таг байхгүй.</p>
+    <p><b>Syntax</b>: <em>(&lt;img src="url" alt="alternatetext">)</em></p>
+
+    <h2>The src Attribute</h2>
+    <p>Шаардлагатай <mark>src</mark> атрибут нь зурагт хүрэх замыг <i>(URL)</i> зааж өгдөг.</p>
+    <img src="images/white-lotus-flower.jpg" alt="White-lotus-flower" style="width:340px;height:350px;">
+
+    <h2>The alt Attribute</h2>
+    <p><mark>alt</mark> - HTML шинж чанар нь зургийг харуулах боломжгүй бол текстийг (зургийн нэр) харуулна.</p>
+    <p>Атрибутын <b>alt</b> утга нь зургийг тайлбарлах ёстой:</p>
+    <img src="wrongname.gif" alt="Flowers in Chania">
+    <p>Хэрэв хөтөч зураг олж чадахгүй бол <b>alt</b> нь атрибутын утгыг харуулах болнo.</p>
+
+    <h2>Image Size - Width and Height</h2>
+    <p><mark>width, height</mark> шинж чанарууд нь зургийн өргөн, өндрийг үргэлж пикселээр тодорхойлдог.</p>
+    <p>Зургийн өргөн, өндрийг тодорхойлохын тулд <b>style</b> атрибутыг ашиглаж болно:
+        <em>style="width:500px;height:600px;</em>
+    </p>
+    <p>Эсвэл <b>width</b>, <b>height</b> шинж чанаруудыг ашиглаж болно: <em>width="500" height="600"</em></p>
+
+    <h2>Width and Height, or Style?</h2>
+    <p><mark>Width, height, style</mark> шинж чанарууд HTML дээр хүчинтэй.</p>
+    <p>Гэхдээ <b>style</b> шинж чанарыг ашиглахыг санал болгодог, учир нь хуудасны зургийн хэмжээг өөрчлөхөөс сэргийлнэ.
+    </p>
+
+    <h2>Images in Another Folder</h2>
+    <p>Хэрэв танд дэд хавтас дотор зураг байгаа бол <b>src</b> шинж чанарт хавтасны нэрийг зааж өгөх ёстой.</p>
+    <img src="images/sunlight-sky-clouds.jpg" alt="Sky" style="width:450px;height:350px;">
+
+    <h2>Images on Another Server/Website</h2>
+    <p>Өөр сервер дээрх зургийг оруулахын тулд <b>src</b> шинж чанарт үнэмлэхүй URL-г зааж өгдөг.</p>
+    <img src="https://i.pinimg.com/564x/d5/9c/fb/d59cfb6a0f0e85e82968e6c342ff0a0a.jpg"
+        style="width:240px;height:250px;">
+
+    <h2>Animated Images (Хөдөлгөөнт зураг)</h2>
+    <p>HTML нь хөдөлгөөнт GIF-г зөвшөөрдөг.</p>
+    <img src="images/programming.gif" alt="Computer man" style="width:48px;height:48px;">
+
+    <h2>Image as a Link (Зургийг холбоос хэлбэрээр)</h2>
+    <p>Зургийг холбоос болгон ашиглахын тулд <b>
+            &lt;a>
+        </b> таг дотор <b>
+            &lt;img>
+        </b> тагийг байрлуулна.</p>
+    <a href="https://vox525.wordpress.com/"><img src="images/smiley.gif" alt="Smilling head"
+            style="width:40px;height:40px;"></a>
+
+    <h2>Image Floating (Хөвөгч зураг)</h2>
+    <p>Зургийг текстийн баруун эсвэл зүүн талд байрлуулахын тулд CSS-н <b>float</b> шинж чанарыг ашиглана.</p>
+    <p><strong>Хөвөгч зураг баруун талд:</strong></p>
+    <p><img src="images/smiley.gif" alt="Smiley face" style="float:right;width:45px;height:45px;">Зургийг баруун талд
+        байрлуулав.</p>
+    <p><strong>Хөвөгч зураг зүүн талд:</strong></p>
+    <p><img src="images/smiley.gif" alt="Smiley face" style="float:left;width:45px;height:45px;">Зураг зүүн талд байна.
+    </p>
+
+</body>
+
+</html>

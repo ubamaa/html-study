@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .flex-item-left {
+        background-color: lawngreen;
+        padding: 10px;
+        flex: 50%;
+    }
+
+    .flex-item-right {
+        background-color: limegreen;
+        padding: 10px;
+        flex: 50%;
+    }
+
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    @media (max-width: 800px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .flex-container1 {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .flex-item-left1 {
+        background-color: yellow;
+        padding: 10px;
+        flex: 50%;
+    }
+
+    .flex-item-right1 {
+        background-color: orange;
+        padding: 10px;
+        flex: 50%;
+    }
+
+    /* Responsive layout - makes a one column-layout instead of a two-column layout */
+    @media (max-width: 800px) {
+
+        .flex-item-right1,
+        .flex-item-left1 {
+            flex: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>CSS Flex Responsive</h1>
+    <h2>Responsive Flexbox</h2>
+    <p>Хэрэв дэлгэцийн хэмжээтэй хоёр багана, жижиг дэлгэцийн хэмжээтэй (утас, таблет гэх мэт) нэг баганатай модель
+        үүсгэхийг хүсвэл <b>flex-direction</b> шинж чанарыг <em>row to column</em> болгон уян чиглэлийг өөрчилж болно.
+        (доорх жишээнд 800px):</p>
+    <p>Дараах жишээ нь дэлгэцийн хэмжээ 800px буюу түүнээс бага өргөнтэй үед уян элементүүдийг босоо (дээрээс
+        доош) байдлаар (<b>flex-direction: row;</b>), <br>
+        хэрэв дэлгэцийн хэмжээ 800px-ээс том бол уян элементүүдийг хэвтээ байдлаар (зүүнээс баруун тийш)
+        <b>flex-direction: row;</b> болгож өөрчилнө:
+    </p>
+    <p>.flex-container { <br>
+        display: flex; <br>
+        flex-direction: row; <br>
+        } <br>
+    </p>
+    <p><span style="color:darkorange">/* Responsive layout - makes a one column layout instead of a two-column
+            layout
+            */</span> <br>
+        @media (max-width: 800px) { <br>
+        .flex-container { <br>
+        flex-direction: column; } <br>
+        }</p>
+    <div class="flex-container">
+        <div class="flex-item-left">1</div>
+        <div class="flex-item-right">2</div>
+    </div>
+    <p>Өөр нэг арга бол уян элементийн <b>flex</b> шинж чанарын хувь хэмжээг өөрчлөж, янз бүрийн дэлгэцийн хэмжээтэй өөр
+        байршил үүсгэх явдал юм. <br>
+        Энэ жишээг ажиллуулахын тулд уян контейнерт <b>flex-wrap: wrap;</b>-г оруулах хэрэгтэйг анхаар:</p>
+    <p>.flex-container { <br>
+        display: flex; <br>
+        flex-wrap: wrap; <br>
+        } <br>
+        <br>
+        .flex-item-left { <br>
+        flex: 50%; <br>
+        } <br>
+        <br>
+        .flex-item-right { <br>
+        flex: 50%; <br>
+        } <br>
+        <br>
+        <span style="color:darkorange">/* Responsive layout - makes a one column layout instead of a two-column layout
+            */</span> <br>
+        @media (max-width: 800px) { <br>
+        .flex-item-right, .flex-item-left { <br>
+        flex: 100%; } <br>
+        }
+    </p>
+    <div class="flex-container1">
+        <div class="flex-item-left1">1</div>
+        <div class="flex-item-right1">2</div>
+    </div>
+    <br>
+
+</body>
+
+</html>

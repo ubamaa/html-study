@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Borders</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <style>
+        p.dotted {
+            border-style: dotted;
+            padding: 3px;
+        }
+
+        p.dashed {
+            border-style: dashed;
+            padding: 3px;
+        }
+
+        p.solid {
+            border-style: solid;
+            padding: 3px;
+        }
+
+        p.double {
+            border-style: double;
+            padding: 3px;
+        }
+
+        p.groove {
+            border-style: groove;
+            padding: 3px;
+        }
+
+        p.ridge {
+            border-style: ridge;
+            padding: 3px;
+        }
+
+        p.inset {
+            border-style: inset;
+            padding: 3px;
+        }
+
+        p.outset {
+            border-style: outset;
+            padding: 3px;
+        }
+
+        p.none {
+            border-style: none;
+            padding: 3px;
+        }
+
+        p.hidden {
+            border-style: hidden;
+            padding: 3px;
+        }
+
+        p.mix {
+            border-style: dotted dashed solid double;
+            padding: 3px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 7px;
+        }
+
+        tr:nth-child(even) {
+            background-color: hsla(222, 100%, 47%, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>CSS Borders</h1>
+    <p>CSS <b>border</b> шинж чанар нь элементийн хүрээний хэв маяг, өргөн, өнгийг тодорхойлох боломжийг олгодог.</p>
+
+    <h2>CSS Border Style</h2>
+    <p><b>border-style</b> шинж чанар нь ямар төрлийн хүрээ харуулахыг зааж өгдөг:</p>
+
+    <p class="dotted"><b>dotted</b> - Цэгэн хүрээг тодорхойлно.</p>
+    <p class="dashed"><b>dashed</b> - Тасархай зураасан хүрээг тодорхойлно.</p>
+    <p class="solid"><b>solid</b> - Зураасан хүрээг тодорхойлно.</p>
+    <p class="double"><b>double</b> - Давхар зураастай хүрээг тодорхойлно.</p>
+    <p class="groove"><b>groove</b> - 3D ховилтой хүрээг тодорхойлно.</p>
+    <p class="ridge"><b>ridge</b> - 3D товгор хүрээг тодорхойлно.</p>
+    <p class="inset"><b>inset</b> - 3D тасархай хүрээг тодорхойлно.</p>
+    <p class="outset"><b>outset</b> - 3D эхлэлийн хүрээг тодорхойлно.</p>
+    <p class="none"><b>none</b> - Хүрээ байхгүй.</p>
+    <p class="hidden"><b>hidden</b> - Далд хүрээг илтгэнэ.</p>
+    <p class="mix"><b>mix</b> - Холимог хүрээг харуулна.</p>
+    <p><b>border-style</b> нь 4-н утгатай:</p>
+    <ul style="list-style-type:none;">
+        <li><em>top border</em></li>
+        <li><em>right border</em></li>
+        <li><em>bottom border</em></li>
+        <li><em>left border</em></li>
+    </ul>
+
+    <hr><br>
+    <table>
+        <caption style="font-size: 120%;"><b>All CSS Border Properties</b></caption>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>border</td>
+            <td>Бүх хилийн шинж чанарыг 1 илэрхийлэлд тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-bottom</td>
+            <td>Доод хилийн бүх шинж чанарыг 1 илэрхийлэлд тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-bottom-color</td>
+            <td>Доод хүрээний өнгийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-bottom-style</td>
+            <td>Доод хүрээний хэв загварыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-bottom-width</td>
+            <td>Доод хүрээний өргөнийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-color</td>
+            <td>Хүрээний 4-н хилийн өнгийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-left</td>
+            <td>Зүүн хилийн бүх шинж чанарыг 1 илэрхийлэлд тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-left-color</td>
+            <td>Зүүн хүрээний өнгийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-left-style</td>
+            <td>Зүүн хүрээний хэв загварыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-left-width</td>
+            <td>Зүүн хүрээний өргөнийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-radius</td>
+            <td>Хүрээний 4-н булангийн радиус шинж чанарыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-right</td>
+            <td>Баруун хилийн бүх шинж чанарыг 1 илэрхийлэлд тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-right-color</td>
+            <td>Баруун хүрээний өнгийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-right-style</td>
+            <td>Баруун хүрээний хэв загварыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-right-width</td>
+            <td>Баруун хүрээний өргөнийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-style</td>
+            <td>Дөрвөн хүрээний хэв загварыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-top</td>
+            <td>Дээд хилийн бүх шинж чанарыг нэг илэрхийлэлд тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-top-color</td>
+            <td>Дээд талын хүрээний өнгийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-top-style</td>
+            <td>Дээд талын хүрээний хэв загварыг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-top-width</td>
+            <td>Дээд талын хүрээний өргөнийг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>border-width</td>
+            <td>4-н хилийн өргөнийг тохируулна.</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

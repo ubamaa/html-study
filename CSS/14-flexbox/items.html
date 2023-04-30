@@ -3,6 +3,7 @@
 
 <head>
     <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="../../styles/style.css">
 </head>
 <style>
     .flex-container {
@@ -56,7 +57,7 @@
 
 <body>
 
-    <p><a href="../index.html">Index буцах</a></p>
+    <p><a class="backbutton" href="index.html">буцах</a></p>
 
     <h1>CSS Flex Items</h1>
     <h2>Child Elements (Items)</h2>
@@ -76,15 +77,15 @@
     </div>
     <p>Уян элементийн шинж чанарууд нь:</p>
     <ul>
-        <li>order</li>
-        <li>flex-grow</li>
-        <li>flex-shrink</li>
-        <li>flex-basic</li>
-        <li>flex</li>
-        <li>align-self</li>
+        <li><a href="#1">order</a></li>
+        <li><a href="#2">flex-grow</a></li>
+        <li><a href="#3">flex-shrink</a></li>
+        <li><a href="#4">flex-basic</a></li>
+        <li><a href="#5">flex</a></li>
+        <li><a href="#6">align-self</a></li>
     </ul>
 
-    <h3>The order Property</h3>
+    <h3 id="1">The order Property</h3>
     <p><b>order</b> шинж чанар нь уян элементийн дарааллыг тодорхойлдог. <br>
         <em>order</em>-ийн утга нь тоо байх ёстой, анхдагч утга нь 0 юм. <br>
         Кодын эхний уян элементийг байршлын эхний элемент болгон харуулах албагүй. <br>
@@ -103,7 +104,7 @@
         <div style="order: 1">4</div>
     </div>
 
-    <h3>flex-row Property</h3>
+    <h3 id="2">flex-row Property</h3>
     <p><b>flex-grow</b> шинж чанар нь 1 flex-элемент нь бусад flex-элементүүдтэй харьцуулахад хэр хэмжээгээр өсөхийг
         тодорхойлдог.<br> Утга нь тоо байх ёстой, <i>анхдагч утга</i> нь 0 байна.</p>
     <p>3 дахь уян элемент нь бусад уян элементүүдээсээ <b>8 дахин</b> томорсон байна.</p>
@@ -118,7 +119,7 @@
         <div style="flex-grow: 8">3</div>
     </div>
 
-    <h3>The flex-shrink Property</h3>
+    <h3 id="3">The flex-shrink Property</h3>
     <p><b>flex-shrink</b> шинж чанар нь 1 уян элемент бусад уян элементүүдтэй харьцуулахад хэр хэмжээгээр агшихыг
         тодорхойлдог. <br> Утга нь тоо байх ёстой, анхдагч утга нь 1 байна.</p>
     <p>9 дахь уян элементийг бусад уян элементийн адил багасгаагүй байгаа:</p>
@@ -154,7 +155,7 @@
         <div>17</div>
     </div>
 
-    <h3>The flex-basis Property</h3>
+    <h3 id="4">The flex-basis Property</h3>
     <p><b>flex-basis</b> шинж чанар нь уян элементийн анхны уртыг тодорхойлдог.</p>
     <p>3 дахь уян элементийн анхны уртыг 200px болгож тохируулсан:</p>
     <p>&lt;div class="flex-container"> <br>
@@ -171,7 +172,7 @@
         <div>4</div>
     </div>
 
-    <h3>The flex Property</h3>
+    <h3 id="5">The flex Property</h3>
     <p><b>flex</b> шинж чанар нь <em>flex-grow</em>, <em>flex-shrink</em> болон <em>flex-basis</em> шинж чанаруудын
         товчилсон шинж чанар юм.</p>
     <p>1 дахь уян элементийг <em>flex-grow: 0, flex-shrink: 0, flex-basis: 200px</em> болгоно:</p>
@@ -189,7 +190,7 @@
         <div>4</div>
     </div>
 
-    <h3>The align-self Property</h3>
+    <h3 id="6">The align-self Property</h3>
     <p><b>align-self</b> шинж чанар нь уян контейнер доторх сонгосон элементийн зэрэгцүүлэлтийг тодорхойлдог. <br>
         <b>align-self</b> шинж чанар нь контейнерийн <b>align-items</b> шинж чанараар тохируулсан өгөгдмөл
         зэрэгцүүлэлтийг хүчингүй болгодог.
@@ -222,7 +223,8 @@
         <div style="align-self: flex-end">3</div>
         <div>4</div>
     </div>
-    <br><br>
+    <p><b>align-self</b> шинж чанар нь контейнерийн <b>align-items</b> шинж чанарыг дардаг.</p>
+    <br>
 
     <p style="text-align: center;font-size: 120%;font-weight: bold;">The CSS Flexbox Items Properties</p>
     <table>

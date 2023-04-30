@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Images</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>HTML picture Element</h1>
+    <p>HTML <b>&lt;picture&gt;</b> элемент нь янз бүрийн төхөөрөмж эсвэл дэлгэцийн хэмжээтэй зургуудыг харуулах
+        боломжтой.
+    </p>
+
+    <h2>The HTML picture Element</h2>
+    <p><mark>&lt;picture&gt;</mark> элемент нь нэг буюу хэд хэдэн <b>&lt;source&gt;</b> элементийг агуулж байдаг.</p>
+    <p><mark>&lt;source&gt;</mark> элемент тус бүр нь <b>srcset</b> атрибутаар дамжуулан өөр өөр зургийг илэрхийлдэг.
+    </p>
+    <p><b>&lt;source&gt;</b> элемент бүхэн <mark>media</mark> шинж чанартай байдаг, энэ нь тухайн зураг хэзээ хамгийн
+        тохиромжтой болохыг тодорхойдог.</p>
+    <picture>
+        <source media="(min-width: 350px)" srcset="images/360.jpg">
+        <source media="(min-width: 600px)" srcset="images/iPhone6s.jpg">
+        <img src="images/workplace.jpg" style="width:auto;">
+    </picture>
+    <p><mark>&lt;picture&gt;</mark> <br>
+        <b>&lt;source</b> <em>media</em>="(min-width: 650px)" <b>srcset</b>="images/360.jpg"> <br>
+        <b>&lt;source</b> <em>media</em>="(min-width: 465px)" <b>srcset</b>="images/iPhone6s.jpg"> <br>
+        <b>&lt;img</b> <em>src</em>="img_girl.jpg"> <br>
+        <mark>&lt;/picture&gt;</mark>
+    </p>
+    <p><b>&lt;img></b> элементийг <mark>&lt;picture></mark> элементийн хэсэгт заавал дагалдуулна. <b>&lt;picture></b>
+        элементийг дэмждэггүй хөтчүүд <br>
+        эсвэл <mark>&lt;source&gt;</mark> тагуудын аль нь ч таарахгүй тохиолдолд <mark>&lt;img&gt;</mark> элементийг
+        ашигладаг.</p>
+
+    <h2>When to use the Picture Element</h2>
+    <p>Элементийн (<b>&lt;picture&gt;</b>) 2 үндсэн зорилго байдаг:</p>
+    <p><em>1. Bandwidth (Дамжуулах зурвасын өргөн)</em> <br>
+        Хэрэв жижиг дэлгэц, төхөөрөмжтэй бол том зургийн файлыг татаж авах шаардлагагүй. <br>
+        Хөтөч нь зохих шинж чанарын утгуудтай эхний <b>source</b> элементийг ашиглах болно.</p>
+    <p><b>Жишээ нь:</b> Дээр оруулсан зургийн эхний зургийг программ тохиромжтой учир сонгосон байна.</p>
+    <p><em>2. Format Support (Форматын дэмжлэг)</em> <br>
+        Зарим хөтөч эсвэл төхөөрөмж нь бүх зургийн форматыг дэмждэггүй. <br>
+        Бүх форматын зургийг нэмж болох бөгөөд <b>&lt;picture&gt;</b> элемент нь анхны дэмжигдсэн зургийн форматыг
+        ашиглана.</p>
+    <p><b>&lt;picture&gt;</b> <br>
+        <mark>&lt;source srcset="img_avatar.png"&gt;</mark> <br>
+        &lt;source srcset="img_girl.jpg"> <br>
+        &lt;img src="img_beatles.gif" alt="Beatles" style="width:auto;"> <br>
+        <b>&lt;/picture&gt;</b> <br>
+        <br>
+        энэ жишээн дээрх эхний зураг буюу шарлуулсан утгыг программ сонгосон.
+    </p>
+
+</body>
+
+</html>

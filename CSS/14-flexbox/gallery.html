@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .border {
+            border-color: yellow;
+            border-width: 2px;
+            border-style: dotted;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+
+            .border {
+                border: 1px dotted blue;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>Responsive Image Gallery using Flexbox</h1>
+    <p>Дэлгэцийн хэмжээнээс хамааран дөрөв, хоёр, бүтэн хэмжээтэй зураг хэлбэлздэг мэдрэмжтэй зургийн цомог үүсгэхийн
+        тулд <b>flexbox</b> ашиглана.</p>
+    <br>
+
+    <h2 style="text-align:center">Responsive Image Gallery</h2>
+    <p style="text-align: center;">(<em>Дэлгэцийн хариу үйлдэл харахын тулд хөтчийн цонхны хэмжээг
+            өөрчлөж болно.</em>)</p>
+    <div class="row">
+        <div class="column border">
+            <img src="images/1.jpg" style="width:100%">
+            <img src="images/2.jpg" style="width:100%">
+            <img src="images/3.jpg" style="width:100%">
+            <img src="images/4.jpg" style="width:100%">
+            <img src="images/5.jpg" style="width:100%">
+
+        </div>
+
+        <div class="column border">
+            <img src="images/6.jpg" style="width:100%">
+            <img src="images/7.jpg" style="width:100%">
+            <img src="images/8.jpg" style="width:100%">
+            <img src="images/9.jpg" style="width:100%">
+            <img src="images/10.jpg" style="width:100%">
+        </div>
+
+        <div class="column border">
+            <img src="images/11.jpg" style="width:100%">
+            <img src="images/12.jpg" style="width:100%">
+            <img src="images/13.jpg" style="width:100%">
+            <img src="images/14.jpg" style="width:100%">
+        </div>
+
+        <div class="column border">
+            <img src="images/15.jpg" style="width:100%">
+            <img src="images/16.jpg" style="width:100%">
+            <img src="images/17.jpg" style="width:100%">
+            <img src="images/18.jpg" style="width:100%">
+            <img src="images/poppy.jpg" style="width: 100%;">
+        </div>
+
+</body>
+
+</html>

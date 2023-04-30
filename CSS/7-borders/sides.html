@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Borders</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <style>
+        p.sex {
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+            padding: 3px;
+        }
+
+        p.five {
+            border-style: dotted solid;
+            padding: 3px;
+        }
+
+        /* Four values */
+        p.four {
+            border-style: dotted solid double dashed;
+            padding: 3px;
+        }
+
+        /* Three values */
+        p.three {
+            border-style: dotted solid double;
+            padding: 3px;
+        }
+
+        /* Two values */
+        p.two {
+            border-style: dotted solid;
+            padding: 3px;
+        }
+
+        /* One value */
+        p.one {
+            border-style: dotted;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>CSS Border Sides</h1>
+    <h2>CSS Border - Individual Sides</h2>
+    <p>Хүрээний тал бүрт өөр өөр хил зааж өгч болно.</p>
+    <p>CSS нь хил тус бүрийг (<i>top, right, bottom, left</i>) зааж өгөх шинж чанартай байдаг:</p>
+    <p style="padding-left: 30px;" class="sex"><b>Хилийн 4-н шинж чанартай, 2 өөр загвар: </b><br>
+        <i>border-top-style: dotted; <br>
+            border-right-style: solid; <br>
+            border-bottom-style: dotted; <br>
+            border-left-style: solid;</i>
+    </p>
+    <p style="padding-left: 30px;" class="five"><b>Дээрх жишээ үүнтэй ижил үр дүнтэй байна:</b><br>
+        <i>border-style: dotted solid;</i>
+    </p>
+    <p>Тэгэхээр, дээрх илэрхийллүүд хэрхэн ажилладагийн харцгаая.</p>
+    <p class="four">Хэрэв <b>border-style</b> 4-н утгатай бол:</p>
+    <ul>
+        <li><ins>border-style: dotted solid double dashed;</ins></li>
+        <ul>
+            <li><i>top border - dotted</i></li>
+            <li><i>right border - solid</i></li>
+            <li><i>bottom border - double</i></li>
+            <li><i>left border - dashed</i></li>
+        </ul>
+    </ul>
+    <p class="three">Хэрэв <b>border-style</b> 3-н утгатай бол:</p>
+    <ul>
+        <li>border-style: dotted solid double;</li>
+        <ul>
+            <li><i>top border - dotted</i></li>
+            <li><i>right and left - solid</i></li>
+            <li><i>bottom border - double</i></li>
+        </ul>
+    </ul>
+    <p class="two">Хэрэв <b>border-style</b> нь 2 утгатай бол:</p>
+    <ul>
+        <li>border-style: dotted solid;</li>
+        <ul>
+            <li><i>top and bottom - dotted</i></li>
+            <li><i>right and left - solid</i></li>
+        </ul>
+    </ul>
+    <p class="one">Хэрэв <b>border-style</b> нэг утгатай бол:</p>
+    <ul>
+        <li>border-style: dotted;
+            <ul>
+                <li><i>all four borders - dotted</i></li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Мөн <b>border-style</b>-ийг <ins>border-width</ins> болон <ins>border-color</ins> шинж чанаруудтай хамт ашиглаж
+        болно.</p>
+
+</body>
+
+</html>

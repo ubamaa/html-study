@@ -3,6 +3,7 @@
 
 <head>
     <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="../../styles/style.css">
 </head>
 <style>
     .flex-container {
@@ -19,27 +20,12 @@
 
     .flex-container1 {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         background-color: hsl(147, 50%, 47%);
     }
 
     .flex-container1>div {
-        background-color: #f5e3e3;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 90px;
-        font-size: 30px;
-    }
-
-    .flex-container2 {
-        display: flex;
-        justify-content: center;
-        background-color: hsl(147, 50%, 47%);
-    }
-
-    .flex-container2>div {
-        background-color: #f1f1f1;
+        background-color: bisque;
         width: 100px;
         margin: 10px;
         text-align: center;
@@ -47,15 +33,29 @@
         font-size: 30px;
     }
 
+    .flex-container2 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: hsl(147, 50%, 47%);
+    }
+
+    .flex-container2>div {
+        background-color: bisque;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 90px;
+        font-size: 30px;
+    }
+
     .flex-container3 {
         display: flex;
-        height: 200px;
-        align-items: center;
+        justify-content: center;
         background-color: hsl(147, 50%, 47%);
     }
 
     .flex-container3>div {
-        background-color: #f1f1f1;
+        background-color: bisque;
         width: 100px;
         margin: 10px;
         text-align: center;
@@ -65,15 +65,13 @@
 
     .flex-container4 {
         display: flex;
-        height: 400px;
-        flex-wrap: wrap;
-        align-content: space-between;
-        overflow: scroll;
+        height: 200px;
+        align-items: center;
         background-color: hsl(147, 50%, 47%);
     }
 
     .flex-container4>div {
-        background-color: #f1f1f1;
+        background-color: bisque;
         width: 100px;
         margin: 10px;
         text-align: center;
@@ -83,15 +81,33 @@
 
     .flex-container5 {
         display: flex;
+        height: 400px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        overflow: scroll;
+        background-color: hsl(147, 50%, 47%);
+    }
+
+    .flex-container5>div {
+        background-color: bisque;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+
+    .flex-container6 {
+        display: flex;
         justify-content: center;
         align-items: center;
         height: 300px;
         background-color: hsl(147, 50%, 47%);
     }
 
-    .flex-container5>div {
-        background-color: #f1f1f1;
-        color: black;
+    .flex-container6>div {
+        background-color: bisque;
+        color: rgb(255, 140, 0);
         text-align: center;
         width: 100px;
         height: 100px;
@@ -106,19 +122,19 @@
     td {
         padding: 7px;
         text-align: left;
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid lightpink;
     }
 
     tr:hover {
-        background-color: #D6EEEE;
+        background-color: rgba(255, 159, 79, 0.2);
     }
 </style>
 
 <body>
 
-    <p><a href="../index.html">Index буцах</a></p>
+    <p><a class="backbutton" href="index.html">буцах</a></p>
 
-    <h1>CSS Flexbox</h1>
+    <h1 style="text-align: center;">CSS Flexbox</h1>
     <h2>CSS Flexbox Layout Module</h2>
     <p>Flexbox Layout модулийг ашиглахаас өмнө байршлын 4-н горим байсан:</p>
     <ul>
@@ -141,8 +157,9 @@
         <div>2 item</div>
         <div>3 item</div>
     </div>
+    <br><br>
 
-    <h1>CSS Flex Container</h1>
+    <h1 style="text-align: center;">CSS Flex Container</h1>
     <h2>Parent Element (Container)</h2>
     <p><b>Container</b> гэдэг нь өмнө дурдсанчлан, 3-н уян <em>элемент (item)</em> бүхий уян <b>сав (container)</b>
         (ногоон хэсэг) юм.</p>
@@ -150,15 +167,15 @@
         <b>flex container</b> шинж чанарууд:
     </p>
     <ul>
-        <li>flex-direction</li>
-        <li>flex-wrap</li>
-        <li>flex-flow</li>
-        <li>justify-content</li>
-        <li>align-items</li>
-        <li>align-content</li>
+        <li><a href="#1">flex-direction</a></li>
+        <li><a href="#2">flex-wrap</a></li>
+        <li><a href="#3">flex-flow</a></li>
+        <li><a href="#4">justify-content</a></li>
+        <li><a href="#5">align-items</a></li>
+        <li><a href="#6">align-content</a></li>
     </ul>
 
-    <h3>The flex-direction Property</h3>
+    <h3 id="1">The flex-direction Property</h3>
     <p><b>flex-direction</b> шинж чанар контейнер нь уян элементийг аль чиглэлд байршуулахыг хүсч байгааг тодорхойлдог.
     </p>
     <p><b>Column</b> утга нь уян элементийг босоо байдлаар <em>(from top to bottom)</em> байршуулсныг зааж байна:</p>
@@ -167,6 +184,11 @@
         <b>flex-direction: column;</b> <br>
         }
     </p>
+    <div class="flex-container1">
+        <div>1 item</div>
+        <div>2 item</div>
+        <div>3 item</div>
+    </div>
     <p><b>column-reverse</b> утга нь уян элементийг босоо байдлаар (from bottom to top) байршуулна.</p>
     <p>.flex-container { <br>
         display: flex; <br>
@@ -186,10 +208,10 @@
         }
     </p>
 
-    <h3>The flex-wrap Property</h3>
+    <h3 id="2">The flex-wrap Property</h3>
     <p><b>flex-wrap</b> шинж чанар нь уян элемент нь тойрон бүслэх эсэхийг тодорхойлдог.</p>
     <p>Доорх жишээ нь <i>flex-wrap</i> шинж чанарыг илүү сайн харуулахын тулд 15 уян элементийг агуулсан.</p>
-    <div class="flex-container1">
+    <div class="flex-container2">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
@@ -225,7 +247,7 @@
         }
     </p>
 
-    <h3>The flex-flow Property</h3>
+    <h3 id="3">The flex-flow Property</h3>
     <p><b>flex-flow</b> шинж чанар нь <b>flex-direction</b> болон <b>flex-wrap</b> шинж чанаруудыг тохируулсан
         <em>shorthand</em> шинж чанар юм.
     </p>
@@ -235,10 +257,10 @@
         }
     </p>
 
-    <h3>The justify-content Property</h3>
+    <h3 id="4">The justify-content Property</h3>
     <p><b>justify-content</b> шинж чанар нь уян элементийг зэрэгцүүлэхэд ашиглагддаг:</p>
     <p><b>center</b> утга нь уян элементийг контейнерийн голд зэрэгцүүлнэ.</p>
-    <div class="flex-container2">
+    <div class="flex-container3">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
@@ -268,12 +290,12 @@
         }
     </p>
 
-    <h3>The align-items Property</h3>
+    <h3 id="5">The align-items Property</h3>
     <p><b>align-items</b> шинж чанарыг уян элементийг зэрэгцүүлэхэд ашигладаг.</p>
     <p>Энэ жишээн дээр <b>align-items</b> шинж чанарыг илүү сайн харуулахын тулд 200px өндөртэй контейнерийг ашигласан.
     </p>
     <p><b>center</b> утга нь контейнерийн голд уян хатан элементийг зэрэгцүүлнэ:</p>
-    <div class="flex-container3">
+    <div class="flex-container4">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
@@ -307,12 +329,12 @@
         }
     </p>
 
-    <h3>The align-content Property</h3>
+    <h3 id="6">The align-content Property</h3>
     <p><b>align-content</b> шинж чанарыг уян шугмыг тэгшлэхэд ашигладаг.</p>
     <p>Эдгээр жишээн дээр <b>align-content</b> шинж чанарыг илүү сайн харуулахын тулд <b>flex-wrap</b> шинж чанартай
         600px өндөр контейнерийг ашиглаж байна.</p>
     <p><b>space-between</b> утга нь хоорондоо тэнцүү зайтай уян шугмуудыг харуулдаг:</p>
-    <div class="flex-container4">
+    <div class="flex-container5">
         <div>1 item</div>
         <div>2 item</div>
         <div>3 item</div>
@@ -381,7 +403,7 @@
             align-items: center;</b> <br>
         }
     </p>
-    <div class="flex-container5">
+    <div class="flex-container6">
         <div><b>perfect centering</b></div>
     </div>
     <br><br>

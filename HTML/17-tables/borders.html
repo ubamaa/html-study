@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Tables</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+
+<body>
+
+    <p><a class="backbutton" href="index.html">буцах</a></p>
+
+    <h1>HTML Table Borders</h1>
+    <p>HTML хүснэгтүүд нь өөр өөр загвар, хэлбэрийн хүрээтэй байж болно.</p>
+
+    <h2>How To Add a Border</h2>
+    <p>Хүрээ нэмэхийн тулд <b>table, th, td</b> элементүүд дээр <mark>CSS border</mark> шинж чанарыг ашиглана.</p>
+    <p>(&lt;style&gt; <b>table, th, td</b> { <mark>border: 1px solid black;</mark> }&lt;/style&gt;)</p>
+    <p>Энэ жишээн дээрх нь давхар хилийг харуулна.</p>
+
+    <h2>Collapsed Table Borders</h2>
+    <p>Энэ нь хүрээг дан хил буюу зураасан хүрээтэй болгоно.</p>
+    <p>Хүрээг дан хүрээтэй болгохын тулд <b>border-collapse</b> CSS шинж чанарыг <mark>collapse</mark> болгож
+        тохируулна.</p>
+    <p><b>&lt;style> <br>
+            table, th, td { <br>
+            border: 1px solid black; <br>
+            <mark>border-collapse: collapse;</mark> } <br>
+            &lt;/style></b></p>
+
+    <h2>Style Table Borders</h2>
+    <p>Нүд бүрийн дэвсгэр өнгийг тохируулж, хүрээний өнгийг сольж өвөрмөц хүснэгт байгуулж болно.</p>
+    <p><b>&lt;style> <br>
+            table, th, td { <br>
+            border: 1px solid <mark>white</mark>; <br>
+            border-collapse: collapse; <br>
+            } <br>
+            th, td {
+            <mark>background-color: #96D4D4;</mark> } <br>
+            &lt;/style></b></p>
+    <p>Үл үзэгдэх хүрээ мэт сэтгэгдэл төрүүлэхийн тулд цагаан хүрээ, цэнхэр дэвсгэр өнгөөр тохируулав.</p>
+
+    <h2>Round Table Borders</h2>
+    <p><b>border-radius</b> шинж чанар нь хүрээнүүдэд бөөрөнхий булан нэмнэ.</p>
+    <p><b>&lt;style> <br>
+            table, th, td { <br>
+            border: 1px solid black; <br>
+            <mark>border-radius: 10px;</mark> } <br>
+            &lt;/style></b></p>
+    <p>Дээрх жишээний <mark>table</mark> элементийг хасвал, гадна хүрээ хасагдаж нүднүүдэд дугуйрсан булан нэмнэ.</p>
+    <p><b>&lt;style> <br>
+            <mark>th, td</mark> { <br>
+            border: 1px solid black; <br>
+            border-radius: 10px; } <br>
+            &lt;/style></b></p>
+
+    <h2>Dotted Table Borders</h2>
+    <p><b>border-style</b> тусламжтайгаар хүрээний харагдах байдлыг тохируулж болно.</p>
+    <p><b>&lt;style> <br>
+            th, td { <br>
+            <mark>border-style: dotted;</mark> } <br>
+            &lt;/style></b></p>
+    <p><b>border-style</b> утгуудыг доор жагсаая: <br>
+        - <b>dotted</b> (цэгэн хүрээ)<br>
+        - <b>dashed</b> (тасархай зураасан хүрээ)<br>
+        - <b>solid</b> (зураасан хүрээ)<br>
+        - <b>double</b> (давхар зураасан хүрээ)<br>
+        - <b>groove</b> (ховилон хүрээ)<br>
+        - <b>ridge</b> (жаазан хүрээ)<br>
+        - <b>inset</b> (оруулга хүрээ)<br>
+        - <b>outset</b> (эхлэлгүй хүрээ)<br>
+        - <b>none</b> (хүрээ байхгүй)<br>
+        - <b>hidden</b> (нуугдсан хүрээ)</p>
+
+    <h2>Border Color</h2>
+    <p><b>border-color</b> шинж чанараар хүрээний өнгийг тохируулж болно.</p>
+    <p><b>&lt;style> <br>
+            th, td { <br>
+            border-style:solid; <br>
+            <mark>border-color: #96D4D4;</mark> } <br>
+            &lt;/style></b></p>
+
+</body>
+
+</html>

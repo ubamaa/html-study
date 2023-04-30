@@ -3,13 +3,15 @@
 
 <head>
   <title>CSS Backgrounds</title>
+  <link rel="stylesheet" href="../../styles/style.css">
   <style>
     body {
       background-image: url("images/ist.jpg"), url("images/butterfly.jpg");
-      background-repeat: repeat-y;
+      background-position: left top, right top;
+      background-repeat: repeat-y, no-repeat;
     }
 
-    p.a {
+    p.row {
       background-image: url("images/bak.jpg");
     }
 
@@ -32,7 +34,7 @@
 
 <body>
 
-  <p><a href="../index.html">Index буцах</a></p>
+  <p><a class="backbutton" href="index.html">буцах</a></p>
 
   <h1 style="text-align: center;">CSS Background Image</h1>
   <h2>CSS background-image</h2>
@@ -41,7 +43,7 @@
     <i>Анхдагч байдлаар</i>, дэвсгэр зураг давтагддаг тул бүтэн элементийг хамарна.
   </p>
   <p>Арын дэвсгэр зургийг &lt;p&gt; элемент гэх мэт тодорхой элементэд тохируулж болно:</p>
-  <p class="a">Текст болон дэвсгэр зургийн хослолыг зөв тохируулахгүй бол текстийг уншихад хэцүү болно. <br>
+  <p class="row">Текст болон дэвсгэр зургийн хослолыг зөв тохируулахгүй бол текстийг уншихад хэцүү болно. <br>
     <b>Note:</b> Дэвсгэр зургийг сонгохдоо текстэнд саад учруулахгүй зургийг ашиглах хэрэгтэй.
   </p>
   <br>

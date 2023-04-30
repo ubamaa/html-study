@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Width</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <style>
+    p.one {
+      border-style: solid;
+      border-width: 7px;
+      padding: 3px;
+    }
+
+    p.two {
+      border-style: solid;
+      border-width: medium;
+      padding: 3px;
+    }
+
+    p.three {
+      border-style: dashed;
+      border-width: thin;
+      padding: 3px;
+    }
+
+    p.four {
+      border-style: dotted;
+      border-width: thick;
+      padding: 3px;
+    }
+
+    p.five {
+      border-style: double;
+      border-width: 10px;
+      padding: 3px;
+    }
+
+    p.six {
+      border-style: double;
+      border-width: 3px;
+      padding: 3px;
+    }
+
+    p.seven {
+      border-style: solid;
+      border-width: 5px 20px;
+      padding: 3px;
+      /* 5px top and bottom, 20px on the sides */
+    }
+
+    p.eight {
+      border-style: solid;
+      border-width: 20px 5px;
+      padding: 3px;
+      /* 20px top and bottom, 5px on the sides */
+    }
+
+    p.nine {
+      border-style: solid;
+      border-width: 25px 10px 4px 35px;
+      padding: 3px;
+      /* 25px top, 10px right, 4px bottom and 35px left */
+    }
+  </style>
+</head>
+
+<body>
+
+  <p><a class="backbutton" href="index.html">буцах</a></p>
+
+  <h1>CSS Borders</h1>
+  <h2>CSS Border Width</h2>
+  <p><b>border-width</b> шинж чанар нь хүрээний 4-н хилийн өргөнийг тодорхойлдог.</p>
+  <p>Өргөнийг тодорхой хэмжээгээр <b>(px, pt, cm, em г.м)</b> эсвэл урьдчилан тодорхойлсон <b>thin, medium, thick</b>
+    3-н утгыг ашиглан тохируулж болно.</p>
+  <p class="one">Энэ хүрээ - <em>border-style: solid; border-width: 7px;</em></p>
+  <p class="two">Энэ хүрээ - <em>border-style: solid; border-width: medium;</em></p>
+  <p class="three">Энэ хүрээ - <em>border-style: dashed; border-width: thin;</em></p>
+  <p class="four">Энэ хүрээ - <em>border-style: dotted; border-width: thick;</em></p>
+  <p class="five">Энэ хүрээ - <em>border-style: double; border-width: 10px;</em></p>
+  <p class="six">Энэ хүрээ - <em>border-style: double; border-width: 3px;</em></p>
+  <p><b>Note:</b> <em>border-width</em> шинж чанар нь дангаараа ашиглагддаггүй. Эхэнд <em>border-style</em> шинж чанарыг
+    заавал зааж өгнө.</p>
+
+  <h2>Specific Side Widths</h2>
+  <p><b>border-width</b> 4-н утгатай:</p>
+  <ul style="list-style-type:square;">
+    <li>top border</li>
+    <li>right border</li>
+    <li>bottom border</li>
+    <li>left border</li>
+  </ul>
+  <p>Тиймээс аль нэг талыг өөрчилж болно. Дараах жишээг харцгаая.</p>
+  <p class="seven"><em>border-style: solid; border-width: 5px 20px;</em> (5px top and bottom, 20px on the sides)</p>
+  <p class="eight"><em>border-style: solid; border-width: 20px 5px;</em> (20px top and bottom, 5px on the sides)</p>
+  <p class="nine"><em>border-style: solid; border-width: 25px 10px 4px 35px;</em> (25px top, 10px right, 4px bottom and
+    35px left)</p>
+
+</body>
+
+</html>
