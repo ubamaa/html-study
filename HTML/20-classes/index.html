@@ -32,10 +32,10 @@
     <p>Загварын хүснэгт дэх ангиллын нэрийг зааж өгөхийн тулд <b>class</b> шинж чанарыг ихэвчлэн ашигладаг. <br>
       Үүнийг мөн JavaScript ашиглан тухайн ангиллын нэр бүхий элементүүдэд хандаж, удирдах боломжтой.</p>
   </div>
-  <p>Доорх жишээ <b>city</b> утгатай <mark>class</mark> шинж чанартай <mark>&lt;div></mark> элементтэй байна. <br>
-    <mark>&lt;div></mark> элемент нь <b>&lt;head></b> хэсгийн <mark>.city</mark> загвараар тодорхойлогдсон байна:
+  <p>Доорх жишээ <b>city</b> утгатай <mark>class</mark> шинж чанартай <mark>&lt;div&gt;</mark> элементтэй байна. <br>
+    <mark>&lt;div&gt;</mark> элемент нь <b>&lt;head&gt;</b> хэсгийн <mark>.city</mark> загвараар тодорхойлогдсон байна:
   </p>
-  <p>&lt;style> <br>
+  <p>&lt;style&gt; <br>
     <b>.city</b> { <br>
     background-color: honeydew; <br>
     color: dodgerblue; <br>
@@ -43,25 +43,25 @@
     margin: 20px; <br>
     padding: 20px; <br>
     } <br>
-    &lt;/style> <br>
+    &lt;/style&gt; <br>
     <br>
-    <b>&lt;div class="city"></b> <br>
-    &lt;h2>London/h2> <br>
-    &lt;p>London is the capital of England.&lt;/p> <br>
-    <b>&lt;/div></b>
+    <b>&lt;div class="city"&gt;</b> <br>
+    &lt;h2&gt;London/h2&gt; <br>
+    &lt;p&gt;London is the capital of England.&lt;/p&gt; <br>
+    <b>&lt;/div&gt;</b>
   </p>
   <p>Дараах жишээ нь <b>note</b> утгатай <mark>class</mark> шинж чанартай <mark>&lt;span></mark> элементтэй байна. <br>
-    <mark>&lt;span></mark> элемент <b>&lt;head></b> хэсгийн <mark>.note</mark> загвараар тодорхойлогдсон байна:
+    <mark>&lt;span&gt;</mark> элемент <b>&lt;head&gt;</b> хэсгийн <mark>.note</mark> загвараар тодорхойлогдсон байна:
   </p>
-  <p>&lt;style> <br>
+  <p>&lt;style&gt; <br>
     <mark>.note</mark> { <br>
     font-size: 120%; <br>
     color: red; <br>
     } <br>
-    &lt;/style> <br>
+    &lt;/style&gt; <br>
     <br>
-    &lt;h1>My <b>&lt;span class="note">Important&lt;/span></b> Heading&lt;/h1> <br>
-    &lt;p>This is some <b>&lt;span class="note">important&lt;/span></b> text.&lt;/p>
+    &lt;h1&gt;My <b>&lt;span class="note"&gt;Important&lt;/span&gt;</b> Heading&lt;/h1&gt; <br>
+    &lt;p&gt;This is some <b>&lt;span class="note"&gt;important&lt;/span&gt;</b> text.&lt;/p&gt;
   </p>
   <p style="color:red;"><b>note</b>-тэй жишээг турших боломжгүй байв!</p>
   <p>Зөвлөмж: <b>Class</b> шинж чанарыг ямар ч HTML элемент дээр ашиглаж болно. <br>
@@ -78,8 +78,8 @@
   <h2 class="city main">Multiple Classes</h2>
   <p>HTML элементүүд нь нэгээс олон ангид харьяалагддаг. Олон ангиудыг тодорхойлохын тулд ангийн нэрсийг зайгаар
     тусгаарлах <br>
-    ж.нь: div class="city main">. Элементийг заасан ангиудын дагуу загварчлах болно.</p>
-  <p>Дараах жишээнд 3-н <b>&lt;h2></b> элемент <mark>city</mark> ангилалд хамаарна. <br>
+    ж.нь:&lt;div class="city main"&gt;. Элементийг заасан ангиудын дагуу загварчлах болно.</p>
+  <p>Дараах жишээнд 3-н <b>&lt;h2&gt;</b> элемент <mark>city</mark> ангилалд хамаарна. <br>
     <em>London</em> текстийг <b>center</b>-т байрлуулж, <mark>main</mark> ангилалд багтаажээ.
   </p>
   <p>&lt;style&gt; <br>
@@ -91,26 +91,26 @@
     <b>.main { <br>
       text-align: center; <br>
       }</b> <br>
-    &lt;/style><br>
-    <b>&lt;h2 class="city main">London&lt;/h2></b> <br>
-    &lt;h2 class="city">Paris&lt;/h2> <br>
-    &lt;h2 class="city">Tokyo&lt;/h2>
+    &lt;/style&gt;<br>
+    <b>&lt;h2 class="city main"&gt;London&lt;/h2&gt;</b> <br>
+    &lt;h2 class="city"&gt;Paris&lt;/h2&gt; <br>
+    &lt;h2 class="city"&gt;Tokyo&lt;/h2&gt;
   </p>
 
   <h2 class="city">Different Elements Can Share Same Class</h2>
   <p class="city">Өөр өөр HTML элементүүд нь ижил ангийн нэрийг зааж болно.</p>
-  <p>Дараах жишээнд <b>&lt;h2>, &lt;p></b> хоёулаа <mark>city</mark> ангиллыг зааж байгаа бөгөөд ижил хэв маягтай байна:
-  </p>
-  <p>&lt;style> <br>
+  <p>Дараах жишээнд <b>&lt;h2&gt;, &lt;p&gt;</b> хоёулаа <mark>city</mark> ангиллыг зааж байгаа бөгөөд ижил хэв маягтай
+    байна:</p>
+  <p>&lt;style&gt; <br>
     <mark>.city</mark> { <br>
     background-color: honeydew; <br>
     color: dodgerblue; <br>
     padding: 10px; <br>
     } <br>
-    &lt;/style><br>
+    &lt;/style&gt;<br>
     <br>
-    <b>&lt;h2 class="city">Paris&lt;/h2></b><br>
-    <b>&lt;p class="city">Paris is the capital of France.&lt;/p></b>
+    <b>&lt;h2 class="city"&gt;Paris&lt;/h2&gt;</b><br>
+    <b>&lt;p class="city"&gt;Paris is the capital of France.&lt;/p&gt;</b>
   </p>
 
   <h2>Use of The class Attribute in JavaScript</h2>

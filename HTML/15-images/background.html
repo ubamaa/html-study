@@ -4,10 +4,9 @@
 <head>
   <title>HTML Images</title>
   <link rel="stylesheet" href="../../styles/style.css">
-
   <style>
     body {
-      background-image: url('images/hd-wall.jpg');
+      background-image: url('images/back.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -26,50 +25,48 @@
   <p>HTML элементэд дэвсгэр зураг нэмэхийн тулд HTML <mark>style</mark> attribute, CSS-н <mark>background-image</mark>
     шинж чанарыг ашиглана.</p>
   <p>HTML элемент дээр дэвсгэр зураг нэмэхэд <em>(p элемент)</em>:</p>
-  <p>(&lt;<mark>p</mark> <b>style="background-image: url('img_girl.jpg');"></b>)</p>
-  <p>Мөн <mark>&lt;head></mark> хэсгийн <b>style></b> элементэд дэвсгэр зургийг зааж өгч болно:</p>
-  <p><b>&lt;style> p { background-image: url('img_girl.jpg'); } &lt;/style></b></p>
+  <p>(&lt;<mark>p</mark> <b>style="background-image: url('img_girl.jpg');"&gt;</b>)</p>
+  <p>Мөн <mark>&lt;head&gt;</mark> хэсгийн <b>style&gt;</b> элементэд дэвсгэр зургийг зааж өгч болно:</p>
+  <p><b>&lt;style&gt; p { background-image: url('img_girl.jpg'); } &lt;/style&gt;</b></p>
 
   <h2>Background Image on a Page</h2>
-  <p>Хэрэв хуудсыг бүхэлд нь дэвсгэр зурагтай болгохыг хүсвэл <mark>&lt;body></mark> элементэд дэвсгэр зургийг зааж өгөх
-    ёстой:</p>
-  <p><b>&lt;style> body { background-image: url('img_girl.jpg'); }&lt;/style></b></p>
+  <p>Хэрэв хуудсыг бүхэлд нь дэвсгэр зурагтай болгохыг хүсвэл <mark>&lt;body&gt;</mark> элементэд дэвсгэр зургийг зааж
+    өгөх ёстой:</p>
+  <p><b>&lt;style&gt; body { background-image: url('img_girl.jpg'); }&lt;/style&gt;</b></p>
 
   <h2>Background Repeat</h2>
-  <p>Хэрэв дэвсгэр зургийн хэмжээ нь жижиг бол зураг дэлгэц дүүргэхээр хэвтээ болон босоо байдлаар давтагдана.</p>
-  <p>Дэвсгэр зургийг ингэж давтахаас сэргийлэхийн тулд <b>background-repeat</b> шинж чанарыг давталтгүй болгож
-    тохируулна.</p>
-  <p><b>style> <br>
+  <p>Хэрэв дэвсгэр зургийн хэмжээ нь жижиг бол зураг дэлгэц дүүргэхээр хэвтээ эсвэл босоо байдлаар давтагдана.</p>
+  <p>Дэвсгэр зургийг давтамжгүй болгохын тулд <b>background-repeat</b> шинж чанарыг давталтгүй болгож тохируулна.</p>
+  <p><b>&lt;style&gt; <br>
       body {
       background-image: url('example_img_girl.jpg');<br>
       <mark>background-repeat: no-repeat;</mark> }<br>
-      /style></b></p>
+      &lt;/style&gt;</b></p>
 
   <h2>Background Cover</h2>
-  <p>Хэрэв дэвсгэр зургийг бүтэн дэлгэцийг хамрахыг хүсвэл <b>background-size</b> шинж чанарыг <mark>cover</mark> болгож
-    тохируулж болно.</p>
-  <p>Мөн түүнчлэн <b>background-attachment</b> шинж чанарыг <mark>fixed</mark> болгож тохируулна уу:</p>
+  <p>Хэрэв дэвсгэр зургийг бүтэн дэлгэцэнд тавихыг хүсвэл <b>background-size</b> шинж чанарыг <mark>cover</mark> болгож
+    тохируулна.</p>
+  <p>Мөн <b>background-attachment</b> шинж чанарыг <mark>fixed</mark> болгож тохируулна:</p>
   <p>Ингэснээр дэвсгэр зураг нь суналтгүйгээр анхны харьцаагаа хадгалах болно.</p>
-  <p><b>style><br>
+  <p><b>&lt;style&gt;<br>
       body { <br>
       background-image: url('img_girl.jpg'); <br>
       background-repeat: no-repeat; <br>
       <mark>background-attachment: fixed;</mark> <br>
       <mark>background-size: cover;</mark> } <br>
-      /style></b></p>
-  <p>Энэхүү дэд бүлгийн жишээг ашиглан хуудасны дэвсгэр зургийг оруулав.</p>
+      &lt;/style&gt;</b></p>
+  <p>Энэ дэд бүлгийн жишээг ашиглан хуудасны дэвсгэр зургийг оруулав.</p>
 
   <h2>Background Stretch</h2>
-  <p>Хэрэв дэвсгэр зургийг бүтэн дэлгэцийг хамрахыг хүсвэл <b>background-size</b> шинж чанарыг 100% 100% болгож
-    тохируулж болно:</p>
-  <p>Дэвсгэр зураг нь бүтэн дэлгэцийг хамрах боловч зураг сунасан дүрстэй байна.</p>
-  <p><b>style> <br>
+  <p>Дэвсгэр зургийг бүтэн дэлгэц болгохыг хүсвэл <b>background-size</b> шинж чанарыг 100% 100% болгож тохируулна.<br>
+    Дэвсгэр зураг нь бүтэн дэлгэцийг хамрах боловч зураг сунасан дүрстэй байна.</p>
+  <p><b>&lt;style&gt;
       <div>body {</div>
-      <div style="margin-left: 20px;"> background-image: url('img_girl.jpg');</div>
-      <div style="margin-left: 20px;"> background-repeat: no-repeat;</div>
+      <div style="margin-left: 20px;">background-image: url('img_girl.jpg');</div>
+      <div style="margin-left: 20px;">background-repeat: no-repeat;</div>
       <div style="margin-left: 20px;">background-attachment: fixed;</div>
       <div style="margin-left: 20px;"><mark>background-size: 100% 100%;</mark> }</div>
-      /style>
+      &lt;/style&gt;
     </b></p>
 
 </body>

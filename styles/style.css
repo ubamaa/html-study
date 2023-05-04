@@ -1,6 +1,6 @@
 .backbutton {
-    background-color: violet;
-    color: white;
+    background-color: rgb(255, 255, 59);
+    color: darkorange;
     padding: 7px 10px;
     border-radius: 3px;
 }

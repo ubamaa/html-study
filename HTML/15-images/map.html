@@ -14,8 +14,8 @@
   <p>HTML газрын зургийн (image maps) тусламжтайгаар зураг дээр товших боломжтой хэсгийг үүсгэж болно.</p>
 
   <h2>Image Maps</h2>
-  <p>HTML <mark>&lt;map></mark> таг нь зургийн газрын зургийг тодорхойлдог.</p>
-  <p>Зургийн газрын зургийг товших талбайг нэг буюу хэд хэдэн <mark>&lt;area></mark> тагаар тодорхойлно.</p>
+  <p>HTML <mark>&lt;map&gt;</mark> таг нь зургийн газрын зургийг тодорхойлдог.</p>
+  <p>Зургийн газрын зургийг товших талбайг 1 буюу хэд хэдэн <mark>&lt;area&gt;</mark> тагаар тодорхойлно.</p>
 
   <img src="images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
 
@@ -24,26 +24,26 @@
     <area shape="rect" coords="290,172,333,250" alt="Phone" href="images/iPhone6s.jpg">
     <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="images/koppkaffe.jpg">
   </map>
-  <p><em>Компьютер, гар утас эсвэл аяга кофе дээр дарж шинэ хуудаст нэвтэрч болно!</em></p>
+  <p><em>Компьютер, гар утас эсвэл аяга кофе дээр дарвал шинэ хуудаст нэвтрэх болно!</em></p>
 
   <h1>How Does it Work?</h1>
-  <p>Зургийн газрын зураг үүсгэхийн тулд зураг дээр товших боломжтой хэсгийг тодорхойлсон HTML код хэрэгтэй.</p>
+  <p>Зурагт газрын зураг үүсгэхийн тулд зураг дээр товших боломжтой хэсгийг тодорхойлсон HTML код хэрэгтэй.</p>
 
   <h2>The Image</h2>
-  <p>Зургийг <mark>&lt;img></mark> таг ашиглан оруулна.</p>
+  <p>Зургийг <mark>&lt;img&gt;</mark> таг ашиглан оруулна.</p>
   <p>Бусад зургуудаас цорын ганц ялгаа нь <b>usemap</b> шинж чанарыг нэмэх ёстой.</p>
-  <p>(<b>&lt;img src="image.jpg" alt="text" usemap="#workmap"></b>)</p>
+  <p>(<b>&lt;img src="image.jpg" alt="text" usemap="#workmap"&gt;</b>)</p>
   <p><em>Usemap</em> утга нь <b>#</b> хэштэгээр эхэлнэ.</p>
 
   <h2>Create Image Map</h2>
-  <p><mark>&lt;map></mark> элемент нь зургийн map үүсгэхэд хэрэглэгддэг бөгөөд <mark>name</mark> шинж чанарыг ашиглан
-    зурагтай холбодог.</p>
-  <p><b>(&lt;map name="workmap"&lt;/map>)</b></p>
-  <p><b>Name</b> шинж чанар нь <mark>&lt;img></mark> -н <b>usemap</b> шинж чанартай ижил утгатай байх ёстой.</p>
+  <p><mark>&lt;map&gt;</mark> таг нь зургийн <b>map</b> үүсгэхэд хэрэглэгддэг бөгөөд <mark>name</mark> шинж чанарыг
+    ашиглан зурагтай холбодог.</p>
+  <p><b>(&lt;map name="workmap"&lt;/map&gt;)</b></p>
+  <p><b>Name</b> шинж чанар нь <mark>&lt;img&gt;</mark>-н <b>usemap</b> шинж чанартай ижил утгатай байх ёстой.</p>
 
   <h2>The Areas:</h2>
-  <p>Товших хэсгийг <mark>&lt;area></mark> элемент ашиглан тодорхойлно.</p>
-  <p>Товших хэсгийн хэлбэрийг тодорхойлох ёстой бөгөөд доорх утгуудын аль нэгийг сонгож болно:</p>
+  <p>Товших хэсгийг <mark>&lt;area&gt;</mark> таг ашиглан тодорхойлно.</p>
+  <p>Товших хэсгийн талбайг тодорхойлох ёстой бөгөөд доорх утгуудын аль нэгийг сонгож болно:</p>
   <p><b>rect</b> - тэгш өнцөгт талбайг тодорхойлно.</p>
   <p><b>circle</b> - дугуй талбайг тодорхойлно.</p>
   <p><b>poly</b> - олон өнцөгт талбайг тодорхойлдог.</p>
@@ -52,7 +52,7 @@
   <h3>- Shape="rect"</h3>
   <p><mark>Shape="rect"</mark>-н координатууд нэг нь <b>x</b> тэнхлэгт, нөгөө нь <b>y</b> тэнхлэгт зориулагдсан болно.
   </p>
-  <p>(<b>varea shape="rect" coords="34, 44, 270, 350" href="Images/mac.jpg"></b>)</p>
+  <p>(<b>&lt;area shape="rect" coords="34, 44, 270, 350" href="Images/mac.jpg"&gt;</b>)</p>
 
   <img src="images/comp.jpg" alt="Эхний координат" style="width: 400px; height: 379px;">
   <p>34,44 координатууд нь зүүн дээд захаас 34 пиксел, дээд талаас 44 пиксел зайд байрладаг.</p>
@@ -61,14 +61,14 @@
   <h3>- Shape="circle"</h3>
   <p>Тойргийн талбай нэмэхийн тулд эхлээд тойргийн төвийн координатыг олно.</p>
   <p>337,300 координат нь аягатай кофений тойргийн төв, 44пиксел тойргийн радиус.</p>
-  <p>(<b>&lt;area shape="circle" coords="337, 300, 44" href="Images/koppkaffe.jpg"></b>)</p>
+  <p>(<b>&lt;area shape="circle" coords="337, 300, 44" href="Images/koppkaffe.jpg"&gt;</b>)</p>
 
   <h3>- Shape="poly"</h3>
   <p>Шулуун шугмаас (олон өнцөгт) бүрдэх хэлбэрийг үүсгэдэг олон тооны координатын цэгүүдийг агуулдаг.</p>
 
   <h2>Image Map and JavaScript</h2>
   <p>Товшсон хэсэг нь <em>JavaScript</em> функцийг өдөөж болно.</p>
-  <p>JavaScript функцийг ашиглахын тулд <mark>&lt;area></mark> элементэд товшилтын үйлдлүүдийг нэмнэ.</p>
+  <p>JavaScript функцийг ашиглахын тулд <mark>&lt;area&gt;</mark> элементэд товшилтын үйлдлүүдийг нэмнэ.</p>
   <p><i>JavaScript функцийг туршихын тулд кофены аяга дээр дарна уу:</i></p>
 
   <img src="images/workplace.jpg" alt="Workplace" usemap="#work" width="400" height="379">

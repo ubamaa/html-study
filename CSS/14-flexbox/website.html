@@ -4,13 +4,248 @@
 <head>
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="../../styles/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            justify-content: space-around;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <p><a class="backbutton" href="../index.html">буцах</a></p>
+    <p><a class="backbutton" href="index.html">буцах</a></p>
 
     <h1>Responsive Website using Flexbox</h1>
+    <p><b>Flexbox</b> ашиглан уян навигацийн талбар, уян контент бүхий хариу үйлдэл үзүүлэх вэб сайтыг үүсгэнэ.</p>
+
+    <!-- Note -->
+    <div style="background:yellow;padding:5px">
+        <h4 style="text-align:center">Хариу өгөх эффектийг харахын тулд хөтчийн цонхны хэмжээг өөрчилж болно.</h4>
+        <p><sub>&lt;div style="background:yellow; padding:5px"&gt; <br>
+                &lt;h4 style="text-align:center">Resize the browser window to see the responsive effect.&lt;/h4&gt; <br>
+                &lt;/div&gt;</sub></p>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Миний вэбсайт (Толгой хэсэг)</h1>
+        <p>Уян зохион байгуулалттай.</p>
+        <hr>
+        <p><sub>.header { <br>
+                padding: 60px; <br>
+                text-align: center; <br>
+                background: #1abc9c; <br>
+                color: white; <br>
+                } <br>
+                <br>
+                &lt;div class="header"&gt; <br>
+                &lt;h1&gt;My Website&lt;/h1&gt; <br>
+                &lt;p&gt;With a &lt;b&gt;flexible&lt;/b&gt; layout.&lt;/p&gt; <br>
+                &lt;/div&gt;</sub></p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">.navbar { <br>
+            display: flex; <br>
+            background-color: #333; <br>
+            justify-content: space-around; <br>
+            }</a>
+        <a href="#">.navbar a { <br>
+            color: white; <br>
+            padding: 14px 20px; <br>
+            text-decoration: none; <br>
+            text-align: left; <br>
+            }</a>
+        <a href="#">.navbar a:hover { <br>
+            background-color: #ddd; <br>
+            color: black; <br>
+            }</a>
+        <a href="#">&lt;div class="navbar"> <br>
+            &lt;a href="#">Link&lt;/a&gt; <br>
+            &lt;a href="#">Link&lt;/a&gt; <br>
+            &lt;a href="#">Link&lt;/a&gt; <br>
+            &lt;a href="#">Link&lt;/a&gt; <br>
+            &lt;/div&gt;</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2>Эхлэл</h2>
+            <h5>Тайлбар:</h5>
+            <div class="fakeimg" style="height:200px;">Зурагт хуудас эсвэл бусад</div>
+            <p style="color:red">Ямар нэгэн текст байж болно:</p>
+            <p><sub>/* Column container */ <br>
+                    .row { <br>
+                    display: flex; <br>
+                    flex-wrap: wrap; <br>
+                    } <br>
+                    /* Create two unequal columns that sits next to each other */ <br>
+                    /* Sidebar/left column */ <br>
+                    .side { <br>
+                    flex: 30%; <br>
+                    background-color: #f1f1f1; <br>
+                    padding: 20px; <br>
+                    }</sub></p>
+
+            <h3>Дэд бүлэг</h3>
+            <p style="color:green">Ямар нэгэн текст байж болно:</p>
+            <p><sub>&lt;div class="row"&gt; <br>
+                    &lt;div class="side"&gt; <br>
+                    &lt;h2>About Me&lt;/h2&gt; <br>
+                    &lt;h5>Photo of me:&lt;/h5&gt; <br>
+                    &lt;div class="fakeimg" style="height:200px;">Image&lt;/div&gt; <br>
+                    &lt;p>Some text about me &lt;/p&gt; <br>
+                    &lt;h3>More Text&lt;/h3&gt; <br>
+                    &lt;p>Lorem ipsum dolor sit ame.&lt;/p&gt; <br>
+                    &lt;div class="fakeimg" style="height:60px;">Image&lt;/div&gt; <br>
+                    &lt;div class="fakeimg" style="height:60px;">Image&lt;/div&gt; <br>
+                    &lt;div class="fakeimg" style="height:60px;">Image&lt;/div&gt; <br>
+                    &lt;/div&gt;</sub></p>
+            <div class="fakeimg" style="height:60px;">Цэс 1</div><br>
+            <div class="fakeimg" style="height:60px;">Цэс 2</div><br>
+            <div class="fakeimg" style="height:60px;">Цэс 3</div>
+        </div>
+        <div class="main">
+            <h2>Үндсэн хэсэг</h2>
+            <h5>Тайлбар</h5>
+            <div class="fakeimg" style="height:200px;">Зурагт хуудас эсвэл бусад</div>
+            <p style="color:red">Текст...</p>
+            <p style="color:blue">Текст үргэлжилнэ.</p>
+            <p><sub>/* Main column */ <br>
+                    .main { <br>
+                    flex: 70%; <br>
+                    background-color: white; <br>
+                    padding: 20px; <br>
+                    } <br>
+                    /* Fake image, just for this example */ <br>
+                    .fakeimg { <br>
+                    background-color: #aaa; <br>
+                    width: 100%; <br>
+                    padding: 20px; <br>
+                    }</sub> <br></p>
+
+            <h2>Өөр сэдэв</h2>
+            <h5>Тайлбар</h5>
+            <div class="fakeimg" style="height:200px;">Зурагт хуудас эсвэл бусад</div>
+            <p style="color:red">Текст...</p>
+            <p><sub>&lt;div class="main"&gt; <br>
+                    &lt;h2>TITLE HEADING&lt;/h2&gt; <br>
+                    &lt;h5>Title description, Dec 7, 2017&lt;/h5&gt; <br>
+                    &lt;div class="fakeimg" style="height:200px;">Image&lt;/div&gt; <br>
+                    &lt;p>Some text..&lt;/p&gt; <br>
+                    &lt;p>Sunt in culpa ...&lt;/p&gt; <br>
+                    &lt;h2>TITLE HEADING&lt;/h2&gt; <br>
+                    &lt;h5>Title description, Sep 2, 2017&lt;/h5&gt; <br>
+                    &lt;div class="fakeimg" style="height:200px;">Image&lt;/div&gt; <br>
+                    &lt;p>Some text..&lt;/p&gt; <br>
+                    &lt;p>Sunt in culpa ...&lt;/p&gt; <br>
+                    &lt;/div&gt;</sub></p>
+            <p style="color:purple">Үргэлжлэл ...</p>
+            <p><sub>/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of
+                    each other instead of next to each other */ <br>
+                    <br>
+                    @media screen and (max-width: 700px) { <br>
+                    .row, .navbar { <br>
+                    flex-direction: column; } <br>
+                    }</sub></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Төгсөл хэсэг</h2>
+        <hr>
+        <p><sub>.footer { <br>
+                padding: 20px; <br>
+                text-align: center; <br>
+                background: #ddd; <br>
+                } <br>
+                <br>
+                &lt;div class="footer"&gt; <br>
+                &lt;h2&gt;Footer&lt;/h2&gt; <br>
+                &lt;/div&gt;</sub></p>
+    </div>
 
 </body>
 

@@ -36,10 +36,6 @@
         }
     }
 
-    * {
-        box-sizing: border-box;
-    }
-
     .flex-container1 {
         display: flex;
         flex-wrap: wrap;
@@ -67,11 +63,62 @@
             flex: 100%;
         }
     }
+
+    ul.breadcrumb {
+        padding: 10px 16px;
+        list-style: none;
+        background-color: #eee;
+
+    }
+
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 18px;
+    }
+
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    ul.breadcrumb li a {
+        color: #0275d8;
+        text-decoration: none;
+    }
+
+    ul.breadcrumb li a:hover {
+        color: #01447e;
+        text-decoration: underline;
+
+    }
+
+    .box {
+        float: left;
+        width: 50%;
+        padding: 1px;
+
+    }
+
+    .border {
+        border: 1px solid red
+    }
 </style>
 
 <body>
 
-    <p><a class="backbutton" href="index.html">буцах</a></p>
+    <div class="border" style="display:flex; justify-content:space-between;">
+        <div style="display: flex;">
+            <ul class="breadcrumb border">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../index.html">CSS Tutorial</a></li>
+                <li><a href="index.html">CSS Flexbox</a></li>
+            </ul>
+        </div>
+        <div class="border">
+            <a class="backbutton" href="index.html">буцах</a>
+        </div>
+    </div>
 
     <h1>CSS Flex Responsive</h1>
     <h2>Responsive Flexbox</h2>
@@ -89,8 +136,7 @@
         } <br>
     </p>
     <p><span style="color:darkorange">/* Responsive layout - makes a one column layout instead of a two-column
-            layout
-            */</span> <br>
+            layout */</span> <br>
         @media (max-width: 800px) { <br>
         .flex-container { <br>
         flex-direction: column; } <br>

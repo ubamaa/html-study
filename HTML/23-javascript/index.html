@@ -16,39 +16,39 @@
   <h2>The HTML script Tag</h2>
   <p>JavaScript хэрэглээ нь зураг боловсруулах, маягтыг баталгаажуулах, динамикаар контентыг өөрчлөхөд ашиглагддаг.</p>
   <p>JavaScript нь <b>document.getElementById()</b> аргыг ихэвчлэн ашигладаг.</p>
-  <p>HTML <mark>script></mark> тагийг клиент талын скриптийг (JavaScript) тодорхойлоход ашигладаг.</p>
-  <p><b>script></b> элемент нь скрипт мэдэгдлүүдийг агуулсан, мөн <b>src</b> атрибутаар дамжуулан гадаад скрипт файл руу
-    чиглүүлдэг.</p>
+  <p>HTML <mark>script&gt;</mark> тагийг клиент талын скриптийг (JavaScript) тодорхойлоход ашигладаг.</p>
+  <p><b>script&gt;</b> элемент нь скрипт мэдэгдлүүдийг агуулсан, мөн <b>src</b> атрибутаар дамжуулан гадаад скрипт файл
+    руу чиглүүлдэг.</p>
   <p>Энэ жишээ нь <em>"Hello JavaScript!"</em> гэж бичсэн id="demo"-тай HTML элемент:</p>
-  <p>&lt;p id="demo">&lt;/p> <br>
+  <p>&lt;p id="demo">&lt;/p&gt; <br>
     <br>
-    &lt;script> <br>
+    &lt;script&gt; <br>
     document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
-    &lt;/script>
+    &lt;/script&gt;
   </p>
 
   <h2>A Taste of JavaScript</h2>
   <p>JavaScript-н хийж чадах зарим жишээ энд байна:</p>
   <p><b>1. JavaScript нь агуулгыг өөрчлөх боломжтой;</b></p>
-  <p><em>&lt;p id="demo">JavaScript can change the content of an HTML element&lt;/p></em> <br>
+  <p><em>&lt;p id="demo">JavaScript can change the content of an HTML element&lt;/p&gt;</em> <br>
     <br>
-    <b>&lt;script></b> <br>
+    <b>&lt;script&gt;</b> <br>
     <mark>function myFunction() { <br>
       document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
       } </mark><br>
-    <b>&lt;/script></b> <br>
-    <em>&lt;button type="button" onclick="myFunction()">Товч дарах!&lt;/button></em>
+    <b>&lt;/script&gt;</b> <br>
+    <em>&lt;button type="button" onclick="myFunction()">Товч дарах!&lt;/button&gt;</em>
   </p>
   <p><b>2. JavaScript нь хэв маягийг өөрчилж болно;</b></p>
-  <p><em>&lt;p id="demo">JavaScript can change the style of an HTML element.&lt;/p></em> <br>
+  <p><em>&lt;p id="demo">JavaScript can change the style of an HTML element.&lt;/p&gt;</em> <br>
     <br>
-    <b>&lt;script></b> <br>
+    <b>&lt;script&gt;</b> <br>
     <mark>function myFunction() { <br>
       document.getElementById("demo").style.fontSize = "25px"; <br>
       document.getElementById("demo").style.color = "red"; <br>
       document.getElementById("demo").style.backgroundColor = "yellow"; <br>
       } </mark><br>
-    <b>&lt;/script></b> <br>
+    <b>&lt;/script&gt;</b> <br>
     <br>
     <i>&lt;button type="button" onclick="myFunction()">Click Me!&lt;/button></i>
   </p>
@@ -76,13 +76,13 @@
   <h2>The HTML noscript Tag</h2>
   <p>HTML <b>noscript</b> таг нь хөтчийнхөө скриптийг идэвхгүй болгосон эсвэл <br>
     скрипт дэмждэггүй хөтөчтэй хэрэглэгчдэд харуулах өөр контентыг тодорхойлдог.</p>
-  <p><em>&lt;p id="demo">&lt;/p></em> <br>
+  <p><em>&lt;p id="demo">&lt;/pс</em> <br>
     <br>
-    <b>&lt;script></b> <br>
+    <b>&lt;script&gt;</b> <br>
     document.getElementById("demo").innerHTML = "Hello JavaScript!"; <br>
-    <b>&lt;/script></b> <br>
+    <b>&lt;/script&gt;</b> <br>
     <br>
-    <mark>&lt;noscript>Sorry, your browser does not support JavaScript!&lt;/noscript></mark>
+    <mark>&lt;noscript&gt;Sorry, your browser does not support JavaScript!&lt;/noscript&gt;</mark>
   </p>
   <p>JavaScript дэмждэггүй хөтөч нь <b>noscript</b> элемент дотор бичигдсэн текстийг харуулах болно.</p>
 

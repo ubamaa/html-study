@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-item1 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid palevioletred;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container2 {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-item2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid palevioletred;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container3 {
+            display: grid;
+            column-gap: 50px;
+            grid-template-columns: auto auto auto;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-item3 {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid palevioletred;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container4 {
+            display: grid;
+            row-gap: 50px;
+            grid-template-columns: auto auto auto;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container5 {
+            display: grid;
+            gap: 50px 100px;
+            grid-template-columns: auto auto auto;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .grid-container6 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-container6>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1a {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .grid-container7 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-container7>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1b {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 95%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 7px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p><a href="index.html">буцах</a></p>
+
+    <h1>CSS Grid Layout Module</h1>
+    <h2>Grid Layout</h2>
+    <p>CSS <b>Grid Layout</b> модуль нь мөр, багана бүхий сүлжээнд суурилсан байршлын системийг санал болгодог, <br>
+        энэ нь <b>float</b> болон байрлалыг ашиглахгүйгээр вэб хуудсыг хөгжүүлэхэд хялбар болгодог.</p>
+    <p><b>Grid</b> зохион байгуулалт нь нэг буюу хэд хэдэн <em>child</em> элемент бүхий <em>parent</em> элементээс
+        бүрдэнэ.<br>
+        <em>display</em> шинж чанарыг <b>grid</b> эсвэл <b>inline-grid</b> болгон тохируулсан
+        <span style="color:red;font-weight: bold;">parent</span> элементтэй байх ёстой.<br>
+        <em>Grid</em> контейнерийн шууд <span style="color:blue;font-weight: bold;">child</span> элементүүд
+        автоматаар <span style="color:orangered;font-weight: bold;">grid item</span> болно.
+    </p>
+    <p>Энэ <b>grid</b> зохион байгуулалт нь зургаан багана, гурван мөр агуулсан:</p>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+    <br>
+
+    <h2>Display Property</h2>
+    <p>HTML элемент нь <b>display</b> шинж чанарыг <em>grid</em> эсвэл <em>inline-grid</em> гэж тохируулсан
+        тохиолдолд сүлжээний контейнер болдог.</p>
+    <p><b>display: grid;</b> ашиглан <em>block-level grid container</em> болсон:</p>
+    <div class="grid-container1">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <br>
+    <p><b>display: inline-grid;</b> ашиглан <em>inline grid container</em> болно:</p>
+    <div class="grid-container2">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+
+    <h2>Grid Columns</h2>
+    <p><em>grid item</em>-н босоо шугмуудыг <b>columns</b> (багана) гэж нэрлэдэг.</p>
+
+    <h2>Grid Rows</h2>
+    <p><em>grid item</em>-н хэвтээ шугмуудыг <b>rows</b> (эгнээ) гэж нэрлэдэг.</p>
+
+    <h2>Grid Gaps</h2>
+    <p>Багана/мөр бүрийн хоорондох зайг <b>gap</b> (хоосон зай) гэж нэрлэдэг. <br>
+        Дараах шинж чанаруудын аль нэгийг ашиглан зайны хэмжээг тохируулж болно:</p>
+    <ul>
+        <li><b>column-gap</b></li>
+        <li><b>row-gap</b></li>
+        <li><b>gap</b></li>
+    </ul>
+    <p><b>column-gap</b> шинж чанар нь баганын хоорондох зайг тогтоодог:</p>
+    <div class="grid-container3">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <br>
+    <p><b>row-gap</b> шинж чанар нь мөр хоорондын зайг тогтоодог:</p>
+    <div class="grid-container4">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <br>
+    <p><b>gap</b> шинж чанар нь <em>row-gap</em> болон <em>column-gap</em> шинж чанаруудын товчилсон шинж чанар юм:</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        <span style=color:red;font-weight:bold;>gap</span>: <b>50px 100px;</b> <br>
+        }
+    </p>
+    <div class="grid-container5">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <p>Мөн <b>gap</b> шинж чанарыг 1 утгад мөр болон баганын зайг хоёуланг нь тохируулахад ашиглаж болно:</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        <span style=color:red;font-weight:bold;>gap</span>: <b>50px;</b> <br>
+        }
+    </p>
+
+    <h2>Grid Lines</h2>
+    <p>Баганын хоорондох мөрүүдийг <b>column line</b> гэж нэрлэдэг. <br>
+        Мөр хоорондын шугамыг <b>row line</b> гэж нэрлэдэг.</p>
+    <p><em>grid item</em>-ийг сүлжээний контейнерт байрлуулахдаа <b>line</b>-н дугаарыг бичнэ.</p>
+    <p><b>grid item</b>-г 1-р <em>column line</em>-д байрлуулж, 3-р <em>column line</em>-д төгсгөнө:</p>
+    <p>.item1 { <br>
+        grid-column-start: 1; <br>
+        grid-column-end: 3; <br>
+        }</p>
+    <div class="grid-container6">
+        <div class="item1a">1</div>
+        <div class="item2a">2</div>
+        <div class="item3a">3</div>
+        <div class="item4a">4</div>
+        <div class="item5a">5</div>
+        <div class="item6a">6</div>
+        <div class="item7a">7</div>
+        <div class="item8a">8</div>
+    </div>
+    <br>
+    <p><b>grid item</b>-г 1-р <em>row line</em>-д байрлуулж, 3-р <em>row line</em> дээр төгсгөнө:</p>
+    <p>.item1 { <br>
+        grid-row-start: 1; <br>
+        grid-row-end: 3; <br>
+        }</p>
+    <div class="grid-container7">
+        <div class="item1b">1</div>
+        <div class="item2b">2</div>
+        <div class="item3b">3</div>
+        <div class="item4b">4</div>
+        <div class="item5b">5</div>
+        <div class="item6b">6</div>
+        <div class="item7b">7</div>
+        <div class="item8b">8</div>
+    </div>
+    <br><br><br>
+
+    <p style="text-align: center;font-weight: bold;">All CSS Grid Properties</p>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>column-gap</td>
+            <td>Баганын хоорондох зайг заана.</td>
+        </tr>
+        <tr>
+            <td>gap</td>
+            <td><em>row-gap, column-gap</em> шинж чанаруудын товчилсон шинж чанар.</td>
+        </tr>
+        <tr>
+            <td>grid</td>
+            <td><em>grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns,
+                    grid-auto-flow</em> шинж чанаруудын товчилсон шинж чанар.</td>
+        </tr>
+        <tr>
+            <td>grid-area</td>
+            <td><b>grid item</b> нэрийг заах эсвэл энэ шинж чанар нь <em>grid-row-start, grid-column-start,
+                    grid-row-end, grid-column-end</em> шинж чанаруудын товчилсон шинж чанар юм.</td>
+        </tr>
+        <tr>
+            <td>grid-auto-coliumns</td>
+            <td>Баганын хэмжээг тохируулна. <em>(өгөгдмөл)</em></td>
+        </tr>
+        <tr>
+            <td>grid-auto-flow</td>
+            <td>Автоматаар байрлуулсан <em>item</em> сүлжээнд хэрхэн оруулахыг заана.</td>
+        </tr>
+        <tr>
+            <td>grid-auto-rows</td>
+            <td>Мөрийн хэмжээг тохируулна <em>(өгөгдмөл)</em>.</td>
+        </tr>
+        <tr>
+            <td>grid-column</td>
+            <td><em>grid-column-start, the grid-column-end</em> шинж чанаруудын товчилсон шинж чанар.</td>
+        </tr>
+        <tr>
+            <td>grid-column-end</td>
+            <td><em>grid item</em> хаана дуусахыг заана.</td>
+        </tr>
+        <tr>
+            <td>grid column-gap</td>
+            <td>Багана хоорондох зайны хэмжээг тохируулна.</td>
+        </tr>
+        <tr>
+            <td>grid-column-start</td>
+            <td><em>grid item</em> хаанаас эхлүүлэхийг заана.</td>
+        </tr>
+        <tr>
+            <td>grid-gap</td>
+            <td><em>grid-row-gap, grid-column-gap</em> шинж чанаруудын товчилсон шинж чанар.</td>
+        </tr>
+        <tr>
+            <td>grid-row</td>
+            <td><em>grid-row-start, grid-row-end</em> шинж чанаруудын товчилсон шинж чанар.</td>
+        </tr>
+        <tr>
+            <td>grid-row-end</td>
+            <td><em>grid item</em> хаана дуусахыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>grid-row-gap</td>
+            <td>Мөр хоорондын зайны хэмжээг заана.</td>
+        </tr>
+        <tr>
+            <td>grid-row-start</td>
+            <td><em>grid item</em> хаанаас эхлүүлэхийг зааж өгнө</td>
+        </tr>
+        <tr>
+            <td>grid-template</td>
+            <td><em>grid-template-rows, grid-template-columns, grid-areas</em> шинж чанаруудын товчилсон шинж чанар.
+            </td>
+        </tr>
+        <tr>
+            <td>grid-template-areas</td>
+            <td>Нэрлэсэн <em>grid item</em> ашиглан багана, мөрийг хэрхэн харуулахыг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>grid-template-columns</td>
+            <td>Сүлжээний бүтэц дэх баганын хэмжээ болон баганын тоог заана.</td>
+        </tr>
+        <tr>
+            <td>grid-template-rows</td>
+            <td>Сүлжээний бүтэц дэх мөрийн хэмжээг зааж өгнө.</td>
+        </tr>
+        <tr>
+            <td>row-gap</td>
+            <td>Сүлжээний мөр хоорондын зайг заана.</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
