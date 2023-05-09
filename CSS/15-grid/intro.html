@@ -122,22 +122,18 @@
 
         .grid-container6 {
             display: grid;
+            gap: 50px;
             grid-template-columns: auto auto auto;
-            gap: 10px;
             background-color: violet;
             padding: 10px;
         }
 
-        .grid-container6>div {
+        .grid-item {
             background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 20px 0;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
             font-size: 30px;
-        }
-
-        .item1a {
-            grid-column-start: 1;
-            grid-column-end: 3;
+            text-align: center;
         }
 
         .grid-container7 {
@@ -149,6 +145,26 @@
         }
 
         .grid-container7>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1a {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .grid-container8 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .grid-container8>div {
             background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
             padding: 20px 0;
@@ -210,7 +226,10 @@
     <h2>Display Property</h2>
     <p>HTML элемент нь <b>display</b> шинж чанарыг <em>grid</em> эсвэл <em>inline-grid</em> гэж тохируулсан
         тохиолдолд сүлжээний контейнер болдог.</p>
-    <p><b>display: grid;</b> ашиглан <em>block-level grid container</em> болсон:</p>
+    <p><b>display: grid;</b> ашиглан <em>block-level grid container</em> болсон.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        }</p>
     <div class="grid-container1">
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
@@ -223,7 +242,10 @@
         <div class="grid-item">9</div>
     </div>
     <br>
-    <p><b>display: inline-grid;</b> ашиглан <em>inline grid container</em> болно:</p>
+    <p><b>display: inline-grid;</b> ашиглан <em>inline grid container</em> болно.</p>
+    <p>.grid-container { <br>
+        display: inline-grid; <br>
+        }</p>
     <div class="grid-container2">
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
@@ -250,7 +272,13 @@
         <li><b>row-gap</b></li>
         <li><b>gap</b></li>
     </ul>
-    <p><b>column-gap</b> шинж чанар нь баганын хоорондох зайг тогтоодог:</p>
+    <p><b>column-gap</b> шинж чанар нь баганын хоорондох зайг тогтоодог.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        <span style="color:red;font-weight: bold;">column-gap</span>:
+        <span style="color:blue;font-weight: bold;">50px;</span> <br>
+        }
+    </p>
     <div class="grid-container3">
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
@@ -263,7 +291,13 @@
         <div class="grid-item">9</div>
     </div>
     <br>
-    <p><b>row-gap</b> шинж чанар нь мөр хоорондын зайг тогтоодог:</p>
+    <p><b>row-gap</b> шинж чанар нь мөр хоорондын зайг тогтоодог.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        <span style="color:red;font-weight: bold;">row-gap</span>:
+        <span style="color:blue;font-weight: bold;">50px;</span> <br>
+        }
+    </p>
     <div class="grid-container4">
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
@@ -279,7 +313,8 @@
     <p><b>gap</b> шинж чанар нь <em>row-gap</em> болон <em>column-gap</em> шинж чанаруудын товчилсон шинж чанар юм:</p>
     <p>.grid-container { <br>
         display: grid; <br>
-        <span style=color:red;font-weight:bold;>gap</span>: <b>50px 100px;</b> <br>
+        <span style=color:red;font-weight:bold;>gap</span>:
+        <span style="color:blue;font-weight: bold;">50px 100px;</span> <br>
         }
     </p>
     <div class="grid-container5">
@@ -299,17 +334,29 @@
         <span style=color:red;font-weight:bold;>gap</span>: <b>50px;</b> <br>
         }
     </p>
+    <div class="grid-container6">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <br>
 
     <h2>Grid Lines</h2>
     <p>Баганын хоорондох мөрүүдийг <b>column line</b> гэж нэрлэдэг. <br>
         Мөр хоорондын шугамыг <b>row line</b> гэж нэрлэдэг.</p>
-    <p><em>grid item</em>-ийг сүлжээний контейнерт байрлуулахдаа <b>line</b>-н дугаарыг бичнэ.</p>
+    <p><em>grid item</em>-ийг сүлжээний контейнерт байрлуулахдаа <b>line</b>-ны дугаарыг бичнэ.</p>
     <p><b>grid item</b>-г 1-р <em>column line</em>-д байрлуулж, 3-р <em>column line</em>-д төгсгөнө:</p>
     <p>.item1 { <br>
-        grid-column-start: 1; <br>
-        grid-column-end: 3; <br>
+        grid-column-start: <b>1;</b> <br>
+        grid-column-end: <b>3;</b> <br>
         }</p>
-    <div class="grid-container6">
+    <div class="grid-container7">
         <div class="item1a">1</div>
         <div class="item2a">2</div>
         <div class="item3a">3</div>
@@ -322,10 +369,10 @@
     <br>
     <p><b>grid item</b>-г 1-р <em>row line</em>-д байрлуулж, 3-р <em>row line</em> дээр төгсгөнө:</p>
     <p>.item1 { <br>
-        grid-row-start: 1; <br>
-        grid-row-end: 3; <br>
+        grid-row-start: <b>1;</b> <br>
+        grid-row-end: <b>3;</b> <br>
         }</p>
-    <div class="grid-container7">
+    <div class="grid-container8">
         <div class="item1b">1</div>
         <div class="item2b">2</div>
         <div class="item3b">3</div>

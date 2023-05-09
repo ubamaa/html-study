@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: rgb(186, 247, 66);
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: rgb(253, 253, 5);
+            padding: 10px;
+        }
+
+        .grid-container1>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: 80px 200px auto 30px;
+            gap: 10px;
+            background-color: rgb(253, 253, 5);
+            padding: 10px;
+        }
+
+        .grid-container2>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container3 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 80px 200px;
+            gap: 10px;
+            background-color: orange;
+            padding: 10px;
+        }
+
+        .grid-container3>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container4 {
+            display: grid;
+            justify-content: space-evenly;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(250, 157, 123);
+            padding: 10px;
+        }
+
+        .grid-container4>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container5 {
+            display: grid;
+            justify-content: space-around;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(250, 157, 123);
+            padding: 10px;
+        }
+
+        .grid-container5>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container6 {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(250, 157, 123);
+            padding: 10px;
+        }
+
+        .grid-container6>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container7 {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(250, 157, 123);
+            padding: 10px;
+        }
+
+        .grid-container7>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container8 {
+            display: grid;
+            justify-content: start;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(250, 157, 123);
+            padding: 10px;
+        }
+
+        .grid-container8>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container9 {
+            display: grid;
+            justify-content: end;
+            grid-template-columns: 50px 50px 50px;
+            gap: 10px;
+            background-color: rgb(252, 154, 118);
+            padding: 10px;
+        }
+
+        .grid-container9>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container10 {
+            display: grid;
+            height: 400px;
+            align-content: center;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container10>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container11 {
+            display: grid;
+            height: 400px;
+            align-content: space-evenly;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container11>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container12 {
+            display: grid;
+            height: 400px;
+            align-content: space-around;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container12>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container13 {
+            display: grid;
+            height: 400px;
+            align-content: space-between;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container13>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container14 {
+            display: grid;
+            height: 400px;
+            align-content: start;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container14>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container15 {
+            display: grid;
+            height: 400px;
+            align-content: end;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: #8fc4f0;
+            padding: 10px;
+        }
+
+        .grid-container15>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p><a href="index.html">буцах</a></p>
+
+    <h1>CSS Grid Container</h1>
+    <h2>Grid Container</h2>
+    <p>HTML элементийг сүлжээний контейнер шиг ажлуулахын тулд <b>display</b> шинж чанарыг
+        <span style="color: red"><b>grid</b></span> эсвэл <span style="color:blue"><b>inline-grid</b></span>
+        болгон тохируулах ёстой. <br>
+        <em>Grid</em> контейнерууд нь багана, эгнээ болгон байрлуулсан <b>grid item</b>-үүдээс бүрдэнэ.
+    </p>
+    <div class="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The grid-template-columns Property</h2>
+    <p><b>grid-template-columns</b> шинж чанар нь сүлжээний байршлын баганын тоог, мөн багана бүрийн өргөнийг
+        тодорхойлох боломжтой. <br>
+        Утга тус бүр нь харгалзах баганын өргөнийг зааж, зайгаар тусгаарлагдсан байдаг.<br>
+        Хэрэв сүлжээний бүтцийг 4 баганатай болгохыг хүсвэл 4 баганын өргөнийг зааж өгнө,<br>
+        хэрэв баганын өргөн бүгд адил хэмжээтэй бол <b>auto</b> гэж заана.</p>
+    <p>4 багана бүхий сүлжээ үүсгэх:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>grid-template-columns</b></span>: <span style="color:blue"><b>auto auto auto
+                auto;</b></span> <br>
+        }
+    </p>
+    <div class="grid-container1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <p><b>Note:</b>Хэрэв 4 баганатай сүлжээнд 4-өөс олон <b>grid item</b> байвал сүлжээ нь шинэ мөрийг автоматаар
+        нэмж оруулна.</p>
+    <p>Мөн <b>grid-template-columns</b> шинж чанарыг баганын хэмжээг (өргөн) тодорхойлж болно.</p>
+    <p>4-н өөр хэмжээтэй баганууд үүсгэх:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>grid-template-columns</b></span>: <span style="color:blue"><b>80px 200px auto
+                40px;</b></span> <br>
+        }
+    </p>
+    <div class="grid-container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">grid-template-rows Property</h2>
+    <p><b>grid-template-rows</b> шинж чанар нь мөр бүрийн өндрийг тодорхойлдог. <br>
+        Утга нь мөр бүрийн хэмжээ (өндөр)-ийг зааж, зайгаар тусгаарлагдсан байна.</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>grid-template-rows</b></span>: <span style="color:blue"><b>80px 200px;</b></span>
+        <br>
+        }
+    </p>
+    <div class="grid-container3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The justify-content Property</h2>
+    <p><b>justify-content</b> шинж чанар нь контейнерийн доторх сүлжээг бүхэлд нь зэрэгцүүлэхэд ашиглагддаг. <br>
+        <b>Note:</b> Сүлжээний нийт өргөн нь контейнерийн өргөнөөс бага байж <em>justify-content</em> шинж чанар нь
+        нөлөө үзүүлнэ.
+    </p>
+    <p><b>space-evenly</b> утга нь багануудын хооронд болон эргэн тойронд нь ижил зайтай болгоно.</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>space-evenly;</b></span>
+        <br>
+        }
+    </p>
+    <div class="grid-container4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>space-around</b> утга нь багануудыг тойрон ижил зайг өгнө:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>space-around;</b></span>
+        <br>
+        }
+    </p>
+    <div class="grid-container5">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>space-between</b> утга нь багануудыг хооронд нь ижил зайтай болгоно:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>space-between;</b></span>
+        <br>
+        }
+    </p>
+    <div class="grid-container6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>center</b> утга нь сүлжээг контейнерийн голд зэрэгцүүлнэ.</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>center;</b></span> <br>
+        }
+    </p>
+    <div class="grid-container7">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>start</b> утга нь сүлжээг контейнерийн эхэнд зэрэгцүүлнэ:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>start;</b></span> <br>
+        }
+    </p>
+    <div class="grid-container8">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>end</b> утга нь сүлжээг контейнерийн төгсгөлд зэрэгцүүлнэ:</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>display</b></span>: <span style="color:blue"><b>grid;</b></span> <br>
+        <span style="color:red"><b>justify-content</b></span>: <span style="color:blue"><b>end;</b></span> <br>
+        }
+    </p>
+    <div class="grid-container9">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The align-content Property</h2>
+    <p><b>align-content</b> шинж чанар нь контейнерийн доторх бүхэл сүлжээг босоо байдлаар байрлуулахад ашиглагддаг.<br>
+        Сүлжээний нийт өндөр нь контейнерийн өндрөөс бага байх ёстой, энэ нь <em>align-content</em> нөлөө үзүүлэх
+        боломжтой.</p>
+    <p><b>center</b> утга нь контейнерийн голд мөрүүдийг тэгшлэнэ:</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: center;</b> <br>
+        }
+    </p>
+    <div class="grid-container10">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>space-evenly</b> утга нь мөрүүдийн хооронд болон эргэн тойронд нь ижил зайг өгнө.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: space-evenly;</b> <br>
+        }
+    </p>
+    <div class="grid-container11">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>space-around</b> гэсэн утга нь мөрүүдийг тойрон ижил зайтай болгоно.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: space-around;</b> <br>
+        }
+    </p>
+    <div class="grid-container12">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>space-between</b>> утга нь мөрүүдийн хоорондох ижил зайг өгнө.</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: space-between;</b> <br>
+        }
+    </p>
+    <div class="grid-container13">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>start</b> утга нь мөрүүдийг контейнерийн толгойд зэрэгцүүлнэ:</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: start;</b> <br>
+        }
+    </p>
+    <div class="grid-container14">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <br>
+    <p><b>end</b> утга нь мөрүүдийг контейнерийн ёроолд зэрэгцүүлнэ:</p>
+    <p>.grid-container { <br>
+        display: grid; <br>
+        height: 400px; <br>
+        <b>align-content: end;</b> <br>
+        }
+    </p>
+    <div class="grid-container15">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+</body>
+
+</html>
