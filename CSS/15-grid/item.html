@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            gap: 10px;
+            background-color: powderblue;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1 {
+            grid-column: 1 / 5;
+        }
+
+        .item1a {
+            grid-column: 1 / span 3;
+        }
+
+        .item2b {
+            grid-column: 2 / span 3;
+        }
+
+        .item1c {
+            grid-row: 1 / 4;
+        }
+
+        .item1d {
+            grid-row: 1 / span 2;
+        }
+
+        .item8e {
+            grid-area: 1 / 2 / 5 / 6;
+        }
+
+        .item8i {
+            grid-area: 2 / 1 / span 2 / span 3;
+        }
+
+        .item1x {
+            grid-area: myArea;
+        }
+
+        .grid-container1 {
+            display: grid;
+            grid-template-areas: 'myArea myArea myArea myArea myArea';
+            gap: 10px;
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .grid-container1>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1z {
+            grid-area: myArea;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-areas: 'myArea myArea . . .';
+            gap: 10px;
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .grid-container2>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1g {
+            grid-area: myArea;
+        }
+
+        .grid-container3 {
+            display: grid;
+            grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .';
+            gap: 10px;
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .grid-container3>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1y {
+            grid-area: header;
+        }
+
+        .item2y {
+            grid-area: menu;
+        }
+
+        .item3y {
+            grid-area: main;
+        }
+
+        .item4y {
+            grid-area: right;
+        }
+
+        .item5y {
+            grid-area: footer;
+        }
+
+        .grid-container4 {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: darkseagreen;
+            padding: 10px;
+        }
+
+        .grid-container4>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .grid-container5 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: rgb(147, 252, 252);
+            padding: 10px;
+        }
+
+        .grid-container5>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item1o {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .item2o {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .item3o {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .item4o {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .item5o {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .item6o {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .grid-container6 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: rgb(147, 252, 252);
+            padding: 10px;
+        }
+
+        .grid-container6>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            .item1q {
+                grid-area: 1 / span 3 / 2 / 4;
+            }
+
+            .item2q {
+                grid-area: 3 / 3 / 4 / 4;
+            }
+
+            .item3q {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+
+            .item4q {
+                grid-area: 2 / 2 / span 2 / 3;
+            }
+
+            .item5q {
+                grid-area: 3 / 1 / 4 / 2;
+            }
+
+            .item6q {
+                grid-area: 2 / 3 / 3 / 4;
+            }
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <p><a href="index.html">буцах</a></p>
+
+    <h1>CSS Grid Item</h1>
+    <h2>Child Elements (Items)</h2>
+    <p>Сүлжээний контейнер нь сүлжээний зүйлсийг <em>(item)</em> агуулдаг.</p>
+    <p>Анхдагч өгөгдлөөр, контейнер нь мөр болгоны багана тус бүрт нэг сүлжээний зүйлтэй <em>(item)</em> байдаг,<br>
+        хэрэв олон багана эсвэл мөртөй болгох бол сүлжээний зүйлсийг загварчилж болно.</p>
+
+    <h2 style="text-align: center;">The grid-column Property:</h2>
+    <p><b>grid-column</b> шинж чанар нь тухайн <em>item</em>-ийг аль баганануудад байрлуулахыг тодорхойлдог. <br>
+        Мөн <b>grid-column</b> шинж чанар нь <span style="color:red"><b>grid-column-start</b></span>,
+        <span style="color:blue;"><b>grid-column-end</b></span> шинж чанаруудын товчилсон шинж чанар юм.
+    </p>
+    <p>Тухайн <em>item</em> хаанаас эхлэх, хаана дуусахыг тодорхойлох ёстой. <br>
+        <em>Доорх жишээ:</em> <b>item1</b> 1-р баганаас эхэлж 5-р баганаас өмнө дуусна:
+    </p>
+    <p>.item1 { <br>
+        grid-column: <b>1 / 5;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>
+        <div class="item13">13</div>
+        <div class="item14">14</div>
+        <div class="item15">15</div>
+    </div>
+    <br>
+    <p><em>item</em>-г байрлуулахын тулд мөрийн дугаарыг бичих эсвэл <b>span</b> түлхүүр үгийг ашиглан тухайн
+        <em>item</em> хэдэн баганатай болохыг тодорхойлж болно.
+    </p>
+    <p><b>item1</b> нь 1-р баганаас эхэлж 3 баганыг хамарна:</p>
+    <p>.item1 { <br>
+        grid-column: <b>1 / span 3;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1a">1</div>
+        <div class="item2a">2</div>
+        <div class="item3a">3</div>
+        <div class="item4a">4</div>
+        <div class="item5a">5</div>
+        <div class="item6a">6</div>
+        <div class="item7a">7</div>
+        <div class="item8a">8</div>
+        <div class="item9a">9</div>
+        <div class="item10a">10</div>
+        <div class="item11a">11</div>
+        <div class="item12a">12</div>
+        <div class="item13a">13</div>
+        <div class="item14a">14</div>
+        <div class="item15a">15</div>
+        <div class="item16a">16</div>
+    </div>
+    <br>
+    <p><b>item2</b> 2-р баганаас эхэлж, 3 баганыг багтаана:</p>
+    <p>.item2 { <br>
+        grid-column: <b>2 / span 3;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1b">1</div>
+        <div class="item2b">2</div>
+        <div class="item3b">3</div>
+        <div class="item4b">4</div>
+        <div class="item5b">5</div>
+        <div class="item6b">6</div>
+        <div class="item7b">7</div>
+        <div class="item8b">8</div>
+        <div class="item9b">9</div>
+        <div class="item10b">10</div>
+        <div class="item11b">11</div>
+        <div class="item12b">12</div>
+        <div class="item13b">13</div>
+        <div class="item14b">14</div>
+        <div class="item15b">15</div>
+        <div class="item16b">16</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The grid-row Property:</h2>
+    <p><b>grid-row</b> шинж чанар нь <em>item</em>-ийг аль мөрөнд байрлуулахыг тодорхойлдог. <br>
+        Мөн <b>grid-row</b> шинж чанар нь <span style="color:orangered;"><b>grid-row-start</b></span> болон
+        <span style="color:purple;"><b>grid-row-end</b></span> шинж чанаруудын товчилсон шинж чанар юм.
+    </p>
+    <p><em>item</em> хаана эхлэх, хаана дуусахыг тодорхойлох ёстой. <br>
+        <b>item1</b>-ийг 1-р мөрнөөс эхэлж, 4-р мөрөнд төгсгөнө:
+    </p>
+    <p>.item1 { <br>
+        grid-row: <b>1 / 4;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1c">1</div>
+        <div class="item2c">2</div>
+        <div class="item3c">3</div>
+        <div class="item4c">4</div>
+        <div class="item5c">5</div>
+        <div class="item6c">6</div>
+        <div class="item7c">7</div>
+        <div class="item8c">8</div>
+        <div class="item9c">9</div>
+        <div class="item10c">10</div>
+        <div class="item11c">11</div>
+        <div class="item12c">12</div>
+        <div class="item13c">13</div>
+        <div class="item14c">14</div>
+        <div class="item15c">15</div>
+        <div class="item16c">16</div>
+    </div>
+    <br>
+    <p><em>item</em> байрлуулахдаа мөрийн дугаарыг зааж өгөх эсвэл <b>span</b> түлхүүр үгийг ашиглан <em>item</em>
+        хэдэн мөрийг хамрахыг тодорхойлох боломжтой.</p>
+    <p><b>item2</b> нь 1-р мөрөнд эхэлж, 2 мөрийг хамарна:</p>
+    <p>.item1 { <br>
+        grid-row: <b>1 / span 2;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1d">1</div>
+        <div class="item2d">2</div>
+        <div class="item3d">3</div>
+        <div class="item4d">4</div>
+        <div class="item5d">5</div>
+        <div class="item6d">6</div>
+        <div class="item7d">7</div>
+        <div class="item8d">8</div>
+        <div class="item9d">9</div>
+        <div class="item10d">10</div>
+        <div class="item11d">11</div>
+        <div class="item12d">12</div>
+        <div class="item13d">13</div>
+        <div class="item14d">14</div>
+        <div class="item15d">15</div>
+        <div class="item16d">16</div>
+        <div class="item17d">17</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The grid-area Property</h2>
+    <p><b>grid-area</b> шинж чанарыг <span style="color: green;"><em>grid-row-start, grid-column-start,
+                grid-row-end, grid-column-end</em></span> шинж чанаруудын товчилсон шинж чанар болгон ашиглаж болно.</p>
+    <p><b>item8</b>-ыг 1-р мөр, 2-р баганаас эхэлж, 5-р мөр, 6-р баганаар төгсгөнө. <br>
+        <span style="color:red"><b>Синтакс:</b></span> <em>grid-row-start</em> / <em>grid-column-start</em> /
+        <em>grid-row-end</em> / <em>grid-column-end</em>.
+    </p>
+    <p>.item8 { <br>
+        grid-area: <b>1 / 2 / 5 / 6;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1e">1</div>
+        <div class="item2e">2</div>
+        <div class="item3e">3</div>
+        <div class="item4e">4</div>
+        <div class="item5e">5</div>
+        <div class="item6e">6</div>
+        <div class="item7e">7</div>
+        <div class="item8e">8</div>
+        <div class="item9e">9</div>
+        <div class="item10e">10</div>
+        <div class="item11e">11</div>
+        <div class="item12e">12</div>
+        <div class="item13e">13</div>
+        <div class="item14e">14</div>
+        <div class="item15e">15</div>
+    </div>
+    <br>
+    <p><b>item8</b> нь 2-р мөр, 1-р баганаас эхэлж, 2 мөр, 3 баганыг хамарна. <br>
+        <span style="color:red"><b>Синтакс:</b></span> <em>grid-row-start</em> / <em>grid-column-start</em> /
+        <em>grid-row-end</em> / <em>grid-column-end</em>.
+    </p>
+    <p>.item8 { <br>
+        grid-area: <b>2 / 1 / span 2 / span 3;</b> <br>
+        }</p>
+    <div class="grid-container">
+        <div class="item1i">1</div>
+        <div class="item2i">2</div>
+        <div class="item3i">3</div>
+        <div class="item4i">4</div>
+        <div class="item5i">5</div>
+        <div class="item6i">6</div>
+        <div class="item7i">7</div>
+        <div class="item8i">8</div>
+        <div class="item9i">9</div>
+        <div class="item10i">10</div>
+        <div class="item11i">11</div>
+        <div class="item12i">12</div>
+        <div class="item13i">13</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">Naming Grid Items</h2>
+    <p><b>grid-area</b> шинж чанарыг сүлжээний зүйлсээ <em>(item)</em> нэрлэхэд ашиглаж болно.<br>
+        Нэрлэсэн сүлжээний зүйлүүдийг сүлжээний контейнерийн <b>grid-template-areas</b> шинж чанарыг ашиглан зааж болно.
+    </p>
+    <p><b>item1</b> нь <em>myArea</em> нэртэй, 5-н баганатай сүлжээний бүх таван багананд байрлана:</p>
+    <p>.item1 { <br>
+        grid-area: <b>myArea;</b> <br>
+        } <br>
+        .grid-container { <br>
+        <span style="color:red"><b>grid-template-areas</b></span>:
+        <span style="color:blue"><b>'myArea myArea myArea myArea myArea';</b></span> <br>
+        }
+    </p>
+    <div class="grid-container1">
+        <div class="item1x">1</div>
+        <div class="item2x">2</div>
+        <div class="item3x">3</div>
+        <div class="item4x">4</div>
+        <div class="item5x">5</div>
+        <div class="item6x">6</div>
+    </div>
+    <br>
+    <p>Мөр бүрийг апострофоор (' ') тодорхойлно.
+        Мөр тус бүрийн баганууд нь зайгаар тусгаарлагдсан апостроф дотор тодорхойлогддог. <br>
+        <b>Note:</b> Цэгэн тэмдэг нь нэргүй сүлжээний <em>item</em>-ийг илэрхийлдэг.
+    </p>
+    <p><em>myArea</em> нь таван баганатай сүлжээнд хоёр баганыг эзэлсэн байна (цэгэн тэмдэг нь нэргүй
+        <em>item</em>-ийг илэрхийлнэ):
+    </p>
+    <p>.item1 { <br>
+        grid-area: <b>myArea;</b> <br>
+        } <br>
+        .grid-container { <br>
+        <span style="color:red"><b>grid-template-areas</b></span>:
+        <span style="color:blue"><b>'myArea myArea . . . ';</b></span> <br>
+        }
+    </p>
+    <div class="grid-container2">
+        <div class="item1z">1</div>
+        <div class="item2z">2</div>
+        <div class="item3z">3</div>
+        <div class="item4z">4</div>
+        <div class="item5z">5</div>
+        <div class="item6z">6</div>
+        <div class="item7z">7</div>
+        <div class="item8z">8</div>
+        <div class="item9z">9</div>
+    </div>
+    <br>
+    <p><b>item1</b>-ийг хоёр багана, хоёр мөртэй болгоно: <br>
+        Хоёр мөрийг тодорхойлохын тулд 2 дахь мөрийн баганыг өөр тэмдэгтийн багц дотор тодорхойлно.</p>
+    <p>.grid-container { <br>
+        <span style="color:red"><b>grid-template-areas</b></span>:
+        <span style="color:blue"><b>'myArea myArea . . . ' 'myArea myArea . . .';</b></span>
+        }
+    </p>
+    <div class="grid-container3">
+        <div class="item1g">1</div>
+        <div class="item2g">2</div>
+        <div class="item3g">3</div>
+        <div class="item4g">4</div>
+        <div class="item5g">5</div>
+        <div class="item6g">6</div>
+        <div class="item7g">7</div>
+    </div>
+    <br>
+    <p>Бүх <em>item</em>-ийг нэрлэн ашиглахад бэлэн вэб хуудасны загвар үүсгэе:</p>
+    <p><b>.item1 { grid-area: header; } <br>
+            .item2 { grid-area: menu; } <br>
+            .item3 { grid-area: main; } <br>
+            .item4 { grid-area: right; } <br>
+            .item5 { grid-area: footer; }</b> <br>
+        <br>
+        .grid-container { <br>
+        grid-template-areas: <br>
+        <em>'header header header header header header' <br>
+            'menu main main main right right' <br>
+            'menu footer footer footer footer footer';</em> <br>
+        }
+    </p>
+    <p>Энэхүү сүлжээний бүтэц нь 6-н багана, 3-н мөр агуулсан.</p>
+    <div class="grid-container4">
+        <div class="item1y">Header</div>
+        <div class="item2y">Menu</div>
+        <div class="item3y">Main</div>
+        <div class="item4y">Right</div>
+        <div class="item5y">Footer</div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">The Order of the Items</h2>
+    <p><em>Grid Layout</em> нь <em>item</em>-үүдийг хаана ч байрлуулах боломжийг олгодог.</p>
+    <p>HTML код дээр эхний <em>item</em>-ийг сүлжээний эхний <em>item</em> болгон харуулах албагүй.</p>
+    <p>.item1 { grid-area: 1 / 3 / 2 / 4; } <br>
+        .item2 { grid-area: 2 / 3 / 3 / 4; } <br>
+        .item3 { grid-area: 1 / 1 / 2 / 2; } <br>
+        .item4 { grid-area: 1 / 2 / 2 / 3; } <br>
+        .item5 { grid-area: 2 / 1 / 3 / 2; } <br>
+        .item6 { grid-area: 2 / 2 / 3 / 3; }</p>
+    <div class="grid-container5">
+        <div class="item1o">1</div>
+        <div class="item2o">2</div>
+        <div class="item3o">3</div>
+        <div class="item4o">4</div>
+        <div class="item5o">5</div>
+        <div class="item6o">6</div>
+    </div>
+    <br>
+    <p><b>media queries</b> ашиглан дэлгэцэнд тодорхой хэмжээг заан <em>item</em>-н дарааллыг өөрчилж болно
+        (Цонхны хэмжээг 500 пиксел болгож өөрчилснөөр нөлөөг үзэх):
+    </p>
+    <p><em>@media only screen and (max-width: 500px)</em> { <br>
+        .item1 { grid-area: 1 / span 3 / 2 / 4; } <br>
+        .item2 { grid-area: 3 / 3 / 4 / 4; } <br>
+        .item3 { grid-area: 2 / 1 / 3 / 2; } <br>
+        .item4 { grid-area: 2 / 2 / span 2 / 3; } <br>
+        .item5 { grid-area: 3 / 1 / 4 / 2; } <br>
+        .item6 { grid-area: 2 / 3 / 3 / 4; } <br>
+        }</p>
+    <div class="grid-container6">
+        <div class="item1q">1</div>
+        <div class="item2q">2</div>
+        <div class="item3q">3</div>
+        <div class="item4q">4</div>
+        <div class="item5q">5</div>
+        <div class="item6q">6</div>
+    </div>
+    <br>
+
+</body>
+
+</html>
